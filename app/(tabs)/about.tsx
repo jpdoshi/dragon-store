@@ -4,18 +4,16 @@ import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
-const Home = () => {
+const About = () => {
   return (
     <ScreenView>
       <AppBar>
         <View className="flex-1 flex-row items-center justify-between">
           <View>
             <Text className="text-2xl font-bold text-white leading-snug">
-              Discover Apps
+              Dragon Store
             </Text>
-            <Text className="font-medium text-primary">
-              Explore library of mod apps
-            </Text>
+            <Text className="font-medium text-primary">Know more about us</Text>
           </View>
           <TouchableOpacity className="size-8">
             <Svg
@@ -37,4 +35,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;
