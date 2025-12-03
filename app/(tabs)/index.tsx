@@ -1,5 +1,6 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
+import { router } from "expo-router";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
@@ -17,7 +18,7 @@ const Home = () => {
               Explore library of mod apps
             </Text>
           </View>
-          <TouchableOpacity className="size-8">
+          <TouchableOpacity onPress={() => router.push('/settings')} className="size-8">
             <Svg
               fill="none"
               viewBox="0 0 24 24"
