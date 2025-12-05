@@ -1,8 +1,11 @@
 export type AppMetaData = {
+  id: string;
   title: string;
   author: string;
+  authorUrl: string;
   category: string;
-  popularity: number;
-  source: string;
-  sourceUrl: string;
+  popularity: string;
+  description: string;
+  iconUrl: string;
+  repoUrl: string;
 };
