@@ -1,9 +1,27 @@
 import AppBar from "@/components/AppBar";
+import AppContainer from "@/components/AppContainer";
 import ScreenView from "@/components/ScreenView";
-import React from "react";
-import { ScrollView, Text, View } from "react-native";
+import config from "@/config";
+import { AppMetaData } from "@/types/AppMetaData";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { FlatList, ScrollView, Text, View } from "react-native";
 
 const Search = () => {
+  const [appList, setAppList] = useState<AppMetaData[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedXHR = await axios.get(config.JSON_REPO_URL);
+
+      if (fetchedXHR?.data) {
+        setAppList(fetchedXHR?.data);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <ScreenView>
       <AppBar>
@@ -24,7 +42,17 @@ const Search = () => {
         <View className="h-5" />
         {/* Search Bar */}
         {/* Categories */}
-        <View className="h-5" />
+
+        <FlatList
+          data={appList}
+          scrollEnabled={false}
+          renderItem={({ item }: { item: AppMetaData }) => (
+            <AppContainer AppData={item} />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
+
+        <View className="h-28" />
       </ScrollView>
     </ScreenView>
   );
