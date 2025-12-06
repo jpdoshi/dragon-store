@@ -45,10 +45,12 @@ const Home = () => {
 
       {/* Page Content */}
       <ScrollView showsVerticalScrollIndicator={false} className="px-5">
-        <View className="h-5" />
-        <Text className="text-white font-medium text-3xl mb-4">
+        <View className="h-10" />
+
+        <Text className="text-white font-medium text-3xl mb-5">
           Popular Repos
         </Text>
+
         <FlatList
           data={appList}
           scrollEnabled={false}
@@ -57,7 +59,8 @@ const Home = () => {
           )}
           keyExtractor={(item) => item.id.toString()}
         />
-        <View className="h-5" />
+
+        <View className="h-28" />
       </ScrollView>
     </ScreenView>
   );

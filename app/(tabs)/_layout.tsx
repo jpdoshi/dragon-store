@@ -6,7 +6,7 @@ import Svg, { Path } from "react-native-svg";
 
 const Layout = () => {
   const screenWidth = Dimensions.get("window").width;
-  const tabBarWidth = 260;
+  const tabBarWidth = 280;
   const marginHorizontal = (screenWidth - tabBarWidth) / 2;
 
   return (
@@ -26,7 +26,7 @@ const Layout = () => {
           borderTopWidth: 1,
           marginHorizontal,
           marginBottom: 40,
-          height: 50,
+          height: 54,
           paddingTop: "auto",
           paddingBottom: "auto",
           borderRadius: 48,
@@ -51,7 +51,7 @@ const Layout = () => {
           title: "Home",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
@@ -79,7 +79,7 @@ const Layout = () => {
           title: "Search",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
@@ -107,7 +107,7 @@ const Layout = () => {
           title: "Favorites",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
@@ -135,7 +135,7 @@ const Layout = () => {
           title: "About",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
