@@ -22,6 +22,8 @@ const Home = () => {
         );
 
         setAppList(sorted.slice(0, 10)); // top 10
+
+        console.log(sorted.slice(0, 10));
       }
     };
 
