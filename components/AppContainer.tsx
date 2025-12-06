@@ -1,11 +1,20 @@
 import { AppMetaData } from "@/types/AppMetaData";
+import { router } from "expo-router";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
 const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
   return (
-    <TouchableOpacity className="h-[80px] bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl">
+    <TouchableOpacity
+      onPress={() =>
+        router.push({
+          pathname: "/appDetails",
+          params: { AppData: JSON.stringify(AppData) },
+        })
+      }
+      className="h-[80px] bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl"
+    >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
           src={AppData.iconUrl}
@@ -14,12 +23,12 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           className="rounded-xl"
         />
         <View className="flex-1 flex-col">
+          <Text className="text-white text-lg font-semibold leading-snug">
+            {AppData.title}
+          </Text>
           <View className="flex-row items-center gap-2">
-            <Text className="text-white text-lg font-semibold">
-              {AppData.title}
-            </Text>
-            <Text className="text-rose-500 text-sm font-medium">
-              ★ {AppData.popularity}
+            <Text className="text-sm font-medium text-rose-500 leading-tight">
+              {AppData.category}
             </Text>
           </View>
           <Text className="text-gray-400 text-sm">{AppData.author}</Text>

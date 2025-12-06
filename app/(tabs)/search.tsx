@@ -15,7 +15,11 @@ const Search = () => {
       const fetchedXHR = await axios.get(config.JSON_REPO_URL);
 
       if (fetchedXHR?.data) {
-        setAppList(fetchedXHR?.data);
+        const sorted = [...fetchedXHR.data].sort((a, b) =>
+          a.title.localeCompare(b.title)
+        );
+
+        setAppList(sorted);
       }
     };
 
@@ -41,6 +45,7 @@ const Search = () => {
       <ScrollView showsVerticalScrollIndicator={false} className="px-5">
         <View className="h-5" />
         {/* Search Bar */}
+
         {/* Categories */}
 
         <FlatList
