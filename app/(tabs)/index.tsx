@@ -1,24 +1,24 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
+import TrendingCard from "@/components/TrendingCard";
+import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { FlatList, ScrollView, Text, View } from "react-native";
 
-const appList: AppMetaData[] = [
-  {
-    id: "1",
-    title: "Youtube",
-    author: "Rvx",
-    category: "Media",
-    popularity: "10",
-    description: "lorem ipsum dolore sit amet un",
-    iconUrl: "https://github.com/rvx",
-    authorUrl: "https://github.com/rvx",
-    repoUrl: "https://youtube.com",
-  },
-];
-
 const Home = () => {
+  const [appList, setAppList] = useState<AppMetaData[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedXHR = await axios.get(config.JSON_REPO_URL);
+      if (fetchedXHR?.data) setAppList(fetchedXHR?.data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <ScreenView>
       <AppBar>
@@ -37,12 +37,14 @@ const Home = () => {
       {/* Page Content */}
       <ScrollView showsVerticalScrollIndicator={false} className="px-5">
         <View className="h-5" />
-        <Text className="text-white font-medium text-xl">Trending Apps</Text>
+        <Text className="text-white font-medium text-3xl mb-4">
+          Trending Apps
+        </Text>
         <FlatList
           data={appList}
           scrollEnabled={false}
           renderItem={({ item }: { item: AppMetaData }) => (
-            <Text className="text-white text-2xl font-bold">{item?.title}</Text>
+            <TrendingCard AppData={item} />
           )}
           keyExtractor={(item) => item.id.toString()}
         />
