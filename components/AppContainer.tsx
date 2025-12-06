@@ -14,9 +14,14 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           className="rounded-xl"
         />
         <View className="flex-1 flex-col">
-          <Text className="text-white text-lg font-semibold">
-            {AppData.title}
-          </Text>
+          <View className="flex-row items-center gap-2">
+            <Text className="text-white text-lg font-semibold">
+              {AppData.title}
+            </Text>
+            <Text className="text-rose-500 text-sm font-medium">
+              ★ {AppData.popularity}
+            </Text>
+          </View>
           <Text className="text-gray-400 text-sm">{AppData.author}</Text>
         </View>
         <View className="size-10 p-2.5 rounded-full bg-[rgba(236,0,63,0.1)]">
