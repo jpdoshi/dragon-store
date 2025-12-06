@@ -150,7 +150,7 @@
     "popularity": "276",
     "description": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "iconUrl": "https://gitlab.com/uploads/-/system/project/avatar/65779408/ironfox.png",
-    "repoUrl": "https://gitlab.com/ironfox-oss/IronFox",
+    "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases",
     "authorUrl": "https://gitlab.com/ironfox-oss"
   },
   {
@@ -273,5 +273,214 @@
     "iconUrl": "https://play-lh.googleusercontent.com/2z9PmknKtRxtKAAUZvHcLmpi2OV_3WD6rMkwcxDlNMyZlXE2ofmf2NKFrryI2bGmnp0",
     "repoUrl": "https://kdeconnect.kde.org/download.html",
     "authorUrl": "https://github.com/KDE"
+  },
+  {
+    "id": "364963",
+    "title": "F-Droid Store",
+    "author": "f-droid",
+    "category": "tools",
+    "popularity": "2.5k",
+    "description": "Android client application.",
+    "iconUrl": "https://f-droid.org/assets/fdroid-logo_bfHl7nsLHOUQxzdU8-rGIhn4bAgl6z7k2mA3fWoCyT4=.png",
+    "repoUrl": "https://github.com/f-droid/fdroidclient",
+    "authorUrl": "https://github.com/f-droid"
+  },
+  {
+    "id": "085570",
+    "title": "Nekogram",
+    "author": "Nekogram",
+    "category": "social",
+    "popularity": "2.9k",
+    "description": "Open-source third-party Telegram client with not many but useful modifications.",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Telegram_2019_simple_logo.svg/250px-Telegram_2019_simple_logo.svg.png",
+    "repoUrl": "https://github.com/Nekogram/Nekogram",
+    "authorUrl": "https://github.com/Nekogram"
+  },
+  {
+    "id": "706419",
+    "title": "Thunderbird",
+    "author": "thunderbird",
+    "category": "internet",
+    "popularity": "12.8k",
+    "description": "Thunderbird for Android – Open Source Email App for Android (fka K-9 Mail)",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Thunderbird_2023_icon.svg/250px-Thunderbird_2023_icon.svg.png",
+    "repoUrl": "https://github.com/thunderbird/thunderbird-android",
+    "authorUrl": "https://github.com/thunderbird"
+  },
+  {
+    "id": "161432",
+    "title": "Proton Mail",
+    "author": "ProtonMail",
+    "category": "internet",
+    "popularity": "679",
+    "description": "Proton Mail Android app",
+    "iconUrl": "https://images.seeklogo.com/logo-png/43/2/proton-mail-logo-png_seeklogo-438756.png",
+    "repoUrl": "https://github.com/ProtonMail/android-mail",
+    "authorUrl": "https://github.com/ProtonMail"
+  },
+  {
+    "id": "954417",
+    "title": "Lawnchair Launcher",
+    "author": "LawnchairLauncher",
+    "category": "tools",
+    "popularity": "11.6k",
+    "description": "No clever tagline needed.",
+    "iconUrl": "https://play-lh.googleusercontent.com/5IKVKRE3DVsCY1BBcD4qe7iN6qzq469ksb-XnUeTcOv-t7Cn_3SkGjZyK0J8ougY_Q",
+    "repoUrl": "https://github.com/LawnchairLauncher/lawnchair",
+    "authorUrl": "https://github.com/LawnchairLauncher"
+  },
+  {
+    "id": "889075",
+    "title": "Winlator",
+    "author": "brunodev85",
+    "category": "emulators",
+    "popularity": "15.7k",
+    "description": "Android application for running Windows applications with Wine and Box86/Box64",
+    "iconUrl": "https://cdn2.steamgriddb.com/icon_thumb/8b407b57d02a2e41c7ba54441391d9ce.png",
+    "repoUrl": "https://github.com/brunodev85/winlator",
+    "authorUrl": "https://github.com/brunodev85"
+  },
+  {
+    "id": "004932",
+    "title": "VLC Player",
+    "author": "videolan",
+    "category": "media",
+    "popularity": "3.4k",
+    "description": "VLC for Android, Android TV and ChromeOS",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/VLC_for_iOS_Icon.png/500px-VLC_for_iOS_Icon.png",
+    "repoUrl": "https://www.videolan.org/vlc/download-android.html",
+    "authorUrl": "https://github.com/videolan"
+  },
+  {
+    "id": "097940",
+    "title": "Squawker",
+    "author": "j-fbriere",
+    "category": "social",
+    "popularity": "1.2k",
+    "description": "An open-source privacy oriented Twitter/X client",
+    "iconUrl": "https://f-droid.org/repo/org.ca.squawker/en-US/icon_V_SPrdBTzkWqRobWbsJ_79bEzweqiNcZvMloB25F1m4=.png",
+    "repoUrl": "https://github.com/j-fbriere/squawker",
+    "authorUrl": "https://github.com/j-fbriere"
+  },
+  {
+    "id": "153168",
+    "title": "Aurora Store",
+    "author": "whyorean",
+    "category": "tools",
+    "popularity": "1.8k",
+    "description": "Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, reviews, and download the APK directly from Google Play to your device.",
+    "iconUrl": "https://downloadr2.apkmirror.com/wp-content/uploads/2019/09/aurora-store.png",
+    "repoUrl": "https://github.com/whyorean/AuroraStore",
+    "authorUrl": "https://github.com/whyorean"
+  },
+  {
+    "id": "488616",
+    "title": "TOR Browser",
+    "author": "TheTorProject",
+    "category": "internet",
+    "popularity": "755",
+    "description": "Protect yourself against tracking, surveillance, and censorship.",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Tor_Browser_icon.svg/250px-Tor_Browser_icon.svg.png",
+    "repoUrl": "https://www.torproject.org/download/",
+    "authorUrl": "https://github.com/TheTorProject"
+  },
+  {
+    "id": "609891",
+    "title": "Cromite",
+    "author": "uazo",
+    "category": "internet",
+    "popularity": "6k",
+    "description": "Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!",
+    "iconUrl": "https://camo.githubusercontent.com/48e6344531e1d70ac0b6adbe6c4ba43c8afdd466f0c67b9a6c9396e13aacc8e9/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67",
+    "repoUrl": "https://github.com/uazo/cromite",
+    "authorUrl": "https://github.com/uazo"
+  },
+  {
+    "id": "229778",
+    "title": "Bitwarden",
+    "author": "bitwarden",
+    "category": "internet",
+    "popularity": "8.1k",
+    "description": "Bitwarden mobile apps (Password Manager and Authenticator) for Android.",
+    "iconUrl": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bitwarden-icon.png",
+    "repoUrl": "https://github.com/bitwarden/android",
+    "authorUrl": "https://github.com/bitwarden"
+  },
+  {
+    "id": "971384",
+    "title": "CloudStream",
+    "author": "recloudstream",
+    "category": "streaming",
+    "popularity": "8.4k",
+    "description": "Android app for streaming and downloading media.",
+    "iconUrl": "https://acloudstreamapp.com/wp-content/uploads/2025/09/Cloudstream-app-logo.webp",
+    "repoUrl": "https://github.com/recloudstream/cloudstream",
+    "authorUrl": "https://github.com/recloudstream"
+  },
+  {
+    "id": "182527",
+    "title": "LocalSend",
+    "author": "localsend",
+    "category": "tools",
+    "popularity": "71.3k",
+    "description": "An open-source cross-platform alternative to AirDrop",
+    "iconUrl": "https://play-lh.googleusercontent.com/t2xwoWAJPoIHZlYiw82J31fZl40kj962j5DVHohn-Pgn7ZiuoXCl-2_NMyMERa7cCFw=w240-h480-rw",
+    "repoUrl": "https://github.com/localsend/localsend",
+    "authorUrl": "https://github.com/localsend"
+  },
+  {
+    "id": "381145",
+    "title": "Nobook",
+    "author": "ycngmn",
+    "category": "social",
+    "popularity": "855",
+    "description": "Ad-free facebook lite for Android.",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/250px-Facebook_f_logo_%282019%29.svg.png",
+    "repoUrl": "https://github.com/ycngmn/Nobook",
+    "authorUrl": "https://github.com/ycngmn"
+  },
+  {
+    "id": "697772",
+    "title": "Xtra",
+    "author": "crackededed",
+    "category": "social",
+    "popularity": "1.8k",
+    "description": "Third-party Twitch client for Android",
+    "iconUrl": "https://image.winudf.com/v2/image1/Y29tLmdpdGh1Yi5leGFjdDcueHRyYV9pY29uXzE1NTUwOTQwNzZfMDQ4/icon.png?w=186&fakeurl=1",
+    "repoUrl": "https://github.com/crackededed/Xtra",
+    "authorUrl": "https://github.com/crackededed"
+  },
+  {
+    "id": "005086",
+    "title": "Futo Keyboard",
+    "author": "futo-org",
+    "category": "tools",
+    "popularity": "1.9k",
+    "description": "Your keyboard shouldn't connect to the internet.",
+    "iconUrl": "https://play-lh.googleusercontent.com/sTw82I2n6RI1SIT18FXcsYvgtPdMTEa37sYOsguCDQcbIRJy7gBTpjL2BdYIOjNSgaw",
+    "repoUrl": "https://github.com/futo-org/android-keyboard",
+    "authorUrl": "https://github.com/futo-org"
+  },
+  {
+    "id": "439122",
+    "title": "Florisboard",
+    "author": "florisboard",
+    "category": "tools",
+    "popularity": "7.7k",
+    "description": "An open-source keyboard for Android which respects your privacy. Currently in beta.",
+    "iconUrl": "https://f-droid.org/repo/dev.patrickgold.florisboard/en-US/icon_Pm4rt1RVPK0LVaw7-3cASjre8509b2pI7jeLZDzspxw=.png",
+    "repoUrl": "https://github.com/florisboard/florisboard",
+    "authorUrl": "https://github.com/florisboard"
+  },
+  {
+    "id": "525179",
+    "title": "NetherSX2",
+    "author": "Trixarian",
+    "category": "emulators",
+    "popularity": "1.8k",
+    "description": "Continuation of NetherSX2 based on AetherSX2 4248",
+    "iconUrl": "https://icon-library.com/images/ps2-logo-icon/ps2-logo-icon-16.jpg",
+    "repoUrl": "https://github.com/Trixarian/NetherSX2-patch",
+    "authorUrl": "https://github.com/Trixarian"
   }
 ]
