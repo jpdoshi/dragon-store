@@ -1,8 +1,9 @@
 import AppBar from "@/components/AppBar";
+import AppContainer from "@/components/AppContainer";
 import ScreenView from "@/components/ScreenView";
-import TrendingCard from "@/components/TrendingCard";
 import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
+import parsePopularity from "@/utils/parsePopularity";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FlatList, ScrollView, Text, View } from "react-native";
@@ -13,7 +14,15 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const fetchedXHR = await axios.get(config.JSON_REPO_URL);
-      if (fetchedXHR?.data) setAppList(fetchedXHR?.data);
+
+      if (fetchedXHR?.data) {
+        const sorted = [...fetchedXHR.data].sort(
+          (a, b) =>
+            parsePopularity(b.popularity) - parsePopularity(a.popularity)
+        );
+
+        setAppList(sorted.slice(0, 10)); // top 10
+      }
     };
 
     fetchData();
@@ -38,13 +47,13 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false} className="px-5">
         <View className="h-5" />
         <Text className="text-white font-medium text-3xl mb-4">
-          Trending Apps
+          Popular Repos
         </Text>
         <FlatList
           data={appList}
           scrollEnabled={false}
           renderItem={({ item }: { item: AppMetaData }) => (
-            <TrendingCard AppData={item} />
+            <AppContainer AppData={item} />
           )}
           keyExtractor={(item) => item.id.toString()}
         />

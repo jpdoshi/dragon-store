@@ -237,7 +237,7 @@
     "category": "emulators",
     "popularity": "500k",
     "description": "The most advanced Nintendo Switch emulator",
-    "iconUrl": "The most advanced Nintendo Switch emulator",
+    "iconUrl": "https://cdn2.steamgriddb.com/icon_thumb/2dfaeab9c4c8275f6d0281d1aea1f513.png",
     "repoUrl": "https://citron-emu.org/#download",
     "authorUrl": "https://git.citron-emu.org/citron/"
   },
