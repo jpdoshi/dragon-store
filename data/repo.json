@@ -6,7 +6,7 @@
     "category": "streaming",
     "popularity": "3.8k",
     "description": "ReVanced eXtended YT and YT-M for both root and non-root users.",
-    "iconUrl": "https://www.latestmodapks.com/wp-content/uploads/2024/04/ReVanced-Extended-logo-media.png",
+    "iconUrl": "rvx-yt.png",
     "repoUrl": "https://github.com/NoName-exe/revanced-extended",
     "authorUrl": "https://github.com/NoName-exe"
   },
@@ -17,7 +17,7 @@
     "category": "streaming",
     "popularity": "3.8k",
     "description": "ReVanced eXtended YT and YT-M for both root and non-root users.",
-    "iconUrl": "https://play-lh.googleusercontent.com/76AjYITcB0dI0sFqdQjNgXQxRMlDIswbp0BAU_O5Oob-73b6cqKggVlAiNXQAW5Bl1g",
+    "iconUrl": "rvx-music.png",
     "repoUrl": "https://github.com/NoName-exe/revanced-extended",
     "authorUrl": "https://github.com/NoName-exe"
   },
@@ -28,7 +28,7 @@
     "category": "streaming",
     "popularity": "35.8k",
     "description": "A libre lightweight streaming front-end for Android.",
-    "iconUrl": "https://newpipe.net/img/logo_400.png",
+    "iconUrl": "newpipe.png",
     "repoUrl": "https://github.com/TeamNewPipe/NewPipe",
     "authorUrl": "https://github.com/TeamNewPipe"
   },
@@ -39,7 +39,7 @@
     "category": "streaming",
     "popularity": "251",
     "description": "ReVanced's pre-made APKs",
-    "iconUrl": "https://play-lh.googleusercontent.com/6MtUcsS5i95q92P6NbHTGzJT6hs6cJANaMHXfW5nco5_hDOnF1AC3A5lgH3Ik3MARAry",
+    "iconUrl": "yt-revanced.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
     "authorUrl": "https://github.com/krvstek"
   },
@@ -50,7 +50,7 @@
     "category": "streaming",
     "popularity": "251",
     "description": "ReVanced's pre-made APKs",
-    "iconUrl": "https://play-lh.googleusercontent.com/76AjYITcB0dI0sFqdQjNgXQxRMlDIswbp0BAU_O5Oob-73b6cqKggVlAiNXQAW5Bl1g",
+    "iconUrl": "yt-music.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
     "authorUrl": "https://github.com/krvstek"
   },
@@ -61,7 +61,7 @@
     "category": "social",
     "popularity": "251",
     "description": "ReVanced's pre-made APKs",
-    "iconUrl": "https://play-lh.googleusercontent.com/YlsjgA1pFEUqNaypaxE5ajushTBOt8IxVk_UEqzaXT7_n3JDgFq6KgtuE8tPBpvaCntB",
+    "iconUrl": "reddit.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
     "authorUrl": "https://github.com/krvstek"
   },
@@ -72,7 +72,7 @@
     "category": "streaming",
     "popularity": "251",
     "description": "ReVanced's pre-made APKs",
-    "iconUrl": "https://play-lh.googleusercontent.com/7ghCqs4kKYrQpTECddnejlSeAXgpdiiKlIghuDR869MpF5msXdPsd3gqjC6lstD_NfJkmP0LAUJTty7UACcrLw=w240-h480-rw",
+    "iconUrl": "spotify.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
     "authorUrl": "https://github.com/krvstek"
   },
@@ -83,7 +83,7 @@
     "category": "social",
     "popularity": "638",
     "description": "Instafel provides fast & up-to-date Instagram Alpha experience for everyone!",
-    "iconUrl": "https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM",
+    "iconUrl": "instagram.png",
     "repoUrl": "https://github.com/mamiiblt/instafel",
     "authorUrl": "https://github.com/mamiiblt"
   },
@@ -94,7 +94,7 @@
     "category": "tools",
     "popularity": "24.5k",
     "description": "Application to use ReVanced on Android",
-    "iconUrl": "https://static.ivonblog.com/posts/youtube-revanced/images/youtube-revanced.png",
+    "iconUrl": "revanced-manager.png",
     "repoUrl": "https://github.com/revanced/revanced-manager",
     "authorUrl": "https://github.com/revanced"
   },
@@ -105,7 +105,7 @@
     "category": "tools",
     "popularity": "3.3k",
     "description": "An Android native video player",
-    "iconUrl": "https://play-lh.googleusercontent.com/42rmTWQaQzv_94dgor8qAho7sEYs-Ax1qnG2NcqoHxbC76SLX3ZYWzmNIErhb4evIYU",
+    "iconUrl": "next-player.png",
     "repoUrl": "https://github.com/anilbeesetti/nextplayer",
     "authorUrl": "https://github.com/anilbeesetti"
   },
@@ -116,7 +116,7 @@
     "category": "tools",
     "popularity": "13.6k",
     "description": "Get Android app updates straight from the source.",
-    "iconUrl": "https://f-droid.org/repo/dev.imranr.obtainium.fdroid/en-US/icon_8o6Dm3kPEr-C-8U1QdRd9B6DrkXPqLJQ7or0KN7ut_4=.png",
+    "iconUrl": "obtainium.png",
     "repoUrl": "https://github.com/ImranR98/Obtainium",
     "authorUrl": "https://github.com/ImranR98"
   },
@@ -127,7 +127,7 @@
     "category": "tools",
     "popularity": "2.1k",
     "description": "GmsCore fork for ReVanced with Material 3 Expressive design, enhanced features, and improvements",
-    "iconUrl": "https://downloadr2.apkmirror.com/wp-content/uploads/2024/04/MicroG_round.png",
+    "iconUrl": "microg-re.png",
     "repoUrl": "https://github.com/WSTxda/MicroG-RE",
     "authorUrl": "https://github.com/WSTxda"
   },
@@ -138,7 +138,7 @@
     "category": "tools",
     "popularity": "3.1k",
     "description": "Official ProtonVPN Android app",
-    "iconUrl": "https://dl.flathub.org/media/com/protonvpn/www/51f5a5fc3e7c0d2b1286732fae8ec52d/icons/128x128@2/com.protonvpn.www.png",
+    "iconUrl": "protonvpn.png",
     "repoUrl": "https://github.com/ProtonVPN/android-app",
     "authorUrl": "https://github.com/ProtonVPN"
   },
@@ -149,7 +149,7 @@
     "category": "internet",
     "popularity": "276",
     "description": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
-    "iconUrl": "https://gitlab.com/uploads/-/system/project/avatar/65779408/ironfox.png",
+    "iconUrl": "ironfox.png",
     "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases",
     "authorUrl": "https://gitlab.com/ironfox-oss"
   },
@@ -160,7 +160,7 @@
     "category": "internet",
     "popularity": "5.9k",
     "description": "Iceraven Browser",
-    "iconUrl": "https://user-images.githubusercontent.com/26594953/94931663-a4923800-04e5-11eb-8b5f-4d958edf3df4.png",
+    "iconUrl": "iceraven.png",
     "repoUrl": "https://github.com/fork-maintainers/iceraven-browser",
     "authorUrl": "https://github.com/fork-maintainers"
   },
@@ -171,7 +171,7 @@
     "category": "tools",
     "popularity": "47.4k",
     "description": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
-    "iconUrl": "https://f-droid.org/repo/com.termux/en-US/icon_7jMZ7XD80oeucmGEaTwktIRZexLtGWvJfKdVD6Wu2SI=.png",
+    "iconUrl": "termux.png",
     "repoUrl": "https://github.com/termux/termux-app",
     "authorUrl": "https://github.com/termux"
   },
@@ -182,7 +182,7 @@
     "category": "internet",
     "popularity": "20.8k",
     "description": "Brave browser for Android, iOS, Linux, macOS, Windows.",
-    "iconUrl": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/brave-browser-icon.png",
+    "iconUrl": "brave.png",
     "repoUrl": "https://github.com/brave/brave-browser",
     "authorUrl": "https://github.com/brave"
   },
@@ -193,7 +193,7 @@
     "category": "tools",
     "popularity": "11.5k",
     "description": "Free implementation of Play Services",
-    "iconUrl": "https://gmscore.app/wp-content/uploads/2023/11/revanced-microg-icon.webp",
+    "iconUrl": "gms-core.png",
     "repoUrl": "https://github.com/microg/GmsCore",
     "authorUrl": "https://github.com/microg"
   },
@@ -204,7 +204,7 @@
     "category": "media",
     "popularity": "110",
     "description": "ReVanced Google Photos APK Auto-Builds",
-    "iconUrl": "https://www.computerhope.com/jargon/g/google-photos.png",
+    "iconUrl": "photos.png",
     "repoUrl": "https://github.com/mentalblank/GPhotos-Revanced",
     "authorUrl": "https://github.com/mentalblank"
   },
@@ -215,7 +215,7 @@
     "category": "emulators",
     "popularity": "13.1k",
     "description": "A PSP emulator for Android, Windows, Mac and Linux, written in C++. Want to contribute? Join us on Discord at https://discord.gg/5NJB6dD or just send pull requests / issues. For discussion use the forums at forums.ppsspp.org.",
-    "iconUrl": "https://play-lh.googleusercontent.com/DFXgljhAFAOdtTBU3BHspS6Wtzl3wbA1ubGw56VRrYScraEN-rq_CLse6qVXtkAclD0",
+    "iconUrl": "ppsspp.png",
     "repoUrl": "https://www.ppsspp.org/download",
     "authorUrl": "https://github.com/hrydgard"
   },
@@ -226,7 +226,7 @@
     "category": "emulators",
     "popularity": "3k",
     "description": "A new yuzu fork meant to properly continue work on the emulator",
-    "iconUrl": "https://edenemu.com/wp-content/uploads/2025/10/Eden-icon.webp",
+    "iconUrl": "eden.png",
     "repoUrl": "https://eden-emu.dev/download",
     "authorUrl": "https://github.com/eden-emulator"
   },
@@ -237,7 +237,7 @@
     "category": "emulators",
     "popularity": "500k",
     "description": "The most advanced Nintendo Switch emulator",
-    "iconUrl": "https://cdn2.steamgriddb.com/icon_thumb/2dfaeab9c4c8275f6d0281d1aea1f513.png",
+    "iconUrl": "citron.png",
     "repoUrl": "https://citron-emu.org/#download",
     "authorUrl": "https://git.citron-emu.org/citron/"
   },
@@ -248,7 +248,7 @@
     "category": "streaming",
     "popularity": "180",
     "description": "AniLabX - android app for watching anime/dramas/cartoons and reading manga/comics/light novels",
-    "iconUrl": "https://avatars.githubusercontent.com/u/142040443?v=4",
+    "iconUrl": "anilab.png",
     "repoUrl": "https://github.com/AniLabX/AniLabX",
     "authorUrl": "https://github.com/AniLabX"
   },
@@ -259,7 +259,7 @@
     "category": "media",
     "popularity": "17.3k",
     "description": "Free and open source manga reader for Android",
-    "iconUrl": "https://avatars.githubusercontent.com/u/156513628?v=4",
+    "iconUrl": "mihon.png",
     "repoUrl": "https://mihon.app/download",
     "authorUrl": "https://github.com/mihonapp"
   },
@@ -270,7 +270,7 @@
     "category": "tools",
     "popularity": "3.4k",
     "description": "Multi-platform app that allows your devices to communicate",
-    "iconUrl": "https://play-lh.googleusercontent.com/2z9PmknKtRxtKAAUZvHcLmpi2OV_3WD6rMkwcxDlNMyZlXE2ofmf2NKFrryI2bGmnp0",
+    "iconUrl": "kdeconnect.png",
     "repoUrl": "https://kdeconnect.kde.org/download.html",
     "authorUrl": "https://github.com/KDE"
   },
@@ -281,7 +281,7 @@
     "category": "tools",
     "popularity": "2.5k",
     "description": "Android client application.",
-    "iconUrl": "https://f-droid.org/assets/fdroid-logo_bfHl7nsLHOUQxzdU8-rGIhn4bAgl6z7k2mA3fWoCyT4=.png",
+    "iconUrl": "f-droid.png",
     "repoUrl": "https://github.com/f-droid/fdroidclient",
     "authorUrl": "https://github.com/f-droid"
   },
@@ -292,7 +292,7 @@
     "category": "social",
     "popularity": "2.9k",
     "description": "Open-source third-party Telegram client with not many but useful modifications.",
-    "iconUrl": "https://play-lh.googleusercontent.com/WjuFWh4g1RgDbUn_H0q5qfo5vgPOCj8o7T42ENKbq39vQhszHx_6LXUctJiIVNPGQl8e",
+    "iconUrl": "nekogram.png",
     "repoUrl": "https://github.com/Nekogram/Nekogram",
     "authorUrl": "https://github.com/Nekogram"
   },
@@ -303,7 +303,7 @@
     "category": "internet",
     "popularity": "12.8k",
     "description": "Thunderbird for Android – Open Source Email App for Android (fka K-9 Mail)",
-    "iconUrl": "https://play-lh.googleusercontent.com/1KXrx11Eau8eZrNQz1irg2XHJZPqxDt2xhj6lGBjS9Kj-2aoGMp-NQw0ejNC3ePBwlQ",
+    "iconUrl": "thunderbird.png",
     "repoUrl": "https://github.com/thunderbird/thunderbird-android",
     "authorUrl": "https://github.com/thunderbird"
   },
@@ -314,7 +314,7 @@
     "category": "internet",
     "popularity": "679",
     "description": "Proton Mail Android app",
-    "iconUrl": "https://cdn.aptoide.com/imgs/a/2/5/a258901071cb5c214e4ef75a06e71fdf_icon.png",
+    "iconUrl": "protonmail.png",
     "repoUrl": "https://github.com/ProtonMail/android-mail",
     "authorUrl": "https://github.com/ProtonMail"
   },
@@ -325,7 +325,7 @@
     "category": "tools",
     "popularity": "11.6k",
     "description": "No clever tagline needed.",
-    "iconUrl": "https://play-lh.googleusercontent.com/5IKVKRE3DVsCY1BBcD4qe7iN6qzq469ksb-XnUeTcOv-t7Cn_3SkGjZyK0J8ougY_Q",
+    "iconUrl": "lawnchair.png",
     "repoUrl": "https://github.com/LawnchairLauncher/lawnchair",
     "authorUrl": "https://github.com/LawnchairLauncher"
   },
@@ -336,7 +336,7 @@
     "category": "emulators",
     "popularity": "15.7k",
     "description": "Android application for running Windows applications with Wine and Box86/Box64",
-    "iconUrl": "https://cdn2.steamgriddb.com/icon_thumb/8b407b57d02a2e41c7ba54441391d9ce.png",
+    "iconUrl": "winlator.png",
     "repoUrl": "https://github.com/brunodev85/winlator",
     "authorUrl": "https://github.com/brunodev85"
   },
@@ -347,7 +347,7 @@
     "category": "media",
     "popularity": "3.4k",
     "description": "VLC for Android, Android TV and ChromeOS",
-    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7l0EO3oaGhFOfsfcOCTM-XONnGWTyJdQiJw&s",
+    "iconUrl": "vlc.png",
     "repoUrl": "https://www.videolan.org/vlc/download-android.html",
     "authorUrl": "https://github.com/videolan"
   },
@@ -358,7 +358,7 @@
     "category": "social",
     "popularity": "1.2k",
     "description": "An open-source privacy oriented Twitter/X client",
-    "iconUrl": "https://f-droid.org/repo/org.ca.squawker/en-US/icon_V_SPrdBTzkWqRobWbsJ_79bEzweqiNcZvMloB25F1m4=.png",
+    "iconUrl": "squawker.png",
     "repoUrl": "https://github.com/j-fbriere/squawker",
     "authorUrl": "https://github.com/j-fbriere"
   },
@@ -369,7 +369,7 @@
     "category": "tools",
     "popularity": "1.8k",
     "description": "Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, reviews, and download the APK directly from Google Play to your device.",
-    "iconUrl": "https://downloadr2.apkmirror.com/wp-content/uploads/2019/09/aurora-store.png",
+    "iconUrl": "aurora-store.png",
     "repoUrl": "https://github.com/whyorean/AuroraStore",
     "authorUrl": "https://github.com/whyorean"
   },
@@ -380,7 +380,7 @@
     "category": "internet",
     "popularity": "755",
     "description": "Protect yourself against tracking, surveillance, and censorship.",
-    "iconUrl": "https://play-lh.googleusercontent.com/KdhlvGOBM0ooqzOvmc0i7aTVTNt4_IpJAjE9tkqXumSjRQ94Cjhh9aVl7A13vhdgQg",
+    "iconUrl": "tor.png",
     "repoUrl": "https://www.torproject.org/download/",
     "authorUrl": "https://github.com/TheTorProject"
   },
@@ -391,7 +391,7 @@
     "category": "internet",
     "popularity": "6k",
     "description": "Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!",
-    "iconUrl": "https://camo.githubusercontent.com/48e6344531e1d70ac0b6adbe6c4ba43c8afdd466f0c67b9a6c9396e13aacc8e9/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67",
+    "iconUrl": "cromite.png",
     "repoUrl": "https://github.com/uazo/cromite",
     "authorUrl": "https://github.com/uazo"
   },
@@ -402,7 +402,7 @@
     "category": "internet",
     "popularity": "8.1k",
     "description": "Bitwarden mobile apps (Password Manager and Authenticator) for Android.",
-    "iconUrl": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bitwarden-icon.png",
+    "iconUrl": "bitwarden.png",
     "repoUrl": "https://github.com/bitwarden/android",
     "authorUrl": "https://github.com/bitwarden"
   },
@@ -413,7 +413,7 @@
     "category": "streaming",
     "popularity": "8.4k",
     "description": "Android app for streaming and downloading media.",
-    "iconUrl": "https://acloudstreamapp.com/wp-content/uploads/2025/09/Cloudstream-app-logo.webp",
+    "iconUrl": "cloudstream.png",
     "repoUrl": "https://github.com/recloudstream/cloudstream",
     "authorUrl": "https://github.com/recloudstream"
   },
@@ -424,7 +424,7 @@
     "category": "tools",
     "popularity": "71.3k",
     "description": "An open-source cross-platform alternative to AirDrop",
-    "iconUrl": "https://play-lh.googleusercontent.com/t2xwoWAJPoIHZlYiw82J31fZl40kj962j5DVHohn-Pgn7ZiuoXCl-2_NMyMERa7cCFw=w240-h480-rw",
+    "iconUrl": "localsend.png",
     "repoUrl": "https://github.com/localsend/localsend",
     "authorUrl": "https://github.com/localsend"
   },
@@ -435,7 +435,7 @@
     "category": "social",
     "popularity": "855",
     "description": "Ad-free facebook lite for Android.",
-    "iconUrl": "https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo",
+    "iconUrl": "nobook.png",
     "repoUrl": "https://github.com/ycngmn/Nobook",
     "authorUrl": "https://github.com/ycngmn"
   },
@@ -446,7 +446,7 @@
     "category": "social",
     "popularity": "1.8k",
     "description": "Third-party Twitch client for Android",
-    "iconUrl": "https://image.winudf.com/v2/image1/Y29tLmdpdGh1Yi5leGFjdDcueHRyYV9pY29uXzE1NTUwOTQwNzZfMDQ4/icon.png?w=186&fakeurl=1",
+    "iconUrl": "xtra.png",
     "repoUrl": "https://github.com/crackededed/Xtra",
     "authorUrl": "https://github.com/crackededed"
   },
@@ -457,7 +457,7 @@
     "category": "tools",
     "popularity": "1.9k",
     "description": "Your keyboard shouldn't connect to the internet.",
-    "iconUrl": "https://play-lh.googleusercontent.com/sTw82I2n6RI1SIT18FXcsYvgtPdMTEa37sYOsguCDQcbIRJy7gBTpjL2BdYIOjNSgaw",
+    "iconUrl": "futo-keyboard.png",
     "repoUrl": "https://github.com/futo-org/android-keyboard",
     "authorUrl": "https://github.com/futo-org"
   },
@@ -468,7 +468,7 @@
     "category": "tools",
     "popularity": "7.7k",
     "description": "An open-source keyboard for Android which respects your privacy. Currently in beta.",
-    "iconUrl": "https://f-droid.org/repo/dev.patrickgold.florisboard/en-US/icon_Pm4rt1RVPK0LVaw7-3cASjre8509b2pI7jeLZDzspxw=.png",
+    "iconUrl": "florisboard.png",
     "repoUrl": "https://github.com/florisboard/florisboard",
     "authorUrl": "https://github.com/florisboard"
   },
@@ -479,7 +479,7 @@
     "category": "emulators",
     "popularity": "1.8k",
     "description": "Continuation of NetherSX2 based on AetherSX2 4248",
-    "iconUrl": "https://icon-library.com/images/ps2-logo-icon/ps2-logo-icon-16.jpg",
+    "iconUrl": "nethersx2.png",
     "repoUrl": "https://github.com/Trixarian/NetherSX2-patch",
     "authorUrl": "https://github.com/Trixarian"
   }
