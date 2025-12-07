@@ -89,10 +89,10 @@ const Search = () => {
           <View className="flex-1 flex-row items-center justify-between">
             <View>
               <Text className="text-2xl font-bold text-white leading-snug">
-                Search Apps
+                Discover Apps
               </Text>
               <Text className="font-medium text-primary">
-                Find Your Apps Here
+                Explore Library of Apps
               </Text>
             </View>
           </View>

@@ -14,10 +14,10 @@ const About = () => {
           <View className="flex-1 flex-row items-center justify-between">
             <View>
               <Text className="text-2xl font-bold text-white leading-snug">
-                Dragon Store
+                About Developer
               </Text>
               <Text className="font-medium text-primary">
-                Know More About Us
+                Know More About Developer
               </Text>
             </View>
           </View>

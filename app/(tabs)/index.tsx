@@ -38,10 +38,10 @@ const Home = () => {
           <View className="flex-1 flex-row items-center justify-between">
             <View>
               <Text className="text-2xl font-bold text-white leading-snug">
-                Discover Apps
+                Dragon Store
               </Text>
               <Text className="font-medium text-primary">
-                Explore Library of Mod Apps
+                Discover Trending Apps
               </Text>
             </View>
           </View>
