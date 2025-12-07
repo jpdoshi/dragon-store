@@ -1,12 +1,12 @@
 import AppBar from "@/components/AppBar";
-import AppContainer from "@/components/AppContainer";
+import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
 import parsePopularity from "@/utils/parsePopularity";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FlatList, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 
 const Home = () => {
   const [appList, setAppList] = useState<AppMetaData[]>([]);
@@ -30,37 +30,33 @@ const Home = () => {
 
   return (
     <ScreenView>
-      <AppBar>
-        <View className="flex-1 flex-row items-center justify-between">
-          <View>
-            <Text className="text-2xl font-bold text-white leading-snug">
-              Discover Apps
-            </Text>
-            <Text className="font-medium text-primary">
-              Explore Library of Mod Apps
-            </Text>
+      <ScrollView
+        stickyHeaderIndices={[0]}
+        showsVerticalScrollIndicator={false}
+      >
+        <AppBar>
+          <View className="flex-1 flex-row items-center justify-between">
+            <View>
+              <Text className="text-2xl font-bold text-white leading-snug">
+                Discover Apps
+              </Text>
+              <Text className="font-medium text-primary">
+                Explore Library of Mod Apps
+              </Text>
+            </View>
           </View>
+        </AppBar>
+        <View className="h-8" />
+
+        <View className="px-5">
+          <Text className="text-white font-medium text-2xl mb-5">
+            Popular Repos
+          </Text>
+
+          <AppsList appData={appList} />
         </View>
-      </AppBar>
 
-      {/* Page Content */}
-      <ScrollView showsVerticalScrollIndicator={false} className="px-5">
-        <View className="h-10" />
-
-        <Text className="text-white font-medium text-3xl mb-5">
-          Popular Repos
-        </Text>
-
-        <FlatList
-          data={appList}
-          scrollEnabled={false}
-          renderItem={({ item }: { item: AppMetaData }) => (
-            <AppContainer AppData={item} />
-          )}
-          keyExtractor={(item) => item.id.toString()}
-        />
-
-        <View className="h-28" />
+        <View className="h-24" />
       </ScrollView>
     </ScreenView>
   );

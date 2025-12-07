@@ -1,3 +1,4 @@
+import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
 import { router } from "expo-router";
 import React from "react";
@@ -17,10 +18,10 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
-          src={AppData.iconUrl}
-          height={50}
-          width={50}
-          className="rounded-xl"
+          src={config.ICON_REPO_URL + AppData.iconUrl}
+          height={54}
+          width={54}
+          className="rounded-2xl"
         />
         <View className="flex-1 flex-col">
           <Text className="text-white text-lg font-semibold leading-snug">
@@ -28,10 +29,11 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           </Text>
           <View className="flex-row items-center gap-2">
             <Text className="text-sm font-medium text-rose-500 leading-tight">
-              {AppData.category}
+              {AppData.category.charAt(0).toUpperCase() +
+                AppData.category.slice(1)}
             </Text>
           </View>
-          <Text className="text-gray-400 text-sm">{AppData.author}</Text>
+          <Text className="text-stone-400 text-sm">{AppData.author}</Text>
         </View>
         <View className="size-10 p-2.5 rounded-full bg-[rgba(236,0,63,0.1)]">
           <Svg
