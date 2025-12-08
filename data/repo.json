@@ -458,5 +458,125 @@
     "description": "Obsidian Mobile is your second brain on the go. Available for free on iOS and Android.",
     "icon": "obsidian.png",
     "repoUrl": "https://obsidian.md/mobile"
+  },
+  {
+    "id": "198951",
+    "title": "Hail",
+    "author": "aistra0528",
+    "category": "tools",
+    "popularity": "4.7k",
+    "description": "Disable / Hide / Suspend / Uninstall Android apps without root.",
+    "icon": "hail.png",
+    "repoUrl": "https://github.com/aistra0528/Hail"
+  },
+  {
+    "id": "058946",
+    "title": "AntiSplit M",
+    "author": "AbdurazaaqMohammed",
+    "category": "tools",
+    "popularity": "3.3k",
+    "description": "App to AntiSplit (merge) split APKs (APKS/XAPK/APKM) to regular .APK file on Android",
+    "icon": "antisplit-m.png",
+    "repoUrl": "https://github.com/AbdurazaaqMohammed/AntiSplit-M"
+  },
+  {
+    "id": "583539",
+    "title": "AdAway",
+    "author": "AdAway",
+    "category": "internet",
+    "popularity": "8.6k",
+    "description": "AdAway is a free and open source ad blocker for Android.",
+    "icon": "adaway.png",
+    "repoUrl": "https://github.com/AdAway/AdAway"
+  },
+  {
+    "id": "198864",
+    "title": "MpvEx",
+    "author": "marlboro-advance",
+    "category": "media",
+    "popularity": "325",
+    "description": "A beautiful media player for android, based on mpv-android and built with Jetpack Compose. Forked from mpvKt",
+    "icon": "mpvex.png",
+    "repoUrl": "https://github.com/marlboro-advance/mpvEx"
+  },
+  {
+    "id": "594932",
+    "title": "Metrolist",
+    "author": "mostafaalagamy",
+    "category": "streaming",
+    "popularity": "5k",
+    "description": "YouTube Music client for Android",
+    "icon": "metrolist.png",
+    "repoUrl": "https://github.com/mostafaalagamy/Metrolist"
+  },
+  {
+    "id": "058843",
+    "title": "Fossify Gallery",
+    "author": "FossifyOrg",
+    "category": "media",
+    "popularity": "2.8k",
+    "description": "Browse your memories without any interruptions with this photo and video gallery",
+    "icon": "fossify-gallery.png",
+    "repoUrl": "https://github.com/FossifyOrg/Gallery"
+  },
+  {
+    "id": "234071",
+    "title": "Fossify Phone",
+    "author": "FossifyOrg",
+    "category": "tools",
+    "popularity": "984",
+    "description": "A handy phone call manager with phonebook, number blocking and multi-SIM support",
+    "icon": "fossify-phone.png",
+    "repoUrl": "https://github.com/FossifyOrg/Phone"
+  },
+  {
+    "id": "391337",
+    "title": "Infinity For Reddit+",
+    "author": "Docile-Alligator",
+    "category": "social",
+    "popularity": "5.1k",
+    "description": "A Reddit client for Android",
+    "icon": "infinity.png",
+    "repoUrl": "https://github.com/Docile-Alligator/Infinity-For-Reddit"
+  },
+  {
+    "id": "139814",
+    "title": "Pixel Play",
+    "author": "theovilardo",
+    "category": "media",
+    "popularity": "1.3k",
+    "description": "Material3 Music Player for android phones",
+    "icon": "pixelplay.png",
+    "repoUrl": "https://github.com/theovilardo/PixelPlay"
+  },
+  {
+    "id": "325031",
+    "title": "Installer X Revived",
+    "author": "wxxsfxyzm",
+    "category": "tools",
+    "popularity": "2.6k",
+    "description": "More Expressive InstallerX !",
+    "icon": "installer-x-revived.png",
+    "repoUrl": "https://github.com/wxxsfxyzm/InstallerX-Revived"
+  },
+  {
+    "id": "185516",
+    "title": "App Manager",
+    "author": "MuntashirAkon",
+    "category": "tools",
+    "popularity": "7k",
+    "description": "A full-featured package manager and viewer for Android",
+    "icon": "appmanager.png",
+    "repoUrl": "https://github.com/MuntashirAkon/AppManager"
+  },
+  {
+    "id": "942493",
+    "title": "SD Maid SE",
+    "author": "d4arken-org",
+    "category": "tools",
+    "popularity": "5.7k",
+    "description": "SD Maid 2/SE is Android's most thorough cleaning tool.",
+    "icon": "sdmaid-se.png",
+    "repoUrl": "https://github.com/d4rken-org/sdmaid-se"
   }
 ]
