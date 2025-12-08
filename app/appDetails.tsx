@@ -211,8 +211,8 @@ const appDetails = () => {
           )}
 
           {githubData && (
-            <View className="mb-5">
-              <Text className="text-white text-xl font-semibold mb-4">
+            <View className="mb-4">
+              <Text className="text-white text-2xl font-medium mb-4">
                 GitHub Repo
               </Text>
 
@@ -249,7 +249,7 @@ const appDetails = () => {
 
           {!loadingData && (
             <View className="flex-row items-center gap-4">
-              {githubData && githubData.homepage.startsWith("https://") && (
+              {githubData && githubData?.homepage?.startsWith("https://") && (
                 <TouchableOpacity
                   onPress={async () =>
                     await openBrowserAsync(githubData.homepage)
@@ -270,8 +270,8 @@ const appDetails = () => {
                       />
                     </Svg>
                   </View>
-                  <Text className="text-black text-base font-medium">
-                    Go to Website
+                  <Text className="text-black text-base font-semibold">
+                    App Website
                   </Text>
                 </TouchableOpacity>
               )}
@@ -302,10 +302,128 @@ const appDetails = () => {
                     />
                   </Svg>
                 </View>
-                <Text className="text-white text-base font-medium">
+                <Text className="text-white text-base font-semibold">
                   Latest APK
                 </Text>
               </TouchableOpacity>
+            </View>
+          )}
+
+          <View className="h-12" />
+
+          {!loadingData && (
+            <View>
+              <Text className="text-white text-2xl font-medium mb-2">
+                About App
+              </Text>
+              <Text className="text-lg text-neutral-400">
+                {appData.description}
+              </Text>
+            </View>
+          )}
+
+          <View className="h-12" />
+
+          {!loadingData && (
+            <View>
+              <Text className="text-white text-2xl font-medium mb-4">
+                App Info
+              </Text>
+              <View className="flex-col gap-3">
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
+                  <Text className="text-white font-medium text-base">
+                    Popularity
+                  </Text>
+                  <Text className="text-neutral-400 font-medium text-base">
+                    {githubData
+                      ? formatPopularity(githubData.stargazers_count)
+                      : appData.popularity}
+                  </Text>
+                </View>
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
+                  <Text className="text-white font-medium text-base">
+                    Download Source
+                  </Text>
+                  <Text className="text-neutral-400 font-medium text-base">
+                    {new URL(appData.repoUrl).hostname}
+                  </Text>
+                </View>
+                {githubData && (
+                  <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
+                    <Text className="text-white font-medium text-base">
+                      Owner Profile
+                    </Text>
+                    <TouchableOpacity
+                      className="flex-row gap-1 items-center"
+                      onPress={async () => {
+                        if (
+                          appData.repoUrl.includes("github.com") &&
+                          githubData
+                        ) {
+                          await openBrowserAsync(githubData.owner.html_url);
+                        } else {
+                          await openBrowserAsync(
+                            `https://${new URL(appData.repoUrl).hostname}`
+                          );
+                        }
+                      }}
+                    >
+                      <Text className="text-rose-400 font-medium text-base">
+                        {`github.com/${githubData.owner.login}`}
+                      </Text>
+                      <View className="size-5">
+                        <Svg
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="#ff637e"
+                        >
+                          <Path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                          />
+                        </Svg>
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+                )}
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
+                  <Text className="text-white font-medium text-base">
+                    {githubData ? "Github Repo" : "Source URL"}
+                  </Text>
+                  <TouchableOpacity
+                    className="flex-row gap-1 items-center"
+                    onPress={async () => {
+                      if (appData.repoUrl.includes("github.com")) {
+                        await openBrowserAsync(appData.repoUrl);
+                      } else {
+                        await openBrowserAsync(
+                          `https://${new URL(appData.repoUrl).hostname}`
+                        );
+                      }
+                    }}
+                  >
+                    <Text className="text-rose-400 font-medium text-base">
+                      {githubData ? githubData.full_name : appData.author}
+                    </Text>
+                    <View className="size-5">
+                      <Svg
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="#ff637e"
+                      >
+                        <Path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                        />
+                      </Svg>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
             </View>
           )}
         </Animated.View>
