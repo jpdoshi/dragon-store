@@ -1,6 +1,7 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
+import convertDate from "@/utils/convertDate";
 import formatPopularity from "@/utils/formatPopularity";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
@@ -10,6 +11,7 @@ import {
   ActivityIndicator,
   Image,
   ScrollView,
+  Share,
   Text,
   TouchableOpacity,
   View,
@@ -50,7 +52,12 @@ const appDetails = () => {
       if (appData.repoUrl.includes("github")) {
         setLoadingData(true);
         const fetchedXHR = await axios.get(
-          appData.repoUrl.replace("github.com/", "api.github.com/repos/")
+          appData.repoUrl.replace("github.com/", "api.github.com/repos/"),
+          {
+            headers: {
+              Authorization: `token ${config.GITHUB_TOKEN}`,
+            },
+          }
         );
 
         if (fetchedXHR?.data) setGithubData(fetchedXHR?.data);
@@ -112,9 +119,25 @@ const appDetails = () => {
             </View>
 
             {/* Action buttons */}
-            <View className="flex-row items-center gap-4">
+            <View className="flex-row items-center gap-5">
               {/* Share icon (unchanged) */}
-              <TouchableOpacity className="size-5">
+              <TouchableOpacity
+                onPress={async () => {
+                  try {
+                    await Share.share(
+                      {
+                        message: appData.repoUrl,
+                        url: appData.repoUrl,
+                        title: "Share or Copy App URL",
+                      },
+                      { dialogTitle: "Share or Copy App URL" }
+                    );
+                  } catch (error) {
+                    console.log("Error sharing URL:", error);
+                  }
+                }}
+                className="size-5"
+              >
                 <Svg viewBox="0 0 24 24" fill="#fff">
                   <Path
                     fillRule="evenodd"
@@ -151,7 +174,7 @@ const appDetails = () => {
         <View className="h-5" />
 
         <View className="px-5">
-          <View className="flex-row gap-5 items-center mb-8">
+          <View className="flex-row gap-5 items-center mb-10">
             <Image
               src={config.ICON_REPO_URL + appData.icon}
               height={90}
@@ -185,11 +208,11 @@ const appDetails = () => {
 
           {githubData && (
             <View>
-              <Text className="text-white text-xl font-medium mb-2">
-                Github Info
+              <Text className="text-white text-xl font-medium mb-3">
+                Github Repo Info
               </Text>
 
-              <View className="h-[80px] flex-1 bg-[#181818] rounded-xl px-4 flex-row gap-4 justify-evenly">
+              <View className="h-[80px] flex-1 bg-[#181818] rounded-xl px-4 flex-row gap-3 items-center justify-around">
                 <View className="flex-col justify-center items-center">
                   <Text className="font-bold text-white text-lg">
                     {formatPopularity(githubData.stargazers_count)}
@@ -198,20 +221,22 @@ const appDetails = () => {
                     Stargazers
                   </Text>
                 </View>
+                <View className="h-10 w-[2px] bg-neutral-700" />
                 <View className="flex-col justify-center items-center">
                   <Text className="font-bold text-white text-lg">
                     {formatPopularity(githubData.forks_count)}
                   </Text>
                   <Text className="font-medium text-sm text-neutral-400">
-                    Forks
+                    Repo Forks
                   </Text>
                 </View>
+                <View className="h-10 w-[2px] bg-neutral-700" />
                 <View className="flex-col justify-center items-center">
                   <Text className="font-bold text-white text-lg">
-                    {githubData.updated_at}
+                    {convertDate(githubData.pushed_at)} ago
                   </Text>
                   <Text className="font-medium text-sm text-neutral-400">
-                    Last Updated
+                    Last Commit
                   </Text>
                 </View>
               </View>
