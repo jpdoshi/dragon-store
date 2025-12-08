@@ -47,9 +47,12 @@ const Favorites = () => {
           </View>
         </AppBar>
 
-        <View className="h-5" />
+        <View className="h-8" />
 
         <View className="px-5">
+          <Text className="text-2xl font-medium text-white mb-5">
+            Your Favorites
+          </Text>
           <AppsList appData={appList} />
         </View>
 

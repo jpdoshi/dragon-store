@@ -27,6 +27,11 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
       renderItem={({ item }) => <AppContainer AppData={item} />}
       keyExtractor={(item) => item.id.toString()}
       scrollEnabled={false}
+      ListEmptyComponent={() => (
+        <Text className="text-neutral-400 text-lg font-medium mt-24 text-center">
+          No Items to show
+        </Text>
+      )}
       ListFooterComponent={
         visible.length < appData.length ? (
           <View style={{ paddingVertical: 12 }}>

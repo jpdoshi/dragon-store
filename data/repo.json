@@ -438,5 +438,15 @@
     "description": "Continuation of NetherSX2 based on AetherSX2 4248",
     "icon": "nethersx2.png",
     "repoUrl": "https://github.com/Trixarian/NetherSX2-patch"
+  },
+  {
+    "id": "202198",
+    "title": "Shizuku",
+    "author": "RikkaApps",
+    "category": "tools",
+    "popularity": "19.4k",
+    "description": "Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.",
+    "icon": "shizuku.png",
+    "repoUrl": "https://github.com/RikkaApps/Shizuku"
   }
 ]
