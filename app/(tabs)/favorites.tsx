@@ -1,9 +1,33 @@
 import AppBar from "@/components/AppBar";
+import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
-import React from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFocusEffect } from "expo-router";
+import React, { useCallback, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 
+const FAVORITES_KEY = "favorite_apps";
+
 const Favorites = () => {
+  const [appList, setAppList] = useState([]);
+
+  // Load favorites every time user returns to this screen
+  useFocusEffect(
+    useCallback(() => {
+      loadFavorites();
+    }, [])
+  );
+
+  const loadFavorites = async () => {
+    try {
+      const saved = await AsyncStorage.getItem(FAVORITES_KEY);
+      const favorites = saved ? JSON.parse(saved) : [];
+      setAppList(favorites);
+    } catch (err) {
+      console.log("Error loading favorites:", err);
+    }
+  };
+
   return (
     <ScreenView>
       <ScrollView
@@ -25,7 +49,9 @@ const Favorites = () => {
 
         <View className="h-5" />
 
-        <View className="px-5"></View>
+        <View className="px-5">
+          <AppsList appData={appList} />
+        </View>
 
         <View className="h-24" />
       </ScrollView>

@@ -1,14 +1,54 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router, useLocalSearchParams } from "expo-router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
+
+const FAVORITES_KEY = "favorite_apps";
 
 const appDetails = () => {
   const { AppData } = useLocalSearchParams();
   const appData = JSON.parse(AppData.toString());
+
+  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+
+  // Load favorite state
+  useEffect(() => {
+    loadFavoriteState();
+  }, []);
+
+  const loadFavoriteState = async () => {
+    try {
+      const saved = await AsyncStorage.getItem(FAVORITES_KEY);
+      const favorites = saved ? JSON.parse(saved) : [];
+
+      const exists = favorites.some((item: any) => item.id === appData.id);
+      setIsFavorite(exists);
+    } catch (err) {
+      console.log("Error loading favorites:", err);
+    }
+  };
+
+  const toggleFavorite = async () => {
+    try {
+      const saved = await AsyncStorage.getItem(FAVORITES_KEY);
+      let favorites = saved ? JSON.parse(saved) : [];
+
+      if (isFavorite) {
+        favorites = favorites.filter((item: any) => item.id !== appData.id);
+      } else {
+        favorites.push(appData);
+      }
+
+      await AsyncStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+      setIsFavorite(!isFavorite);
+    } catch (err) {
+      console.log("Error updating favorites:", err);
+    }
+  };
 
   return (
     <ScreenView>
@@ -18,25 +58,67 @@ const appDetails = () => {
       >
         <AppBar>
           <View className="flex-1 flex-row items-center gap-4">
-            <TouchableOpacity onPress={() => router.back()} className="size-6">
-              <Svg
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="#ff2056"
+            <View className="flex-1 flex-row items-center gap-4">
+              <TouchableOpacity
+                onPress={() => router.back()}
+                className="size-6"
               >
-                <Path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                />
-              </Svg>
-            </TouchableOpacity>
-            <Text className="text-xl font-bold text-white leading-snug">
-              App Details
-            </Text>
+                <Svg
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="#ff2056"
+                >
+                  <Path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                  />
+                </Svg>
+              </TouchableOpacity>
+
+              <Text className="text-xl font-bold text-white leading-snug">
+                App Details
+              </Text>
+            </View>
+
+            {/* Action buttons */}
+            <View className="flex-row items-center gap-4">
+              {/* Share icon (unchanged) */}
+              <TouchableOpacity className="size-5">
+                <Svg viewBox="0 0 24 24" fill="#fff">
+                  <Path
+                    fillRule="evenodd"
+                    d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z"
+                    clipRule="evenodd"
+                  />
+                </Svg>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={toggleFavorite} className="size-6">
+                {isFavorite ? (
+                  <Svg viewBox="0 0 24 24" fill="#ff2056" className="size-6">
+                    <Path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                  </Svg>
+                ) : (
+                  <Svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="#fff"
+                  >
+                    <Path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </Svg>
+                )}
+              </TouchableOpacity>
+            </View>
           </View>
         </AppBar>
+
         <View className="h-5" />
 
         <View className="px-5">
