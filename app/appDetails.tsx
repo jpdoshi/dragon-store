@@ -1,10 +1,19 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
+import formatPopularity from "@/utils/formatPopularity";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import axios from "axios";
 import { router, useLocalSearchParams } from "expo-router";
 import React, { useEffect, useState } from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import {
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Svg, { Path } from "react-native-svg";
 
 const FAVORITES_KEY = "favorite_apps";
@@ -14,10 +23,14 @@ const appDetails = () => {
   const appData = JSON.parse(AppData.toString());
 
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const [loadingData, setLoadingData] = useState<boolean>(false);
+  const [githubData, setGithubData] = useState<any>(null);
+  const [releases, setReleases] = useState<any>(null);
 
   // Load favorite state
   useEffect(() => {
     loadFavoriteState();
+    loadGithubData();
   }, []);
 
   const loadFavoriteState = async () => {
@@ -29,6 +42,22 @@ const appDetails = () => {
       setIsFavorite(exists);
     } catch (err) {
       console.log("Error loading favorites:", err);
+    }
+  };
+
+  const loadGithubData = async () => {
+    try {
+      if (appData.repoUrl.includes("github")) {
+        setLoadingData(true);
+        const fetchedXHR = await axios.get(
+          appData.repoUrl.replace("github.com/", "api.github.com/repos/")
+        );
+
+        if (fetchedXHR?.data) setGithubData(fetchedXHR?.data);
+        setLoadingData(false);
+      }
+    } catch (err) {
+      console.log("Error loading github info: ", err);
     }
   };
 
@@ -145,6 +174,49 @@ const appDetails = () => {
               </View>
             </View>
           </View>
+
+          {loadingData && (
+            <ActivityIndicator
+              size={"large"}
+              color={"#ff2056"}
+              className="mt-24"
+            />
+          )}
+
+          {githubData && (
+            <View>
+              <Text className="text-white text-xl font-medium mb-2">
+                Github Info
+              </Text>
+
+              <View className="h-[80px] flex-1 bg-[#181818] rounded-xl px-4 flex-row gap-4 justify-evenly">
+                <View className="flex-col justify-center items-center">
+                  <Text className="font-bold text-white text-lg">
+                    {formatPopularity(githubData.stargazers_count)}
+                  </Text>
+                  <Text className="font-medium text-sm text-neutral-400">
+                    Stargazers
+                  </Text>
+                </View>
+                <View className="flex-col justify-center items-center">
+                  <Text className="font-bold text-white text-lg">
+                    {formatPopularity(githubData.forks_count)}
+                  </Text>
+                  <Text className="font-medium text-sm text-neutral-400">
+                    Forks
+                  </Text>
+                </View>
+                <View className="flex-col justify-center items-center">
+                  <Text className="font-bold text-white text-lg">
+                    {githubData.updated_at}
+                  </Text>
+                  <Text className="font-medium text-sm text-neutral-400">
+                    Last Updated
+                  </Text>
+                </View>
+              </View>
+            </View>
+          )}
         </View>
 
         <View className="h-24" />

@@ -448,5 +448,15 @@
     "description": "Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.",
     "icon": "shizuku.png",
     "repoUrl": "https://github.com/RikkaApps/Shizuku"
+  },
+  {
+    "id": "285148",
+    "title": "Obsidian",
+    "author": "obsidianmd",
+    "category": "tools",
+    "popularity": "13.7k",
+    "description": "Obsidian Mobile is your second brain on the go. Available for free on iOS and Android.",
+    "icon": "obsidian.png",
+    "repoUrl": "https://obsidian.md/mobile"
   }
 ]
