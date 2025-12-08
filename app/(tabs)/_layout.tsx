@@ -34,7 +34,7 @@ const Layout = () => {
         },
         tabBarBackground: () => (
           <BlurView
-            intensity={45}
+            intensity={40}
             experimentalBlurMethod="dimezisBlurView"
             tint="dark"
             style={{

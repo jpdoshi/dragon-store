@@ -3,11 +3,15 @@ import { AppMetaData } from "@/types/AppMetaData";
 import { router } from "expo-router";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
+import Animated, { FadeInDown } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
+
+const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 
 const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
   return (
-    <TouchableOpacity
+    <AnimatedTouchable
+      entering={FadeInDown.duration(450).springify()}
       onPress={() =>
         router.push({
           pathname: "/appDetails",
@@ -23,18 +27,22 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           width={54}
           className="rounded-2xl"
         />
+
         <View className="flex-1 flex-col">
           <Text className="text-white text-lg font-semibold leading-snug">
             {AppData.title}
           </Text>
+
           <View className="flex-row items-center gap-2">
             <Text className="text-sm font-medium text-rose-500 leading-tight">
               {AppData.category.charAt(0).toUpperCase() +
                 AppData.category.slice(1)}
             </Text>
           </View>
+
           <Text className="text-stone-400 text-sm">{AppData.author}</Text>
         </View>
+
         <View className="size-10 p-2.5 rounded-full bg-[rgba(236,0,63,0.1)]">
           <Svg
             fill="none"
@@ -50,7 +58,7 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           </Svg>
         </View>
       </View>
-    </TouchableOpacity>
+    </AnimatedTouchable>
   );
 };
 
