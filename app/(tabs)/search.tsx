@@ -154,23 +154,19 @@ const Search = () => {
           </View>
 
           {/* Categories */}
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            className="mb-8"
-          >
+          <View className="flex-row flex-wrap gap-2 mb-8">
             {categoriesList.map((item, index) => (
               <TouchableOpacity
                 key={index}
                 onPress={() => setCategory(item)}
-                className={`${category == item ? "bg-rose-500" : "bg-[#212121]"} rounded-lg py-2 px-3.5 mx-1`}
+                className={`${category == item ? "bg-rose-500" : "bg-[#212121]"} rounded-lg py-1.5 px-3`}
               >
                 <Text className="text-white font-semibold">
                   {item ? item.charAt(0).toUpperCase() + item.slice(1) : "All"}
                 </Text>
               </TouchableOpacity>
             ))}
-          </ScrollView>
+          </View>
 
           <View className="flex-row items-center justify-between mb-5">
             <Text className="text-white text-2xl font-medium">

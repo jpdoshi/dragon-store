@@ -25,7 +25,9 @@ async function run() {
     const category = await ask("Enter Category: ");
     const popularity = await ask("Enter Popularity: ");
     const description = await ask("Enter App Description: ");
-    const icon = await ask("Enter Icon URL: ");
+    const icon = await ask(
+      "Enter Icon Name (image.png stored in data/icons): "
+    );
     const repoUrl = await ask("Enter Source/Repo URL: ");
 
     // Read existing JSON or start with empty array
@@ -50,7 +52,8 @@ async function run() {
     // Save JSON
     await fs.writeFile("./data/repo.json", JSON.stringify(data, null, 2));
 
-    console.log("Data saved!");
+    console.log("\nData saved!");
+    console.log("Commit and Push code to update app in the repo");
     rl.close();
   } catch (err) {
     console.error(err);

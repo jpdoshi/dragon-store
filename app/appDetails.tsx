@@ -6,6 +6,7 @@ import formatPopularity from "@/utils/formatPopularity";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { router, useLocalSearchParams } from "expo-router";
+import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
@@ -16,6 +17,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
 const FAVORITES_KEY = "favorite_apps";
@@ -27,7 +29,6 @@ const appDetails = () => {
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
   const [loadingData, setLoadingData] = useState<boolean>(false);
   const [githubData, setGithubData] = useState<any>(null);
-  const [releases, setReleases] = useState<any>(null);
 
   // Load favorite state
   useEffect(() => {
@@ -156,7 +157,7 @@ const appDetails = () => {
                   <Svg
                     fill="none"
                     viewBox="0 0 24 24"
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                     stroke="#fff"
                   >
                     <Path
@@ -173,7 +174,10 @@ const appDetails = () => {
 
         <View className="h-5" />
 
-        <View className="px-5">
+        <Animated.View
+          entering={FadeIn.delay(200).duration(400)}
+          className="px-5"
+        >
           <View className="flex-row gap-5 items-center mb-10">
             <Image
               src={config.ICON_REPO_URL + appData.icon}
@@ -186,7 +190,7 @@ const appDetails = () => {
               <Text className="text-white font-bold text-2xl leading-tight">
                 {appData.title}
               </Text>
-              <Text className="text-stone-400 text-xl font-medium mb-2">
+              <Text className="text-neutral-400 text-xl font-medium mb-2">
                 {appData.author}
               </Text>
               <View className="bg-[rgba(236,0,63,0.2)] px-1.5 rounded border border-rose-500 self-start">
@@ -207,9 +211,9 @@ const appDetails = () => {
           )}
 
           {githubData && (
-            <View>
-              <Text className="text-white text-xl font-medium mb-3">
-                Github Repo Info
+            <View className="mb-5">
+              <Text className="text-white text-xl font-semibold mb-4">
+                GitHub Repo
               </Text>
 
               <View className="h-[80px] flex-1 bg-[#181818] rounded-xl px-4 flex-row gap-3 items-center justify-around">
@@ -242,7 +246,69 @@ const appDetails = () => {
               </View>
             </View>
           )}
-        </View>
+
+          {!loadingData && (
+            <View className="flex-row items-center gap-4">
+              {githubData && githubData.homepage.startsWith("https://") && (
+                <TouchableOpacity
+                  onPress={async () =>
+                    await openBrowserAsync(githubData.homepage)
+                  }
+                  className="h-[45px] flex-1 flex-row rounded-xl bg-white justify-center items-center gap-1"
+                >
+                  <View className="size-5">
+                    <Svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="#000"
+                    >
+                      <Path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                      />
+                    </Svg>
+                  </View>
+                  <Text className="text-black text-base font-medium">
+                    Go to Website
+                  </Text>
+                </TouchableOpacity>
+              )}
+
+              <TouchableOpacity
+                onPress={async () => {
+                  if (appData.repoUrl.includes("github.com")) {
+                    await openBrowserAsync(
+                      `${appData.repoUrl}/releases/latest`
+                    );
+                  } else {
+                    await openBrowserAsync(appData.repoUrl);
+                  }
+                }}
+                className="h-[45px] flex-1 flex-row rounded-xl bg-rose-500 justify-center items-center gap-1"
+              >
+                <View className="size-5">
+                  <Svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="#fff"
+                  >
+                    <Path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                    />
+                  </Svg>
+                </View>
+                <Text className="text-white text-base font-medium">
+                  Latest APK
+                </Text>
+              </TouchableOpacity>
+            </View>
+          )}
+        </Animated.View>
 
         <View className="h-24" />
       </ScrollView>

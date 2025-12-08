@@ -18,9 +18,9 @@ const convertDate = (dateString: string): string => {
   } else if (days < 30) {
     return `${Math.round(days / 7)}w`;
   } else if (days < 365) {
-    return `${Math.round(days / 30)} mo(s)`;
+    return `${Math.round(days / 30)} mo`;
   } else {
-    return `${(days / 365).toFixed(1)} yr(s)`;
+    return `${(days / 365).toFixed(1)} yr`;
   }
 };
 
