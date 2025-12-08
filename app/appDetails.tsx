@@ -42,7 +42,7 @@ const appDetails = () => {
         <View className="px-5">
           <View className="flex-row gap-5 items-center mb-8">
             <Image
-              src={config.ICON_REPO_URL + appData.iconUrl}
+              src={config.ICON_REPO_URL + appData.icon}
               height={90}
               width={90}
               className="rounded-3xl"

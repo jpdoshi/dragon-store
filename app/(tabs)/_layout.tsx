@@ -29,12 +29,12 @@ const Layout = () => {
           height: 54,
           paddingTop: "auto",
           paddingBottom: "auto",
-          borderRadius: 48,
+          borderRadius: 54,
           overflow: "hidden",
         },
         tabBarBackground: () => (
           <BlurView
-            intensity={65}
+            intensity={45}
             experimentalBlurMethod="dimezisBlurView"
             tint="dark"
             style={{

@@ -18,7 +18,7 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
-          src={config.ICON_REPO_URL + AppData.iconUrl}
+          src={config.ICON_REPO_URL + AppData.icon}
           height={54}
           width={54}
           className="rounded-2xl"

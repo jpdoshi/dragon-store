@@ -23,11 +23,10 @@ async function run() {
     const title = await ask("Enter Title: ");
     const author = await ask("Enter Author: ");
     const category = await ask("Enter Category: ");
-    const popularity = await ask("Enter Popularity(0-10): ");
+    const popularity = await ask("Enter Popularity: ");
     const description = await ask("Enter App Description: ");
-    const iconUrl = await ask("Enter Icon URL: ");
+    const icon = await ask("Enter Icon URL: ");
     const repoUrl = await ask("Enter Source/Repo URL: ");
-    const authorUrl = await ask("Enter Author URL: ");
 
     // Read existing JSON or start with empty array
     let data = [];
@@ -44,9 +43,8 @@ async function run() {
       category,
       popularity,
       description,
-      iconUrl,
+      icon,
       repoUrl,
-      authorUrl,
     });
 
     // Save JSON
