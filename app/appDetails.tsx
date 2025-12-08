@@ -222,19 +222,19 @@ const appDetails = () => {
                     {formatPopularity(githubData.stargazers_count)}
                   </Text>
                   <Text className="font-medium text-sm text-neutral-400">
-                    Stargazers
+                    Stars
                   </Text>
                 </View>
-                <View className="h-10 w-[2px] bg-neutral-700" />
+                <View className="h-10 w-[1px] bg-neutral-700" />
                 <View className="flex-col justify-center items-center">
                   <Text className="font-bold text-white text-lg">
                     {formatPopularity(githubData.forks_count)}
                   </Text>
                   <Text className="font-medium text-sm text-neutral-400">
-                    Repo Forks
+                    Forks
                   </Text>
                 </View>
-                <View className="h-10 w-[2px] bg-neutral-700" />
+                <View className="h-10 w-[1px] bg-neutral-700" />
                 <View className="flex-col justify-center items-center">
                   <Text className="font-bold text-white text-lg">
                     {convertDate(githubData.pushed_at)} ago
@@ -271,7 +271,7 @@ const appDetails = () => {
                     </Svg>
                   </View>
                   <Text className="text-black text-base font-semibold">
-                    App Website
+                    Homepage
                   </Text>
                 </TouchableOpacity>
               )}
@@ -313,7 +313,7 @@ const appDetails = () => {
 
           {!loadingData && (
             <View>
-              <Text className="text-white text-2xl font-medium mb-2">
+              <Text className="text-white text-2xl font-medium mb-4">
                 About App
               </Text>
               <Text className="text-lg text-neutral-400">
@@ -345,7 +345,10 @@ const appDetails = () => {
                     Download Source
                   </Text>
                   <Text className="text-neutral-400 font-medium text-base">
-                    {new URL(appData.repoUrl).hostname}
+                    {appData.repoUrl.includes("github.com") ||
+                    appData.repoUrl.includes("gitlab.com")
+                      ? new URL(appData.repoUrl).hostname
+                      : "Official Website"}
                   </Text>
                 </View>
                 {githubData && (
@@ -390,12 +393,18 @@ const appDetails = () => {
                 )}
                 <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
                   <Text className="text-white font-medium text-base">
-                    {githubData ? "Github Repo" : "Source URL"}
+                    {appData.repoUrl.includes("github.com") ||
+                    appData.repoUrl.includes("gitlab.com")
+                      ? "Repo URL"
+                      : "Homepage URL"}
                   </Text>
                   <TouchableOpacity
                     className="flex-row gap-1 items-center"
                     onPress={async () => {
-                      if (appData.repoUrl.includes("github.com")) {
+                      if (
+                        appData.repoUrl.includes("github.com") ||
+                        appData.repoUrl.includes("gitlab.com")
+                      ) {
                         await openBrowserAsync(appData.repoUrl);
                       } else {
                         await openBrowserAsync(
@@ -405,7 +414,9 @@ const appDetails = () => {
                     }}
                   >
                     <Text className="text-rose-400 font-medium text-base">
-                      {githubData ? githubData.full_name : appData.author}
+                      {githubData
+                        ? githubData.full_name
+                        : new URL(appData.repoUrl).hostname}
                     </Text>
                     <View className="size-5">
                       <Svg
