@@ -3,7 +3,6 @@ import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
-import parsePopularity from "@/utils/parsePopularity";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
@@ -16,12 +15,11 @@ const Home = () => {
       const fetchedXHR = await axios.get(config.JSON_REPO_URL);
 
       if (fetchedXHR?.data) {
-        const sorted = [...fetchedXHR.data].sort(
-          (a, b) =>
-            parsePopularity(b.popularity) - parsePopularity(a.popularity)
+        const sorted = [...fetchedXHR.data].sort((a, b) =>
+          a.title.localeCompare(b.title)
         );
 
-        setAppList(sorted.slice(0, 10)); // top 10
+        setAppList(sorted.slice(0, 10));
       }
     };
 
