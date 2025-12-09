@@ -28,6 +28,7 @@ async function run() {
       "Enter Icon Name (image.png stored in data/icons): "
     );
     const repoUrl = await ask("Enter Source/Repo URL: ");
+    const website = await ask("Enter Website URL: ");
 
     // Read existing JSON or start with empty array
     let data = [];
@@ -45,6 +46,7 @@ async function run() {
       about,
       icon: icon.endsWith(".png") ? icon : `${icon}.png`,
       repoUrl,
+      website,
     });
 
     // Save JSON

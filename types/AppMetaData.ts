@@ -6,4 +6,5 @@ export type AppMetaData = {
   about: string;
   icon: string;
   repoUrl: string;
+  website?: string;
 };

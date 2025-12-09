@@ -66,30 +66,21 @@ const appDetails = () => {
         showsVerticalScrollIndicator={false}
       >
         <AppBar>
-          <View className="flex-1 flex-row items-center gap-4">
-            <View className="flex-1 flex-row items-center gap-4">
-              <TouchableOpacity
-                onPress={() => router.back()}
-                className="size-6"
+          <View className="flex-1 flex-row items-center justify-between gap-4">
+            <TouchableOpacity onPress={() => router.back()} className="size-6">
+              <Svg
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="#ff2056"
               >
-                <Svg
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="#ff2056"
-                >
-                  <Path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                  />
-                </Svg>
-              </TouchableOpacity>
-
-              <Text className="text-xl font-bold text-white leading-snug">
-                App Details
-              </Text>
-            </View>
+                <Path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </Svg>
+            </TouchableOpacity>
 
             {/* Action buttons */}
             <View className="flex-row items-center gap-5">
@@ -162,11 +153,11 @@ const appDetails = () => {
               <Text className="text-white font-bold text-2xl leading-tight">
                 {appData.title}
               </Text>
-              <Text className="text-neutral-400 text-xl font-medium mb-2">
+              <Text className="text-neutral-400 text-xl font-medium mb-1.5">
                 {appData.owner}
               </Text>
-              <View className="bg-[rgba(236,0,63,0.2)] px-1.5 rounded border border-rose-500 self-start">
-                <Text className="text-rose-500 text-sm font-medium">
+              <View className="bg-rose-500 py-1 px-2 rounded-lg self-start">
+                <Text className="text-black font-bold">
                   {appData.category.charAt(0).toUpperCase() +
                     appData.category.slice(1)}
                 </Text>
@@ -174,112 +165,74 @@ const appDetails = () => {
             </View>
           </View>
 
-          <View className="mb-4">
-            <Text className="text-white text-2xl font-medium mb-4">
-              GitHub Repo
+          <View>
+            <Text className="text-white text-xl font-medium mb-3">
+              App Info
             </Text>
 
             <View className="h-[80px] flex-1 bg-[#181818] rounded-xl px-4 flex-row gap-3 items-center justify-around">
-              <View className="flex-col justify-center items-center">
-                <Text className="font-bold text-white text-lg">
-                  Android Icon
-                </Text>
+              <View className="flex-col gap-1.5 justify-center items-center">
+                <Image
+                  source={require("@/data/assets/android.png")}
+                  className="size-7"
+                />
                 <Text className="font-medium text-sm text-neutral-400">
                   Platform
                 </Text>
               </View>
               <View className="h-10 w-[1px] bg-neutral-700" />
-              <View className="flex-col justify-center items-center">
-                <Text className="font-bold text-white text-lg">
-                  Website Icon
-                </Text>
-                <Text className="font-medium text-sm text-neutral-400">
-                  Website
-                </Text>
-              </View>
-              <View className="h-10 w-[1px] bg-neutral-700" />
-              <View className="flex-col justify-center items-center">
-                <Text className="font-bold text-white text-lg">
-                  Download Icon
-                </Text>
-                <Text className="font-medium text-sm text-neutral-400">
-                  Latest APK
-                </Text>
-              </View>
-            </View>
-          </View>
-
-          <View className="flex-row items-center gap-4">
-            {appData.homepage && (
-              <TouchableOpacity
-                onPress={async () => await openBrowserAsync(appData.homepage)}
-                className="h-[45px] flex-1 flex-row rounded-xl bg-white justify-center items-center gap-1"
-              >
-                <View className="size-5">
+              {appData.website?.trim() && (
+                <TouchableOpacity className="flex-col gap-1.5 justify-center items-center">
+                  <View className="size-7">
+                    <Svg viewBox="0 0 24 24" fill="#fff">
+                      <Path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
+                    </Svg>
+                  </View>
+                  <Text className="font-medium text-sm text-neutral-400">
+                    Website
+                  </Text>
+                </TouchableOpacity>
+              )}
+              {appData.website?.trim() && (
+                <View className="h-10 w-[1px] bg-neutral-700" />
+              )}
+              <TouchableOpacity className="flex-col gap-1.5 justify-center items-center">
+                <View className="size-7">
                   <Svg
                     fill="none"
                     viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="#000"
+                    strokeWidth={1.5}
+                    stroke="#fff"
                   >
                     <Path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                     />
                   </Svg>
                 </View>
-                <Text className="text-black text-base font-semibold">
-                  Homepage
+                <Text className="font-medium text-sm text-neutral-400">
+                  Latest APK
                 </Text>
               </TouchableOpacity>
-            )}
-
-            <TouchableOpacity
-              onPress={async () => {
-                if (appData.repoUrl.includes("github.com")) {
-                  await openBrowserAsync(`${appData.repoUrl}/releases/latest`);
-                } else {
-                  await openBrowserAsync(appData.repoUrl);
-                }
-              }}
-              className="h-[45px] flex-1 flex-row rounded-xl bg-rose-500 justify-center items-center gap-1"
-            >
-              <View className="size-5">
-                <Svg
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="#fff"
-                >
-                  <Path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-                  />
-                </Svg>
-              </View>
-              <Text className="text-white text-base font-semibold">
-                Latest APK
-              </Text>
-            </TouchableOpacity>
+            </View>
           </View>
 
-          <View className="h-12" />
+          <View className="h-10" />
 
           <View>
-            <Text className="text-white text-2xl font-medium mb-4">
+            <Text className="text-white text-xl font-medium mb-3">
               About App
             </Text>
-            <Text className="text-lg text-neutral-400">{appData.about}</Text>
+            <Text className="text-base text-neutral-400 leading-normal">
+              {appData.about}
+            </Text>
           </View>
 
-          <View className="h-12" />
+          <View className="h-10" />
 
           <View>
-            <Text className="text-white text-2xl font-medium mb-4">
-              App Info
-            </Text>
+            <Text className="text-white text-xl font-medium mb-3">More</Text>
             <View className="flex-col gap-3">
               <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
                 <Text className="text-white font-medium text-base">
