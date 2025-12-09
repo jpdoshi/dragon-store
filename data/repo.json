@@ -578,5 +578,25 @@
     "icon": "sdmaid-se.png",
     "repoUrl": "https://github.com/d4rken-org/sdmaid-se",
     "website": "https://play.google.com/store/apps/details?id=eu.darken.sdmse"
+  },
+  {
+    "id": "105151",
+    "title": "Z Archiver",
+    "owner": "zdevs.ru",
+    "category": "tools",
+    "about": "ZArchiver - is a program for archive management. It has a simple and functional interface. Allows you to work with various types of archives: 7zip, zip, bz2, gz2, tar and others.",
+    "icon": "zarchiver.png",
+    "repoUrl": "https://zdevs.ru/en/za/apk.html",
+    "website": "https://zdevs.ru/en/"
+  },
+  {
+    "id": "559606",
+    "title": "Material Files",
+    "owner": "zhanghai",
+    "category": "tools",
+    "about": "An open source Material Design file manager. Features: - Open source: Lightweight, clean and secure. - Material Design: Follows Material Design guidelines.",
+    "icon": "material-files.png",
+    "repoUrl": "https://github.com/zhanghai/MaterialFiles",
+    "website": "https://play.google.com/store/apps/details?id=me.zhanghai.android.files"
   }
 ]
