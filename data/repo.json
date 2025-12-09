@@ -4,8 +4,7 @@
     "title": "RVX Youtube",
     "author": "NoName-exe",
     "category": "streaming",
-    "popularity": "3.8k",
-    "description": "ReVanced eXtended YT and YT-M for both root and non-root users.",
+    "description": "ReVanced Extended is a forked version of the original ReVanced Project. With the Extended version, you can get more features not yet introduced in the official project.",
     "icon": "rvx-yt.png",
     "repoUrl": "https://github.com/NoName-exe/revanced-extended"
   },
@@ -14,8 +13,7 @@
     "title": "RVX YT Music",
     "author": "NoName-exe",
     "category": "streaming",
-    "popularity": "3.8k",
-    "description": "ReVanced eXtended YT and YT-M for both root and non-root users.",
+    "description": "ReVanced Extended is a forked version of the original ReVanced Project. With the Extended version, you can get more features not yet introduced in the official project.",
     "icon": "rvx-music.png",
     "repoUrl": "https://github.com/NoName-exe/revanced-extended"
   },
@@ -24,7 +22,6 @@
     "title": "NewPipe",
     "author": "TeamNewPipe",
     "category": "streaming",
-    "popularity": "35.8k",
     "description": "A libre lightweight streaming front-end for Android.",
     "icon": "newpipe.png",
     "repoUrl": "https://github.com/TeamNewPipe/NewPipe"
@@ -34,8 +31,7 @@
     "title": "Youtube Revanced",
     "author": "krvstek",
     "category": "streaming",
-    "popularity": "251",
-    "description": "ReVanced's pre-made APKs",
+    "description": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
     "icon": "yt-revanced.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks"
   },
@@ -44,8 +40,7 @@
     "title": "YT Music Revanced",
     "author": "krvstek",
     "category": "streaming",
-    "popularity": "251",
-    "description": "ReVanced's pre-made APKs",
+    "description": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
     "icon": "yt-music.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks"
   },
@@ -54,8 +49,7 @@
     "title": "Reddit Revanced",
     "author": "krvstek",
     "category": "social",
-    "popularity": "251",
-    "description": "ReVanced's pre-made APKs",
+    "description": "Reddit is the most diverse place on the web, where people from all over the world come together to share passions, ideas and experiences.",
     "icon": "reddit.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks"
   },
@@ -64,8 +58,7 @@
     "title": "Spotify Revanced",
     "author": "krvstek",
     "category": "streaming",
-    "popularity": "251",
-    "description": "ReVanced's pre-made APKs",
+    "description": "Spotify is a digital music service that gives you access to millions of songs.",
     "icon": "spotify.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks"
   },
@@ -74,7 +67,6 @@
     "title": "Instafel",
     "author": "mamiiblt",
     "category": "social",
-    "popularity": "638",
     "description": "Instafel provides fast & up-to-date Instagram Alpha experience for everyone!",
     "icon": "instagram.png",
     "repoUrl": "https://github.com/mamiiblt/instafel"
@@ -84,8 +76,7 @@
     "title": "Revanced Manager",
     "author": "ReVanced",
     "category": "tools",
-    "popularity": "24.5k",
-    "description": "Application to use ReVanced on Android",
+    "description": "ReVanced Manager is an all-in-one solution for downloading, installing, and managing ReVanced apps and other modded APKs.",
     "icon": "revanced-manager.png",
     "repoUrl": "https://github.com/revanced/revanced-manager"
   },
@@ -94,8 +85,7 @@
     "title": "Next Player",
     "author": "anilbeesetti",
     "category": "tools",
-    "popularity": "3.3k",
-    "description": "An Android native video player",
+    "description": "Next Player is an Android native video player written in Kotlin. It provides a simple and easy-to-use interface for users to play videos on their Android devices.",
     "icon": "next-player.png",
     "repoUrl": "https://github.com/anilbeesetti/nextplayer"
   },
@@ -104,8 +94,7 @@
     "title": "Obtainium",
     "author": "ImranR98",
     "category": "tools",
-    "popularity": "13.6k",
-    "description": "Get Android app updates straight from the source.",
+    "description": "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.",
     "icon": "obtainium.png",
     "repoUrl": "https://github.com/ImranR98/Obtainium"
   },
@@ -114,8 +103,7 @@
     "title": "MicroG-RE",
     "author": "WSTxda",
     "category": "tools",
-    "popularity": "2.1k",
-    "description": "GmsCore fork for ReVanced with Material 3 Expressive design, enhanced features, and improvements",
+    "description": "GmsCore fork for ReVanced with Material 3 Expressive design, enhanced features, and improvements.",
     "icon": "microg-re.png",
     "repoUrl": "https://github.com/WSTxda/MicroG-RE"
   },
@@ -124,8 +112,7 @@
     "title": "Proton VPN",
     "author": "ProtonVPN",
     "category": "tools",
-    "popularity": "3.1k",
-    "description": "Official ProtonVPN Android app",
+    "description": "Experience true freedom online. Gain unrestricted access to global content, block annoying ads, and safeguard your privacy with a fast and secure VPN.",
     "icon": "protonvpn.png",
     "repoUrl": "https://github.com/ProtonVPN/android-app"
   },
@@ -134,7 +121,6 @@
     "title": "IronFox",
     "author": "ironfox-oss",
     "category": "internet",
-    "popularity": "276",
     "description": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "icon": "ironfox.png",
     "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases"
@@ -144,8 +130,7 @@
     "title": "Iceraven Browser",
     "author": "fork-maintainers",
     "category": "internet",
-    "popularity": "5.9k",
-    "description": "Iceraven Browser",
+    "description": "Iceraven Browser is a web browser for Android, based on Mozilla's Fenix version of Firefox, GeckoView and Mozilla Android Components.",
     "icon": "iceraven.png",
     "repoUrl": "https://github.com/fork-maintainers/iceraven-browser"
   },
@@ -154,7 +139,6 @@
     "title": "Termux",
     "author": "termux",
     "category": "tools",
-    "popularity": "47.4k",
     "description": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
     "icon": "termux.png",
     "repoUrl": "https://github.com/termux/termux-app"
@@ -164,8 +148,7 @@
     "title": "Brave Browser",
     "author": "brave",
     "category": "internet",
-    "popularity": "20.8k",
-    "description": "Brave browser for Android, iOS, Linux, macOS, Windows.",
+    "description": "Block ads. Save data. And get way faster webpages. Just by switching your browser.",
     "icon": "brave.png",
     "repoUrl": "https://github.com/brave/brave-browser"
   },
@@ -174,8 +157,7 @@
     "title": "GMS Core",
     "author": "microg",
     "category": "tools",
-    "popularity": "11.5k",
-    "description": "Free implementation of Play Services",
+    "description": "microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.",
     "icon": "gms-core.png",
     "repoUrl": "https://github.com/microg/GmsCore"
   },
@@ -184,7 +166,6 @@
     "title": "GPhotos Revanced",
     "author": "mentalblank",
     "category": "media",
-    "popularity": "110",
     "description": "ReVanced Google Photos APK Auto-Builds",
     "icon": "photos.png",
     "repoUrl": "https://github.com/mentalblank/GPhotos-Revanced"
@@ -194,8 +175,7 @@
     "title": "PPSSPP",
     "author": "hrydgard",
     "category": "emulators",
-    "popularity": "13.1k",
-    "description": "A PSP emulator for Android, Windows, Mac and Linux, written in C++. Want to contribute? Join us on Discord at https://discord.gg/5NJB6dD or just send pull requests / issues. For discussion use the forums at forums.ppsspp.org.",
+    "description": "PPSSPP is the original and best PSP emulator for Android. It runs a lot of games, but depending on the power of your device all may not run at full speed.",
     "icon": "ppsspp.png",
     "repoUrl": "https://www.ppsspp.org/download"
   },
@@ -204,8 +184,7 @@
     "title": "Eden Emulator",
     "author": "eden-emulator",
     "category": "emulators",
-    "popularity": "3k",
-    "description": "A new yuzu fork meant to properly continue work on the emulator",
+    "description": "Eden is an experimental open-source emulator for the Nintendo Switch, built with performance and stability in mind.",
     "icon": "eden.png",
     "repoUrl": "https://eden-emu.dev/download"
   },
@@ -214,8 +193,7 @@
     "title": "Citron",
     "author": "Citron",
     "category": "emulators",
-    "popularity": "500k",
-    "description": "The most advanced Nintendo Switch emulator",
+    "description": "The most advanced Nintendo Switch emulator. Experience your favorite games on PC with enhanced performance, higher resolutions, and improved frame rates.",
     "icon": "citron.png",
     "repoUrl": "https://citron-emu.org/#download"
   },
@@ -224,8 +202,7 @@
     "title": "AniLab",
     "author": "AniLabX",
     "category": "streaming",
-    "popularity": "180",
-    "description": "AniLabX - android app for watching anime/dramas/cartoons and reading manga/comics/light novels",
+    "description": "AniLabX - android app for watching anime/dramas/cartoons and reading manga/comics/light novels.",
     "icon": "anilab.png",
     "repoUrl": "https://github.com/AniLabX/AniLabX"
   },
@@ -234,8 +211,7 @@
     "title": "Mihon",
     "author": "minhonapp",
     "category": "media",
-    "popularity": "17.3k",
-    "description": "Free and open source manga reader for Android",
+    "description": "Discover and read manga, webtoons, comics, and more - easier than ever on your Android device.",
     "icon": "mihon.png",
     "repoUrl": "https://mihon.app/download"
   },
@@ -244,8 +220,7 @@
     "title": "KDE Connect",
     "author": "KDE",
     "category": "tools",
-    "popularity": "3.4k",
-    "description": "Multi-platform app that allows your devices to communicate",
+    "description": "KDE Connect is a Multi-platform app that allows your devices to communicate.",
     "icon": "kdeconnect.png",
     "repoUrl": "https://kdeconnect.kde.org/download.html"
   },
@@ -254,8 +229,7 @@
     "title": "F-Droid Store",
     "author": "f-droid",
     "category": "tools",
-    "popularity": "2.5k",
-    "description": "Android client application.",
+    "description": "F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform.",
     "icon": "f-droid.png",
     "repoUrl": "https://github.com/f-droid/fdroidclient"
   },
@@ -264,7 +238,6 @@
     "title": "Nekogram",
     "author": "Nekogram",
     "category": "social",
-    "popularity": "2.9k",
     "description": "Open-source third-party Telegram client with not many but useful modifications.",
     "icon": "nekogram.png",
     "repoUrl": "https://github.com/Nekogram/Nekogram"
@@ -274,8 +247,7 @@
     "title": "Thunderbird",
     "author": "thunderbird",
     "category": "internet",
-    "popularity": "12.8k",
-    "description": "Thunderbird for Android – Open Source Email App for Android (fka K-9 Mail)",
+    "description": "Access all your messages, calendars, and contacts in one fast app. Filter and organize the way you like. Manage all accounts separately or in a unified inbox.",
     "icon": "thunderbird.png",
     "repoUrl": "https://github.com/thunderbird/thunderbird-android"
   },
@@ -284,8 +256,7 @@
     "title": "Proton Mail",
     "author": "ProtonMail",
     "category": "internet",
-    "popularity": "679",
-    "description": "Proton Mail Android app",
+    "description": "Proton Mail is a free and secure email service that's powered by our community, not surveillance capitalism.",
     "icon": "protonmail.png",
     "repoUrl": "https://github.com/ProtonMail/android-mail"
   },
@@ -294,8 +265,7 @@
     "title": "Lawnchair Launcher",
     "author": "LawnchairLauncher",
     "category": "tools",
-    "popularity": "11.6k",
-    "description": "No clever tagline needed.",
+    "description": "Lawnchair is a supercharged version of the Pixel Launcher you know and love. Being an open-source project, you get all the latest Pixel Launcher features.",
     "icon": "lawnchair.png",
     "repoUrl": "https://github.com/LawnchairLauncher/lawnchair"
   },
@@ -304,8 +274,7 @@
     "title": "Winlator",
     "author": "brunodev85",
     "category": "emulators",
-    "popularity": "15.7k",
-    "description": "Android application for running Windows applications with Wine and Box86/Box64",
+    "description": "Winlatoe is an Android application for running Windows applications with Wine and Box86/Box64.",
     "icon": "winlator.png",
     "repoUrl": "https://github.com/brunodev85/winlator"
   },
@@ -314,8 +283,7 @@
     "title": "VLC Player",
     "author": "videolan",
     "category": "media",
-    "popularity": "3.4k",
-    "description": "VLC for Android, Android TV and ChromeOS",
+    "description": "VLC for Android is a full audio player, with a complete database, an equalizer and filters, playing all weird audio formats.",
     "icon": "vlc.png",
     "repoUrl": "https://www.videolan.org/vlc/download-android.html"
   },
@@ -324,8 +292,7 @@
     "title": "Squawker",
     "author": "j-fbriere",
     "category": "social",
-    "popularity": "1.2k",
-    "description": "An open-source privacy oriented Twitter/X client",
+    "description": "An open-source privacy oriented Twitter/X client. Privacy: No tracking, with all data local. No ads: Not clogged by multiple ads.",
     "icon": "squawker.png",
     "repoUrl": "https://github.com/j-fbriere/squawker"
   },
@@ -334,7 +301,6 @@
     "title": "Aurora Store",
     "author": "whyorean",
     "category": "tools",
-    "popularity": "1.8k",
     "description": "Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, reviews, and download the APK directly from Google Play to your device.",
     "icon": "aurora-store.png",
     "repoUrl": "https://github.com/whyorean/AuroraStore"
@@ -344,8 +310,7 @@
     "title": "TOR Browser",
     "author": "TheTorProject",
     "category": "internet",
-    "popularity": "755",
-    "description": "Protect yourself against tracking, surveillance, and censorship.",
+    "description": "Tor Browser isolates websites, prevents tracking, hides browsing history, and encrypts traffic three times, allowing access to blocked sites.",
     "icon": "tor.png",
     "repoUrl": "https://www.torproject.org/download/"
   },
@@ -354,8 +319,7 @@
     "title": "Cromite",
     "author": "uazo",
     "category": "internet",
-    "popularity": "6k",
-    "description": "Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!",
+    "description": "Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.",
     "icon": "cromite.png",
     "repoUrl": "https://github.com/uazo/cromite"
   },
@@ -364,8 +328,7 @@
     "title": "Bitwarden",
     "author": "bitwarden",
     "category": "internet",
-    "popularity": "8.1k",
-    "description": "Bitwarden mobile apps (Password Manager and Authenticator) for Android.",
+    "description": "Bitwarden is a freemium open-source password management service that is used to store sensitive information, such as website credentials, in an encrypted vault.",
     "icon": "bitwarden.png",
     "repoUrl": "https://github.com/bitwarden/android"
   },
@@ -374,8 +337,7 @@
     "title": "CloudStream",
     "author": "recloudstream",
     "category": "streaming",
-    "popularity": "8.4k",
-    "description": "Android app for streaming and downloading media.",
+    "description": "CloudStream is one of the best streaming and downloading apps available for free. It helps users stream their favorite movies, TV shows, anime, sports, live TV, and much more.",
     "icon": "cloudstream.png",
     "repoUrl": "https://github.com/recloudstream/cloudstream"
   },
@@ -384,8 +346,7 @@
     "title": "LocalSend",
     "author": "localsend",
     "category": "tools",
-    "popularity": "71.3k",
-    "description": "An open-source cross-platform alternative to AirDrop",
+    "description": "LocalSend is a free, open-source, cross-platform file sharing tool that allows you to share files to nearby devices.",
     "icon": "localsend.png",
     "repoUrl": "https://github.com/localsend/localsend"
   },
@@ -394,8 +355,7 @@
     "title": "Nobook",
     "author": "ycngmn",
     "category": "social",
-    "popularity": "855",
-    "description": "Ad-free facebook lite for Android.",
+    "description": "Nobook is a lightweight Android application to browse facebook.",
     "icon": "nobook.png",
     "repoUrl": "https://github.com/ycngmn/Nobook"
   },
@@ -404,8 +364,7 @@
     "title": "Xtra",
     "author": "crackededed",
     "category": "social",
-    "popularity": "1.8k",
-    "description": "Third-party Twitch client for Android",
+    "description": "Xtra for Twitch is a Twitch client focused on providing the best viewing and chatting experience on mobile devices.",
     "icon": "xtra.png",
     "repoUrl": "https://github.com/crackededed/Xtra"
   },
@@ -414,8 +373,7 @@
     "title": "Futo Keyboard",
     "author": "futo-org",
     "category": "tools",
-    "popularity": "1.9k",
-    "description": "Your keyboard shouldn't connect to the internet.",
+    "description": "FUTO Keyboard is a private, offline keyboard with features like swipe typing, smart autocorrect, predictive text, and personalization.",
     "icon": "futo-keyboard.png",
     "repoUrl": "https://github.com/futo-org/android-keyboard"
   },
@@ -424,8 +382,7 @@
     "title": "Florisboard",
     "author": "florisboard",
     "category": "tools",
-    "popularity": "7.7k",
-    "description": "An open-source keyboard for Android which respects your privacy. Currently in beta.",
+    "description": "FlorisBoard is a free and open-source keyboard for Android 8.0+ devices. It aims at being modern, user-friendly and customizable while fully respecting your privacy.",
     "icon": "florisboard.png",
     "repoUrl": "https://github.com/florisboard/florisboard"
   },
@@ -434,8 +391,7 @@
     "title": "NetherSX2",
     "author": "Trixarian",
     "category": "emulators",
-    "popularity": "1.8k",
-    "description": "Continuation of NetherSX2 based on AetherSX2 4248",
+    "description": "NetherSX2 is a PlayStation emulator created for the Android operating system. It lets people play games on their smartphones or tablets that are using PS2 system hardware to run PS2 game ROMs.",
     "icon": "nethersx2.png",
     "repoUrl": "https://github.com/Trixarian/NetherSX2-patch"
   },
@@ -444,8 +400,7 @@
     "title": "Shizuku",
     "author": "RikkaApps",
     "category": "tools",
-    "popularity": "19.4k",
-    "description": "Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.",
+    "description": "Shizuku guides users to run a process, Shizuku server, with root or ADB first. When the app starts, the binder to Shizuku server will also be sent to the app.",
     "icon": "shizuku.png",
     "repoUrl": "https://github.com/RikkaApps/Shizuku"
   },
@@ -454,8 +409,7 @@
     "title": "Obsidian",
     "author": "obsidianmd",
     "category": "tools",
-    "popularity": "13.7k",
-    "description": "Obsidian Mobile is your second brain on the go. Available for free on iOS and Android.",
+    "description": "Spark ideas. From personal notes to journaling, knowledge bases, and project management, Obsidian gives you the tools to come up with ideas and organize them.",
     "icon": "obsidian.png",
     "repoUrl": "https://obsidian.md/mobile"
   },
@@ -464,8 +418,7 @@
     "title": "Hail",
     "author": "aistra0528",
     "category": "tools",
-    "popularity": "4.7k",
-    "description": "Disable / Hide / Suspend / Uninstall Android apps without root.",
+    "description": "Hail is a free app to freeze Android apps, which can disable, hide, or suspend them to save power and reduce RAM usage.",
     "icon": "hail.png",
     "repoUrl": "https://github.com/aistra0528/Hail"
   },
@@ -474,28 +427,25 @@
     "title": "AntiSplit M",
     "author": "AbdurazaaqMohammed",
     "category": "tools",
-    "popularity": "3.3k",
-    "description": "App to AntiSplit (merge) split APKs (APKS/XAPK/APKM) to regular .APK file on Android",
+    "description": "AntiSplit M is an open-source tool designed specifically for Android devices, mainly used to merge split APK files, such as Split APKs, XAPK, and APKM, into a single complete APK file for direct installation.",
     "icon": "antisplit-m.png",
     "repoUrl": "https://github.com/AbdurazaaqMohammed/AntiSplit-M"
   },
   {
     "id": "583539",
-    "title": "AdAway",
+    "title": "Ad Away",
     "author": "AdAway",
     "category": "internet",
-    "popularity": "8.6k",
-    "description": "AdAway is a free and open source ad blocker for Android.",
+    "description": "AdAway is a free, open-source ad blocker for Android. It uses system hosts or a VPN to block ads and trackers.",
     "icon": "adaway.png",
     "repoUrl": "https://github.com/AdAway/AdAway"
   },
   {
     "id": "198864",
-    "title": "MpvEx",
+    "title": "Mpv Extended",
     "author": "marlboro-advance",
     "category": "media",
-    "popularity": "325",
-    "description": "A beautiful media player for android, based on mpv-android and built with Jetpack Compose. Forked from mpvKt",
+    "description": "mpvExtended is a fork of mpv-android, built on the libmpv library. It aims to combine the powerful features of mpv with an easy to use interface and additional features.",
     "icon": "mpvex.png",
     "repoUrl": "https://github.com/marlboro-advance/mpvEx"
   },
@@ -504,8 +454,7 @@
     "title": "Metrolist",
     "author": "mostafaalagamy",
     "category": "streaming",
-    "popularity": "5k",
-    "description": "YouTube Music client for Android",
+    "description": "Metrolist is an open-source, lightweight client designed to tap into YouTube Music's vast library while stripping away unnecessary features and advertisements.",
     "icon": "metrolist.png",
     "repoUrl": "https://github.com/mostafaalagamy/Metrolist"
   },
@@ -514,8 +463,7 @@
     "title": "Fossify Gallery",
     "author": "FossifyOrg",
     "category": "media",
-    "popularity": "2.8k",
-    "description": "Browse your memories without any interruptions with this photo and video gallery",
+    "description": "Fossify Gallery is a comprehensive photo and video app designed with privacy in mind. This Android application provides a seamless experience free from ads.",
     "icon": "fossify-gallery.png",
     "repoUrl": "https://github.com/FossifyOrg/Gallery"
   },
@@ -524,8 +472,7 @@
     "title": "Fossify Phone",
     "author": "FossifyOrg",
     "category": "tools",
-    "popularity": "984",
-    "description": "A handy phone call manager with phonebook, number blocking and multi-SIM support",
+    "description": "The Fossify Phone App offers a fluid and responsive mobile interface, enhancing your phone's performance while safeguarding your privacy.",
     "icon": "fossify-phone.png",
     "repoUrl": "https://github.com/FossifyOrg/Phone"
   },
@@ -534,8 +481,7 @@
     "title": "Infinity For Reddit+",
     "author": "Docile-Alligator",
     "category": "social",
-    "popularity": "5.1k",
-    "description": "A Reddit client for Android",
+    "description": "Infinity is a beautiful, feature-rich app that offers a smooth Reddit browsing experience. It is completely ad-less; you can browse Reddit without interruptions or distractions. Built by a passionate university student, Infinity is open source.",
     "icon": "infinity.png",
     "repoUrl": "https://github.com/Docile-Alligator/Infinity-For-Reddit"
   },
@@ -544,8 +490,7 @@
     "title": "Pixel Play",
     "author": "theovilardo",
     "category": "media",
-    "popularity": "1.3k",
-    "description": "Material3 Music Player for android phones",
+    "description": "PixelPlay is a modern, offline-first music player for Android, built with Kotlin and Jetpack Compose. It's designed to provide a beautiful and seamless experience for listening to your local music library.",
     "icon": "pixelplay.png",
     "repoUrl": "https://github.com/theovilardo/PixelPlay"
   },
@@ -554,8 +499,7 @@
     "title": "Installer X Revived",
     "author": "wxxsfxyzm",
     "category": "tools",
-    "popularity": "2.6k",
-    "description": "More Expressive InstallerX !",
+    "description": "Looking for a better app installer? Try InstallerX! Many customized Chinese ROMs come with subpar default installers. You can replace them with InstallerX Revived.",
     "icon": "installer-x-revived.png",
     "repoUrl": "https://github.com/wxxsfxyzm/InstallerX-Revived"
   },
@@ -564,18 +508,16 @@
     "title": "App Manager",
     "author": "MuntashirAkon",
     "category": "tools",
-    "popularity": "7k",
-    "description": "A full-featured package manager and viewer for Android",
+    "description": "App Manager is a fully-featured package manager for Android, with features like installing/uninstalling APKs, viewing app info, and creating shortcuts.",
     "icon": "appmanager.png",
     "repoUrl": "https://github.com/MuntashirAkon/AppManager"
   },
   {
     "id": "942493",
     "title": "SD Maid SE",
-    "author": "d4arken-org",
+    "author": "d4rken-org",
     "category": "tools",
-    "popularity": "5.7k",
-    "description": "SD Maid 2/SE is Android's most thorough cleaning tool.",
+    "description": "SD Maid 2/SE is an app and file manager that specializes in knowing which apps have created specific files on your device.",
     "icon": "sdmaid-se.png",
     "repoUrl": "https://github.com/d4rken-org/sdmaid-se"
   }

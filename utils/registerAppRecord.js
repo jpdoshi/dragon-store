@@ -23,8 +23,7 @@ async function run() {
     const title = await ask("Enter Title: ");
     const author = await ask("Enter Author: ");
     const category = await ask("Enter Category: ");
-    const popularity = await ask("Enter Popularity: ");
-    const description = await ask("Enter App Description: ");
+    const about = await ask("Enter App About: ");
     const icon = await ask(
       "Enter Icon Name (image.png stored in data/icons): "
     );
@@ -43,8 +42,7 @@ async function run() {
       title,
       author,
       category,
-      popularity,
-      description,
+      about,
       icon,
       repoUrl,
     });

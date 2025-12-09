@@ -316,9 +316,7 @@ const appDetails = () => {
               <Text className="text-white text-2xl font-medium mb-4">
                 About App
               </Text>
-              <Text className="text-lg text-neutral-400">
-                {appData.description}
-              </Text>
+              <Text className="text-lg text-neutral-400">{appData.about}</Text>
             </View>
           )}
 

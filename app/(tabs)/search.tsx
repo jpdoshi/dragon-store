@@ -69,10 +69,8 @@ const Search = () => {
 
     // Search filter (debounced)
     if (debouncedQuery.trim().length > 0) {
-      filtered = filtered.filter(
-        (app) =>
-          app.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-          app.description.toLowerCase().includes(debouncedQuery.toLowerCase())
+      filtered = filtered.filter((app) =>
+        app.title.toLowerCase().includes(debouncedQuery.toLowerCase())
       );
     }
 
