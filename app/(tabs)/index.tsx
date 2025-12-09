@@ -5,6 +5,7 @@ import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
 import axios from "axios";
 import * as Application from "expo-application";
+import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
@@ -44,7 +45,7 @@ const Home = () => {
         </AppBar>
         <View className="h-8" />
 
-        <View className="mb-16 flex flex-col items-center">
+        <View className="mb-12 flex flex-col items-center">
           <Image
             source={require("@/data/assets/logo.png")}
             className="size-[120px] rounded-full shadow-2xl shadow-rose-600"
@@ -55,10 +56,22 @@ const Home = () => {
           </Text>
           <Text className="text-neutral-400">by jpdoshi</Text>
           <View className="flex-row gap-3 mt-4">
-            <TouchableOpacity className="bg-rose-500 py-3 px-4 rounded-lg">
-              <Text className="font-bold text-white">Latest APK</Text>
+            <TouchableOpacity
+              onPress={async () =>
+                await openBrowserAsync(
+                  `${config.DRAGON_STORE_REPO_URL}/releases/latest`
+                )
+              }
+              className="bg-rose-500 py-3 px-4 rounded-lg"
+            >
+              <Text className="font-bold text-white">Update APK</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="bg-white py-3 px-4 rounded-lg">
+            <TouchableOpacity
+              onPress={async () =>
+                await openBrowserAsync(config.DRAGON_STORE_REPO_URL)
+              }
+              className="bg-white py-3 px-4 rounded-lg"
+            >
               <Text className="font-bold text-black">Github Repo</Text>
             </TouchableOpacity>
           </View>
