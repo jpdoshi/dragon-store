@@ -163,7 +163,7 @@ const appDetails = () => {
                 {appData.title}
               </Text>
               <Text className="text-neutral-400 text-xl font-medium mb-2">
-                {appData.author}
+                {appData.owner}
               </Text>
               <View className="bg-[rgba(236,0,63,0.2)] px-1.5 rounded border border-rose-500 self-start">
                 <Text className="text-rose-500 text-sm font-medium">
@@ -302,7 +302,7 @@ const appDetails = () => {
                     onPress={async () => {
                       if (appData.repoUrl.includes("github.com")) {
                         await openBrowserAsync(
-                          `https://github.com/${appData.author}`
+                          `https://github.com/${appData.owner}`
                         );
                       } else {
                         await openBrowserAsync(
@@ -312,7 +312,7 @@ const appDetails = () => {
                     }}
                   >
                     <Text className="text-rose-400 font-medium text-base">
-                      {`github.com/${appData.author}`}
+                      {`github.com/${appData.owner}`}
                     </Text>
                     <View className="size-5">
                       <Svg

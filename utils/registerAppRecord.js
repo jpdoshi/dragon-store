@@ -21,9 +21,9 @@ async function run() {
     console.log(":: ADD DATA ENTRY FOR REGISTER APP ::\n\n");
     const id = generateUniqueId();
     const title = await ask("Enter Title: ");
-    const author = await ask("Enter Author: ");
+    const owner = await ask("Enter Owner: ");
     const category = await ask("Enter Category: ");
-    const about = await ask("Enter App About: ");
+    const about = await ask("Enter About App: ");
     const icon = await ask(
       "Enter Icon Name (image.png stored in data/icons): "
     );
@@ -40,10 +40,10 @@ async function run() {
     data.push({
       id,
       title,
-      author,
+      owner,
       category,
       about,
-      icon,
+      icon: icon.endsWith(".png") ? icon : `${icon}.png`,
       repoUrl,
     });
 

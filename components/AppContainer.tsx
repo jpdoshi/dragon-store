@@ -40,7 +40,7 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
             </Text>
           </View>
 
-          <Text className="text-neutral-400 text-sm">{AppData.author}</Text>
+          <Text className="text-neutral-400 text-sm">{AppData.owner}</Text>
         </View>
 
         <View className="size-10 p-2.5 rounded-full bg-[rgba(236,0,63,0.1)]">

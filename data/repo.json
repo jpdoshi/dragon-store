@@ -2,7 +2,7 @@
   {
     "id": "057140",
     "title": "RVX Youtube",
-    "author": "NoName-exe",
+    "owner": "NoName-exe",
     "category": "streaming",
     "about": "ReVanced Extended is a forked version of the original ReVanced Project. With the Extended version, you can get more features not yet introduced in the official project.",
     "icon": "rvx-yt.png",
@@ -11,7 +11,7 @@
   {
     "id": "665202",
     "title": "RVX YT Music",
-    "author": "NoName-exe",
+    "owner": "NoName-exe",
     "category": "streaming",
     "about": "ReVanced Extended is a forked version of the original ReVanced Project. With the Extended version, you can get more features not yet introduced in the official project.",
     "icon": "rvx-music.png",
@@ -20,7 +20,7 @@
   {
     "id": "118702",
     "title": "NewPipe",
-    "author": "TeamNewPipe",
+    "owner": "TeamNewPipe",
     "category": "streaming",
     "about": "A libre lightweight streaming front-end for Android.",
     "icon": "newpipe.png",
@@ -29,7 +29,7 @@
   {
     "id": "264136",
     "title": "Youtube Revanced",
-    "author": "krvstek",
+    "owner": "krvstek",
     "category": "streaming",
     "about": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
     "icon": "yt-revanced.png",
@@ -38,7 +38,7 @@
   {
     "id": "631141",
     "title": "YT Music Revanced",
-    "author": "krvstek",
+    "owner": "krvstek",
     "category": "streaming",
     "about": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
     "icon": "yt-music.png",
@@ -47,7 +47,7 @@
   {
     "id": "623181",
     "title": "Reddit Revanced",
-    "author": "krvstek",
+    "owner": "krvstek",
     "category": "social",
     "about": "Reddit is the most diverse place on the web, where people from all over the world come together to share passions, ideas and experiences.",
     "icon": "reddit.png",
@@ -56,7 +56,7 @@
   {
     "id": "169609",
     "title": "Spotify Revanced",
-    "author": "krvstek",
+    "owner": "krvstek",
     "category": "streaming",
     "about": "Spotify is a digital music service that gives you access to millions of songs.",
     "icon": "spotify.png",
@@ -65,7 +65,7 @@
   {
     "id": "914162",
     "title": "Instafel",
-    "author": "mamiiblt",
+    "owner": "mamiiblt",
     "category": "social",
     "about": "Instafel provides fast & up-to-date Instagram Alpha experience for everyone!",
     "icon": "instagram.png",
@@ -74,7 +74,7 @@
   {
     "id": "127378",
     "title": "Revanced Manager",
-    "author": "ReVanced",
+    "owner": "ReVanced",
     "category": "tools",
     "about": "ReVanced Manager is an all-in-one solution for downloading, installing, and managing ReVanced apps and other modded APKs.",
     "icon": "revanced-manager.png",
@@ -83,7 +83,7 @@
   {
     "id": "187661",
     "title": "Next Player",
-    "author": "anilbeesetti",
+    "owner": "anilbeesetti",
     "category": "tools",
     "about": "Next Player is an Android native video player written in Kotlin. It provides a simple and easy-to-use interface for users to play videos on their Android devices.",
     "icon": "next-player.png",
@@ -92,7 +92,7 @@
   {
     "id": "954552",
     "title": "Obtainium",
-    "author": "ImranR98",
+    "owner": "ImranR98",
     "category": "tools",
     "about": "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.",
     "icon": "obtainium.png",
@@ -101,7 +101,7 @@
   {
     "id": "963456",
     "title": "MicroG-RE",
-    "author": "WSTxda",
+    "owner": "WSTxda",
     "category": "tools",
     "about": "GmsCore fork for ReVanced with Material 3 Expressive design, enhanced features, and improvements.",
     "icon": "microg-re.png",
@@ -110,7 +110,7 @@
   {
     "id": "731936",
     "title": "Proton VPN",
-    "author": "ProtonVPN",
+    "owner": "ProtonVPN",
     "category": "tools",
     "about": "Experience true freedom online. Gain unrestricted access to global content, block annoying ads, and safeguard your privacy with a fast and secure VPN.",
     "icon": "protonvpn.png",
@@ -119,7 +119,7 @@
   {
     "id": "008359",
     "title": "IronFox",
-    "author": "ironfox-oss",
+    "owner": "ironfox-oss",
     "category": "internet",
     "about": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "icon": "ironfox.png",
@@ -128,7 +128,7 @@
   {
     "id": "127207",
     "title": "Iceraven Browser",
-    "author": "fork-maintainers",
+    "owner": "fork-maintainers",
     "category": "internet",
     "about": "Iceraven Browser is a web browser for Android, based on Mozilla's Fenix version of Firefox, GeckoView and Mozilla Android Components.",
     "icon": "iceraven.png",
@@ -137,7 +137,7 @@
   {
     "id": "352883",
     "title": "Termux",
-    "author": "termux",
+    "owner": "termux",
     "category": "tools",
     "about": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
     "icon": "termux.png",
@@ -146,7 +146,7 @@
   {
     "id": "178761",
     "title": "Brave Browser",
-    "author": "brave",
+    "owner": "brave",
     "category": "internet",
     "about": "Block ads. Save data. And get way faster webpages. Just by switching your browser.",
     "icon": "brave.png",
@@ -155,7 +155,7 @@
   {
     "id": "342875",
     "title": "GMS Core",
-    "author": "microg",
+    "owner": "microg",
     "category": "tools",
     "about": "microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.",
     "icon": "gms-core.png",
@@ -164,7 +164,7 @@
   {
     "id": "930330",
     "title": "GPhotos Revanced",
-    "author": "mentalblank",
+    "owner": "mentalblank",
     "category": "media",
     "about": "ReVanced Google Photos APK Auto-Builds",
     "icon": "photos.png",
@@ -173,7 +173,7 @@
   {
     "id": "630698",
     "title": "PPSSPP",
-    "author": "hrydgard",
+    "owner": "hrydgard",
     "category": "emulators",
     "about": "PPSSPP is the original and best PSP emulator for Android. It runs a lot of games, but depending on the power of your device all may not run at full speed.",
     "icon": "ppsspp.png",
@@ -182,7 +182,7 @@
   {
     "id": "978280",
     "title": "Eden Emulator",
-    "author": "eden-emulator",
+    "owner": "eden-emulator",
     "category": "emulators",
     "about": "Eden is an experimental open-source emulator for the Nintendo Switch, built with performance and stability in mind.",
     "icon": "eden.png",
@@ -191,7 +191,7 @@
   {
     "id": "046323",
     "title": "Citron",
-    "author": "Citron",
+    "owner": "Citron",
     "category": "emulators",
     "about": "The most advanced Nintendo Switch emulator. Experience your favorite games on PC with enhanced performance, higher resolutions, and improved frame rates.",
     "icon": "citron.png",
@@ -200,7 +200,7 @@
   {
     "id": "181873",
     "title": "AniLab",
-    "author": "AniLabX",
+    "owner": "AniLabX",
     "category": "streaming",
     "about": "AniLabX - android app for watching anime/dramas/cartoons and reading manga/comics/light novels.",
     "icon": "anilab.png",
@@ -209,7 +209,7 @@
   {
     "id": "052341",
     "title": "Mihon",
-    "author": "minhonapp",
+    "owner": "minhonapp",
     "category": "media",
     "about": "Discover and read manga, webtoons, comics, and more - easier than ever on your Android device.",
     "icon": "mihon.png",
@@ -218,7 +218,7 @@
   {
     "id": "927391",
     "title": "KDE Connect",
-    "author": "KDE",
+    "owner": "KDE",
     "category": "tools",
     "about": "KDE Connect is a Multi-platform app that allows your devices to communicate.",
     "icon": "kdeconnect.png",
@@ -227,7 +227,7 @@
   {
     "id": "364963",
     "title": "F-Droid Store",
-    "author": "f-droid",
+    "owner": "f-droid",
     "category": "tools",
     "about": "F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform.",
     "icon": "f-droid.png",
@@ -236,7 +236,7 @@
   {
     "id": "085570",
     "title": "Nekogram",
-    "author": "Nekogram",
+    "owner": "Nekogram",
     "category": "social",
     "about": "Open-source third-party Telegram client with not many but useful modifications.",
     "icon": "nekogram.png",
@@ -245,7 +245,7 @@
   {
     "id": "706419",
     "title": "Thunderbird",
-    "author": "thunderbird",
+    "owner": "thunderbird",
     "category": "internet",
     "about": "Access all your messages, calendars, and contacts in one fast app. Filter and organize the way you like. Manage all accounts separately or in a unified inbox.",
     "icon": "thunderbird.png",
@@ -254,7 +254,7 @@
   {
     "id": "161432",
     "title": "Proton Mail",
-    "author": "ProtonMail",
+    "owner": "ProtonMail",
     "category": "internet",
     "about": "Proton Mail is a free and secure email service that's powered by our community, not surveillance capitalism.",
     "icon": "protonmail.png",
@@ -263,7 +263,7 @@
   {
     "id": "954417",
     "title": "Lawnchair Launcher",
-    "author": "LawnchairLauncher",
+    "owner": "LawnchairLauncher",
     "category": "tools",
     "about": "Lawnchair is a supercharged version of the Pixel Launcher you know and love. Being an open-source project, you get all the latest Pixel Launcher features.",
     "icon": "lawnchair.png",
@@ -272,7 +272,7 @@
   {
     "id": "889075",
     "title": "Winlator",
-    "author": "brunodev85",
+    "owner": "brunodev85",
     "category": "emulators",
     "about": "Winlatoe is an Android application for running Windows applications with Wine and Box86/Box64.",
     "icon": "winlator.png",
@@ -281,7 +281,7 @@
   {
     "id": "004932",
     "title": "VLC Player",
-    "author": "videolan",
+    "owner": "videolan",
     "category": "media",
     "about": "VLC for Android is a full audio player, with a complete database, an equalizer and filters, playing all weird audio formats.",
     "icon": "vlc.png",
@@ -290,7 +290,7 @@
   {
     "id": "097940",
     "title": "Squawker",
-    "author": "j-fbriere",
+    "owner": "j-fbriere",
     "category": "social",
     "about": "An open-source privacy oriented Twitter/X client. Privacy: No tracking, with all data local. No ads: Not clogged by multiple ads.",
     "icon": "squawker.png",
@@ -299,7 +299,7 @@
   {
     "id": "153168",
     "title": "Aurora Store",
-    "author": "whyorean",
+    "owner": "whyorean",
     "category": "tools",
     "about": "Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, reviews, and download the APK directly from Google Play to your device.",
     "icon": "aurora-store.png",
@@ -308,7 +308,7 @@
   {
     "id": "488616",
     "title": "TOR Browser",
-    "author": "TheTorProject",
+    "owner": "TheTorProject",
     "category": "internet",
     "about": "Tor Browser isolates websites, prevents tracking, hides browsing history, and encrypts traffic three times, allowing access to blocked sites.",
     "icon": "tor.png",
@@ -317,7 +317,7 @@
   {
     "id": "609891",
     "title": "Cromite",
-    "author": "uazo",
+    "owner": "uazo",
     "category": "internet",
     "about": "Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.",
     "icon": "cromite.png",
@@ -326,7 +326,7 @@
   {
     "id": "229778",
     "title": "Bitwarden",
-    "author": "bitwarden",
+    "owner": "bitwarden",
     "category": "internet",
     "about": "Bitwarden is a freemium open-source password management service that is used to store sensitive information, such as website credentials, in an encrypted vault.",
     "icon": "bitwarden.png",
@@ -335,7 +335,7 @@
   {
     "id": "971384",
     "title": "CloudStream",
-    "author": "recloudstream",
+    "owner": "recloudstream",
     "category": "streaming",
     "about": "CloudStream is one of the best streaming and downloading apps available for free. It helps users stream their favorite movies, TV shows, anime, sports, live TV, and much more.",
     "icon": "cloudstream.png",
@@ -344,7 +344,7 @@
   {
     "id": "182527",
     "title": "LocalSend",
-    "author": "localsend",
+    "owner": "localsend",
     "category": "tools",
     "about": "LocalSend is a free, open-source, cross-platform file sharing tool that allows you to share files to nearby devices.",
     "icon": "localsend.png",
@@ -353,7 +353,7 @@
   {
     "id": "381145",
     "title": "Nobook",
-    "author": "ycngmn",
+    "owner": "ycngmn",
     "category": "social",
     "about": "Nobook is a lightweight Android application to browse facebook.",
     "icon": "nobook.png",
@@ -362,7 +362,7 @@
   {
     "id": "697772",
     "title": "Xtra",
-    "author": "crackededed",
+    "owner": "crackededed",
     "category": "social",
     "about": "Xtra for Twitch is a Twitch client focused on providing the best viewing and chatting experience on mobile devices.",
     "icon": "xtra.png",
@@ -371,7 +371,7 @@
   {
     "id": "005086",
     "title": "Futo Keyboard",
-    "author": "futo-org",
+    "owner": "futo-org",
     "category": "tools",
     "about": "FUTO Keyboard is a private, offline keyboard with features like swipe typing, smart autocorrect, predictive text, and personalization.",
     "icon": "futo-keyboard.png",
@@ -380,7 +380,7 @@
   {
     "id": "439122",
     "title": "Florisboard",
-    "author": "florisboard",
+    "owner": "florisboard",
     "category": "tools",
     "about": "FlorisBoard is a free and open-source keyboard for Android 8.0+ devices. It aims at being modern, user-friendly and customizable while fully respecting your privacy.",
     "icon": "florisboard.png",
@@ -389,7 +389,7 @@
   {
     "id": "525179",
     "title": "NetherSX2",
-    "author": "Trixarian",
+    "owner": "Trixarian",
     "category": "emulators",
     "about": "NetherSX2 is a PlayStation emulator created for the Android operating system. It lets people play games on their smartphones or tablets that are using PS2 system hardware to run PS2 game ROMs.",
     "icon": "nethersx2.png",
@@ -398,7 +398,7 @@
   {
     "id": "202198",
     "title": "Shizuku",
-    "author": "RikkaApps",
+    "owner": "RikkaApps",
     "category": "tools",
     "about": "Shizuku guides users to run a process, Shizuku server, with root or ADB first. When the app starts, the binder to Shizuku server will also be sent to the app.",
     "icon": "shizuku.png",
@@ -407,7 +407,7 @@
   {
     "id": "285148",
     "title": "Obsidian",
-    "author": "obsidianmd",
+    "owner": "obsidianmd",
     "category": "tools",
     "about": "Spark ideas. From personal notes to journaling, knowledge bases, and project management, Obsidian gives you the tools to come up with ideas and organize them.",
     "icon": "obsidian.png",
@@ -416,7 +416,7 @@
   {
     "id": "198951",
     "title": "Hail",
-    "author": "aistra0528",
+    "owner": "aistra0528",
     "category": "tools",
     "about": "Hail is a free app to freeze Android apps, which can disable, hide, or suspend them to save power and reduce RAM usage.",
     "icon": "hail.png",
@@ -425,7 +425,7 @@
   {
     "id": "058946",
     "title": "AntiSplit M",
-    "author": "AbdurazaaqMohammed",
+    "owner": "AbdurazaaqMohammed",
     "category": "tools",
     "about": "AntiSplit M is an open-source tool designed specifically for Android devices, mainly used to merge split APK files, such as Split APKs, XAPK, and APKM, into a single complete APK file for direct installation.",
     "icon": "antisplit-m.png",
@@ -434,7 +434,7 @@
   {
     "id": "583539",
     "title": "Ad Away",
-    "author": "AdAway",
+    "owner": "AdAway",
     "category": "internet",
     "about": "AdAway is a free, open-source ad blocker for Android. It uses system hosts or a VPN to block ads and trackers.",
     "icon": "adaway.png",
@@ -443,7 +443,7 @@
   {
     "id": "198864",
     "title": "Mpv Extended",
-    "author": "marlboro-advance",
+    "owner": "marlboro-advance",
     "category": "media",
     "about": "mpvExtended is a fork of mpv-android, built on the libmpv library. It aims to combine the powerful features of mpv with an easy to use interface and additional features.",
     "icon": "mpvex.png",
@@ -452,7 +452,7 @@
   {
     "id": "594932",
     "title": "Metrolist",
-    "author": "mostafaalagamy",
+    "owner": "mostafaalagamy",
     "category": "streaming",
     "about": "Metrolist is an open-source, lightweight client designed to tap into YouTube Music's vast library while stripping away unnecessary features and advertisements.",
     "icon": "metrolist.png",
@@ -461,7 +461,7 @@
   {
     "id": "058843",
     "title": "Fossify Gallery",
-    "author": "FossifyOrg",
+    "owner": "FossifyOrg",
     "category": "media",
     "about": "Fossify Gallery is a comprehensive photo and video app designed with privacy in mind. This Android application provides a seamless experience free from ads.",
     "icon": "fossify-gallery.png",
@@ -470,7 +470,7 @@
   {
     "id": "234071",
     "title": "Fossify Phone",
-    "author": "FossifyOrg",
+    "owner": "FossifyOrg",
     "category": "tools",
     "about": "The Fossify Phone App offers a fluid and responsive mobile interface, enhancing your phone's performance while safeguarding your privacy.",
     "icon": "fossify-phone.png",
@@ -479,7 +479,7 @@
   {
     "id": "391337",
     "title": "Infinity For Reddit+",
-    "author": "Docile-Alligator",
+    "owner": "Docile-Alligator",
     "category": "social",
     "about": "Infinity is a beautiful, feature-rich app that offers a smooth Reddit browsing experience. It is completely ad-less; you can browse Reddit without interruptions or distractions. Built by a passionate university student, Infinity is open source.",
     "icon": "infinity.png",
@@ -488,7 +488,7 @@
   {
     "id": "139814",
     "title": "Pixel Play",
-    "author": "theovilardo",
+    "owner": "theovilardo",
     "category": "media",
     "about": "PixelPlay is a modern, offline-first music player for Android, built with Kotlin and Jetpack Compose. It's designed to provide a beautiful and seamless experience for listening to your local music library.",
     "icon": "pixelplay.png",
@@ -497,7 +497,7 @@
   {
     "id": "325031",
     "title": "Installer X Revived",
-    "author": "wxxsfxyzm",
+    "owner": "wxxsfxyzm",
     "category": "tools",
     "about": "Looking for a better app installer? Try InstallerX! Many customized Chinese ROMs come with subpar default installers. You can replace them with InstallerX Revived.",
     "icon": "installer-x-revived.png",
@@ -506,7 +506,7 @@
   {
     "id": "185516",
     "title": "App Manager",
-    "author": "MuntashirAkon",
+    "owner": "MuntashirAkon",
     "category": "tools",
     "about": "App Manager is a fully-featured package manager for Android, with features like installing/uninstalling APKs, viewing app info, and creating shortcuts.",
     "icon": "appmanager.png",
@@ -515,7 +515,7 @@
   {
     "id": "942493",
     "title": "SD Maid SE",
-    "author": "d4rken-org",
+    "owner": "d4rken-org",
     "category": "tools",
     "about": "SD Maid 2/SE is an app and file manager that specializes in knowing which apps have created specific files on your device.",
     "icon": "sdmaid-se.png",

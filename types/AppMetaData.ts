@@ -1,7 +1,7 @@
 export type AppMetaData = {
   id: string;
   title: string;
-  author: string;
+  owner: string;
   category: string;
   about: string;
   icon: string;
