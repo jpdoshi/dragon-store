@@ -138,7 +138,7 @@ const appDetails = () => {
         <View className="h-5" />
 
         <Animated.View
-          entering={FadeIn.delay(150).duration(300)}
+          entering={FadeIn.delay(150).duration(400)}
           className="px-5"
         >
           <View className="flex-row gap-5 items-center mb-10">
@@ -238,9 +238,7 @@ const appDetails = () => {
             <Text className="text-white text-xl font-medium mb-3">
               About App
             </Text>
-            <Text className="text-base text-neutral-400 leading-normal">
-              {appData.about}
-            </Text>
+            <Text className="text-base text-neutral-400">{appData.about}</Text>
           </View>
 
           <View className="h-10" />
