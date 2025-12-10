@@ -21,7 +21,7 @@ const Layout = () => {
         tabBarStyle: {
           position: "absolute",
           backgroundColor: "transparent",
-          borderColor: "rgba(60,60,60,0.5)",
+          borderColor: "rgba(70,70,70,0.5)",
           borderWidth: 1,
           borderTopWidth: 1,
           marginHorizontal,
@@ -34,7 +34,7 @@ const Layout = () => {
         },
         tabBarBackground: () => (
           <BlurView
-            intensity={65}
+            intensity={80}
             experimentalBlurMethod="dimezisBlurView"
             tint="dark"
             style={{
@@ -51,7 +51,7 @@ const Layout = () => {
           title: "Home",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary border border-rose-400"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
@@ -79,7 +79,7 @@ const Layout = () => {
           title: "Search",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary border border-rose-400"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
@@ -107,7 +107,7 @@ const Layout = () => {
           title: "Favorites",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary border border-rose-400"} rounded-full`}
             >
               <View className="size-6">
                 <Svg
@@ -135,7 +135,7 @@ const Layout = () => {
           title: "About",
           tabBarIcon: ({ focused }) => (
             <View
-              className={`h-[45px] w-[60px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary"} rounded-full`}
+              className={`h-[42px] w-[56px] justify-center items-center gap-1.5 p-2 ${focused && "bg-primary border border-rose-400"} rounded-full`}
             >
               <View className="size-6">
                 <Svg

@@ -18,7 +18,7 @@ const Home = () => {
 
       if (fetchedXHR?.data) {
         const shuffled = [...fetchedXHR.data].sort(() => Math.random() - 0.5);
-        setAppList(shuffled.slice(0, 5));
+        setAppList(shuffled.slice(0, 10));
       }
     };
 

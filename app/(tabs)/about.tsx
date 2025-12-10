@@ -3,6 +3,7 @@ import ScreenView from "@/components/ScreenView";
 import { openBrowserAsync } from "expo-web-browser";
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { ClipPath, Defs, G, Path, Rect } from "react-native-svg";
 
 const About = () => {
@@ -27,7 +28,10 @@ const About = () => {
 
         <View className="h-8" />
 
-        <View className="px-5">
+        <Animated.View
+          entering={FadeIn.delay(150).duration(300)}
+          className="px-5"
+        >
           <View className="flex-row gap-5 items-center">
             <Image
               src={"https://avatars.githubusercontent.com/u/122164427?v=4"}
@@ -93,7 +97,16 @@ const About = () => {
             </TouchableOpacity>
           </View>
 
-          <View className="h-12" />
+          <View className="h-10" />
+          <Text className="text-xl font-semibold text-white">
+            About Dragon Store
+          </Text>
+          <Text className="text-lg text-neutral-400 mt-3">
+            Dragon Store is your gateway to transparent, libre and free
+            open-source apps.
+          </Text>
+
+          <View className="h-8" />
           <Text className="text-xl font-semibold text-white">
             About Developer
           </Text>
@@ -102,7 +115,7 @@ const About = () => {
             🇮🇳. I love to create innovative apps.
           </Text>
 
-          <View className="h-10" />
+          <View className="h-8" />
           <Text className="text-xl font-semibold text-white">
             Support the Project
           </Text>
@@ -160,9 +173,9 @@ const About = () => {
               </Defs>
             </Svg>
           </TouchableOpacity>
-        </View>
+        </Animated.View>
 
-        <View className="h-24" />
+        <View className="h-28" />
       </ScrollView>
     </ScreenView>
   );
