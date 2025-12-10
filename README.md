@@ -58,4 +58,6 @@ Below shown are few features that are currently available in dragon store:
 
 ## Support the Project
 
-Fell in love with the project? Contribute to the development by supporting the developer. You can <a href="https://ko-fi.com/thejddev">Buy me a coffee ☕</a> to help me keep up the good work.
+Fell in love with the project? Contribute to the development by supporting the developer. You can Buy me a coffee ☕ to help me keep up the good work.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W51Q0IXP)

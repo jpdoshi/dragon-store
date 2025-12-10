@@ -64,7 +64,7 @@ const Home = () => {
               }
               className="bg-rose-500 py-3 px-4 rounded-lg"
             >
-              <Text className="font-bold text-white">Update APK</Text>
+              <Text className="font-bold text-white">Check Update</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={async () =>
