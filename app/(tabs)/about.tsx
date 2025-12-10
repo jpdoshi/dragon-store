@@ -101,7 +101,7 @@ const About = () => {
           <Text className="text-xl font-semibold text-white">
             About Dragon Store
           </Text>
-          <Text className="text-lg text-neutral-400 mt-3">
+          <Text className="text-base text-neutral-400 mt-3">
             Dragon Store is your gateway to transparent, libre and free
             open-source apps.
           </Text>
@@ -110,7 +110,7 @@ const About = () => {
           <Text className="text-xl font-semibold text-white">
             About Developer
           </Text>
-          <Text className="text-lg text-neutral-400 mt-3">
+          <Text className="text-base text-neutral-400 mt-3">
             👋 Hello there, I am Jainam P. Doshi, Software Engineer from India
             🇮🇳. I love to create innovative apps.
           </Text>
@@ -119,7 +119,7 @@ const About = () => {
           <Text className="text-xl font-semibold text-white">
             Support the Project
           </Text>
-          <Text className="text-lg leading-normal mt-3 text-neutral-400">
+          <Text className="text-base leading-normal mt-3 text-neutral-400">
             Fell in love with the project? Contribute to the development by
             supporting the developer. You can Buy me a coffee ☕ to help me keep
             up the good work.
