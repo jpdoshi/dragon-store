@@ -2,28 +2,16 @@ import AppBar from "@/components/AppBar";
 import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
-import { AppMetaData } from "@/types/AppMetaData";
-import axios from "axios";
+import { useAppsData } from "@/hooks/useAppsData";
 import * as Application from "expo-application";
 import { openBrowserAsync } from "expo-web-browser";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 const Home = () => {
-  const [appList, setAppList] = useState<AppMetaData[]>([]);
+  const { apps } = useAppsData();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const fetchedXHR = await axios.get(config.JSON_REPO_URL);
-
-      if (fetchedXHR?.data) {
-        const shuffled = [...fetchedXHR.data].sort(() => Math.random() - 0.5);
-        setAppList(shuffled.slice(0, 10));
-      }
-    };
-
-    fetchData();
-  }, []);
+  const appList = [...apps].sort(() => Math.random() - 0.5).slice(0, 10);
 
   return (
     <ScreenView>
@@ -34,7 +22,7 @@ const Home = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-snug">
+              <Text className="text-2xl font-bold text-white leading-tight">
                 Dragon Store
               </Text>
               <Text className="font-medium text-primary">

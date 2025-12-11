@@ -1,9 +1,7 @@
 import AppBar from "@/components/AppBar";
 import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
-import config from "@/config";
-import { AppMetaData } from "@/types/AppMetaData";
-import axios from "axios";
+import { useAppsData } from "@/hooks/useAppsData";
 import React, { useEffect, useState } from "react";
 import {
   ScrollView,
@@ -15,12 +13,15 @@ import {
 import Svg, { Path } from "react-native-svg";
 
 const Search = () => {
-  const [appList, setAppList] = useState<AppMetaData[]>([]);
-  const [filterList, setFilterList] = useState<AppMetaData[]>([]);
+  const { apps } = useAppsData();
 
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [debouncedQuery, setDebouncedQuery] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
+
+  const sortedApps = [...apps].sort((a, b) => a.title.localeCompare(b.title));
+
+  const [filterList, setFilterList] = useState(sortedApps);
 
   const categoriesList = [
     null,
@@ -33,23 +34,6 @@ const Search = () => {
   ];
 
   useEffect(() => {
-    const fetchData = async () => {
-      const fetchedXHR = await axios.get(config.JSON_REPO_URL);
-
-      if (fetchedXHR?.data) {
-        const sorted = [...fetchedXHR.data].sort((a, b) =>
-          a.title.localeCompare(b.title)
-        );
-
-        setAppList(sorted);
-        setFilterList(sorted);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
     const timeout = setTimeout(() => {
       setDebouncedQuery(searchQuery);
     }, 300);
@@ -58,16 +42,14 @@ const Search = () => {
   }, [searchQuery]);
 
   useEffect(() => {
-    let filtered = [...appList];
+    let filtered = [...sortedApps];
 
-    // Category filter
     if (category) {
       filtered = filtered.filter(
         (app) => app.category?.toLowerCase() === category.toLowerCase()
       );
     }
 
-    // Search filter (debounced)
     if (debouncedQuery.trim().length > 0) {
       filtered = filtered.filter((app) =>
         app.title.toLowerCase().includes(debouncedQuery.toLowerCase())
@@ -75,7 +57,7 @@ const Search = () => {
     }
 
     setFilterList(filtered);
-  }, [category, debouncedQuery, appList]);
+  }, [category, debouncedQuery, apps]);
 
   return (
     <ScreenView>
@@ -86,7 +68,7 @@ const Search = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-snug">
+              <Text className="text-2xl font-bold text-white leading-tight">
                 Discover Apps
               </Text>
               <Text className="font-medium text-primary">

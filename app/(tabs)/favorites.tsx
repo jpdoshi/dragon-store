@@ -11,7 +11,6 @@ const FAVORITES_KEY = "favorite_apps";
 const Favorites = () => {
   const [appList, setAppList] = useState([]);
 
-  // Load favorites every time user returns to this screen
   useFocusEffect(
     useCallback(() => {
       loadFavorites();
@@ -37,7 +36,7 @@ const Favorites = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-snug">
+              <Text className="text-2xl font-bold text-white leading-tight">
                 Favorite Apps
               </Text>
               <Text className="font-medium text-primary">

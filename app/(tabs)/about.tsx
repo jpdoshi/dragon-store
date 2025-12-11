@@ -16,7 +16,7 @@ const About = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-snug">
+              <Text className="text-2xl font-bold text-white leading-tight">
                 About Developer
               </Text>
               <Text className="font-medium text-primary">
