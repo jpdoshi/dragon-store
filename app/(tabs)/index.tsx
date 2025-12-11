@@ -5,6 +5,7 @@ import config from "@/config";
 import { useAppsData } from "@/hooks/useAppsData";
 import { AppMetaData } from "@/types/AppMetaData";
 import * as Application from "expo-application";
+import { router } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import {
@@ -88,12 +89,15 @@ const Home = () => {
         <View className="px-5">
           <View className="flex-row flex-1 justify-between items-center mb-5">
             <Text className="text-white font-medium text-2xl">Random Apps</Text>
-            <TouchableOpacity onPress={refreshRandomApps} className="size-6">
+            <TouchableOpacity
+              onPress={refreshRandomApps}
+              className="size-9 bg-rose-500 rounded-full p-2"
+            >
               <Svg
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
-                stroke="#fff"
+                stroke="#4d0218"
               >
                 <Path
                   strokeLinecap="round"
@@ -111,7 +115,31 @@ const Home = () => {
               color={"#ff2056"}
             />
           ) : (
-            <AppsList appData={appList} />
+            <>
+              <AppsList appData={appList} />
+              <View style={{ paddingVertical: 15 }}>
+                <TouchableOpacity
+                  onPress={() => router.navigate("/(tabs)/search")}
+                  className="h-[45px] w-[150px] mx-auto bg-rose-500 flex-row gap-1 justify-center items-center rounded-full shadow-lg"
+                >
+                  <Text className="text-white font-semibold">More Apps</Text>
+                  <View className="size-5">
+                    <Svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="#fff"
+                    >
+                      <Path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </Svg>
+                  </View>
+                </TouchableOpacity>
+              </View>
+            </>
           )}
         </View>
 

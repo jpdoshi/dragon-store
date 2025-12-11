@@ -1,6 +1,7 @@
 import { AppMetaData } from "@/types/AppMetaData";
 import React, { useEffect, useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import Svg, { Path } from "react-native-svg";
 import AppContainer from "./AppContainer";
 
 const PAGE_SIZE = 10;
@@ -34,14 +35,26 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
       )}
       ListFooterComponent={
         visible.length < appData.length ? (
-          <View style={{ paddingVertical: 12 }}>
+          <View style={{ paddingVertical: 15 }}>
             <TouchableOpacity
               onPress={loadMore}
-              className="h-[45px] flex-1 bg-rose-500 justify-center items-center rounded-2xl"
+              className="h-[45px] w-[150px] mx-auto bg-rose-500 flex-row gap-1 justify-center items-center rounded-full shadow-lg"
             >
-              <Text className="text-white text-base font-semibold">
-                LOAD MORE
-              </Text>
+              <Text className="text-white font-semibold">Load More</Text>
+              <View className="size-5">
+                <Svg
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="#fff"
+                >
+                  <Path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                  />
+                </Svg>
+              </View>
             </TouchableOpacity>
           </View>
         ) : null
