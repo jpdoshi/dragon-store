@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "dragon-store",
+    "name": "Dragon Store",
     "slug": "dragon-store",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,7 +17,7 @@
         "foregroundImage": "./assets/images/icon.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": true,
+      "predictiveBackGestureEnabled": false,
       "package": "com.jpdoshi.dragonstore"
     },
     "web": {
@@ -32,9 +32,9 @@
           "image": "./assets/images/icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#fafafa",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#121212"
           }
         }
       ]
