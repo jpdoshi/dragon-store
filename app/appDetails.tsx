@@ -78,7 +78,7 @@ const appDetails = () => {
 
             {/* Action buttons */}
             <View className="flex-row items-center gap-5">
-              {/* Share icon (unchanged) */}
+              {/* Share icon */}
               <TouchableOpacity
                 onPress={async () => {
                   try {

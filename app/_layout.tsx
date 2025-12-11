@@ -37,7 +37,6 @@ export default function RootLayout() {
         <Stack.Screen name="appDetails" />
       </Stack>
 
-      {/* Toast container must be inside the root */}
       <Toast />
     </>
   );
