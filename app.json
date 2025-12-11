@@ -17,7 +17,8 @@
         "foregroundImage": "./assets/images/icon.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": true
+      "predictiveBackGestureEnabled": true,
+      "package": "com.jpdoshi.dragonstore"
     },
     "web": {
       "output": "static",
@@ -41,6 +42,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2ec42dfb-a8c3-4abb-9ddc-8e43ddfdcbc5"
+      }
     }
   }
 }
