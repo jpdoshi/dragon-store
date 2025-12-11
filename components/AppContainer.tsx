@@ -1,8 +1,9 @@
 import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
+import { Image } from "expo-image";
 import { router } from "expo-router";
 import React from "react";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
@@ -22,10 +23,11 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
-          src={config.ICON_REPO_URL + AppData.icon}
-          height={54}
-          width={54}
-          className="rounded-2xl"
+          source={config.ICON_REPO_URL + AppData.icon}
+          style={{ height: 54, width: 54, borderRadius: 16 }}
+          placeholder={require("@/data/assets/placeholder.gif")}
+          contentFit="cover"
+          transition={400}
         />
 
         <View className="flex-1 flex-col">

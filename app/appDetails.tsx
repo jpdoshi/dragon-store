@@ -2,17 +2,11 @@ import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Image } from "expo-image";
 import { router, useLocalSearchParams } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
-import {
-  Image,
-  ScrollView,
-  Share,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { ScrollView, Share, Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
@@ -143,10 +137,11 @@ const appDetails = () => {
         >
           <View className="flex-row gap-5 items-center mb-10">
             <Image
-              src={config.ICON_REPO_URL + appData.icon}
-              height={90}
-              width={90}
-              className="rounded-3xl"
+              source={config.ICON_REPO_URL + appData.icon}
+              style={{ height: 90, width: 90, borderRadius: 32 }}
+              placeholder={require("@/data/assets/placeholder.gif")}
+              contentFit="cover"
+              transition={400}
             />
 
             <View>
@@ -174,7 +169,7 @@ const appDetails = () => {
               <View className="flex-col gap-1.5 justify-center items-center">
                 <Image
                   source={require("@/data/assets/android.png")}
-                  className="size-7"
+                  style={{ height: 28, width: 28 }}
                 />
                 <Text className="font-medium text-sm text-neutral-400">
                   Platform
