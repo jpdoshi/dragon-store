@@ -3,9 +3,10 @@ import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import { useAppsData } from "@/hooks/useAppsData";
+import { AppMetaData } from "@/types/AppMetaData";
 import * as Application from "expo-application";
 import { openBrowserAsync } from "expo-web-browser";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Image,
@@ -14,11 +15,23 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import Svg, { Path } from "react-native-svg";
 
 const Home = () => {
   const { apps, loading } = useAppsData();
 
-  const appList = [...apps].sort(() => Math.random() - 0.5).slice(0, 8);
+  const [appList, setAppList] = useState<AppMetaData[]>([]);
+
+  const refreshRandomApps = () => {
+    if (!apps || apps.length === 0) return;
+    const newList = [...apps].sort(() => Math.random() - 0.5).slice(0, 5);
+
+    setAppList(newList);
+  };
+
+  useEffect(() => {
+    refreshRandomApps();
+  }, [apps]);
 
   return (
     <ScreenView>
@@ -73,9 +86,23 @@ const Home = () => {
         </View>
 
         <View className="px-5">
-          <Text className="text-white font-medium text-2xl mb-5">
-            Random Apps
-          </Text>
+          <View className="flex-row flex-1 justify-between items-center mb-5">
+            <Text className="text-white font-medium text-2xl">Random Apps</Text>
+            <TouchableOpacity onPress={refreshRandomApps} className="size-6">
+              <Svg
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="#fff"
+              >
+                <Path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                />
+              </Svg>
+            </TouchableOpacity>
+          </View>
 
           {loading ? (
             <ActivityIndicator
