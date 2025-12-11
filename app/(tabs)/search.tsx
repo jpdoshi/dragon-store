@@ -4,6 +4,7 @@ import ScreenView from "@/components/ScreenView";
 import { useAppsData } from "@/hooks/useAppsData";
 import React, { useEffect, useState } from "react";
 import {
+  ActivityIndicator,
   ScrollView,
   Text,
   TextInput,
@@ -13,7 +14,7 @@ import {
 import Svg, { Path } from "react-native-svg";
 
 const Search = () => {
-  const { apps } = useAppsData();
+  const { apps, loading } = useAppsData();
 
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -159,7 +160,15 @@ const Search = () => {
             </View>
           </View>
 
-          <AppsList appData={filterList} />
+          {loading ? (
+            <ActivityIndicator
+              className="mt-24"
+              size={"large"}
+              color={"#ff2056"}
+            />
+          ) : (
+            <AppsList appData={filterList} />
+          )}
         </View>
 
         <View className="h-24" />

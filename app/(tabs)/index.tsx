@@ -6,10 +6,17 @@ import { useAppsData } from "@/hooks/useAppsData";
 import * as Application from "expo-application";
 import { openBrowserAsync } from "expo-web-browser";
 import React from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import {
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const Home = () => {
-  const { apps } = useAppsData();
+  const { apps, loading } = useAppsData();
 
   const appList = [...apps].sort(() => Math.random() - 0.5).slice(0, 8);
 
@@ -70,7 +77,15 @@ const Home = () => {
             Random Apps
           </Text>
 
-          <AppsList appData={appList} />
+          {loading ? (
+            <ActivityIndicator
+              className="mt-24"
+              size={"large"}
+              color={"#ff2056"}
+            />
+          ) : (
+            <AppsList appData={appList} />
+          )}
         </View>
 
         <View className="h-24" />
