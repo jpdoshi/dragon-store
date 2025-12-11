@@ -11,7 +11,7 @@ import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 const Home = () => {
   const { apps } = useAppsData();
 
-  const appList = [...apps].sort(() => Math.random() - 0.5).slice(0, 10);
+  const appList = [...apps].sort(() => Math.random() - 0.5).slice(0, 8);
 
   return (
     <ScreenView>

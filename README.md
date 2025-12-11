@@ -1,4 +1,4 @@
-<img width="200" height="200" alt="logo" src="https://github.com/user-attachments/assets/88f94aa4-da52-4104-940d-380931965fe5" />
+<img width="150" height="150" alt="logo" src="https://github.com/user-attachments/assets/88f94aa4-da52-4104-940d-380931965fe5" />
 
 # Dragon Store
 
@@ -8,7 +8,7 @@ The end goal of Dragon store is to provide apps to users in a safe and transpare
 
 ## Features
 
-Below shown are few features that are currently available in dragon store:
+Below listed are few features that are currently available in dragon store:
 
 - Native app, not a web wrapper.
 
@@ -22,7 +22,7 @@ Below shown are few features that are currently available in dragon store:
 
 - Respects user privacy. Doesn't connect to any external API.
 
-- Apps are added almost daily to the library.
+- New apps are added frequently to the library.
 
 ## Build Instructions
 
@@ -53,8 +53,6 @@ Below shown are few features that are currently available in dragon store:
 - Local app update notifications
 
 - possible iOS release, please support by donating/sponsoring to the project.
-
-- Installed apps screen
 
 - Much more.
 
