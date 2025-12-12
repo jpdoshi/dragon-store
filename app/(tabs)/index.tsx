@@ -86,7 +86,7 @@ const Home = () => {
           </View>
         </View>
 
-        <View className="px-5">
+        <View className="px-6">
           <View className="flex-row flex-1 justify-between items-center mb-5">
             <Text className="text-white font-medium text-2xl">Random Apps</Text>
             <TouchableOpacity

@@ -28,7 +28,7 @@ const About = () => {
 
         <View className="h-8" />
 
-        <Animated.View entering={FadeIn.duration(300)} className="px-5">
+        <Animated.View entering={FadeIn.duration(300)} className="px-6">
           <View className="flex-row gap-5 items-center">
             <Image
               src={"https://avatars.githubusercontent.com/u/122164427?v=4"}

@@ -181,7 +181,7 @@ const appDetails = () => {
 
         <Animated.View
           entering={FadeIn.delay(150).duration(400)}
-          className="px-5"
+          className="px-6"
         >
           <View className="flex-row gap-5 items-center mb-10">
             <Image

@@ -48,7 +48,7 @@ const Favorites = () => {
 
         <View className="h-8" />
 
-        <View className="px-5">
+        <View className="px-6">
           <Text className="text-2xl font-medium text-white mb-5">
             Your Favorites
           </Text>

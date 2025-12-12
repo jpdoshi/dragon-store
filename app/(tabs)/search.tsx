@@ -80,7 +80,7 @@ const Search = () => {
         </AppBar>
         <View className="h-5" />
 
-        <View className="px-5">
+        <View className="px-6">
           {/* Search Bar */}
           <View
             className="flex-row items-center bg-[#212121] border-2 border-neutral-600
