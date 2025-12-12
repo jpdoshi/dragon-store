@@ -3,12 +3,14 @@ import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Image } from "expo-image";
+import * as MailComposer from "expo-mail-composer";
 import { router, useLocalSearchParams } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import { ScrollView, Share, Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
+import Toast from "react-native-toast-message";
 
 const FAVORITES_KEY = "favorite_apps";
 
@@ -129,7 +131,37 @@ const appDetails = () => {
               {/* Flag icon */}
               <TouchableOpacity
                 onPress={async () => {
-                  // open gmail with app issue template
+                  const isAvailable = await MailComposer.isAvailableAsync();
+
+                  if (isAvailable) {
+                    const result = await MailComposer.composeAsync({
+                      recipients: ["thejddev@gmail.com"],
+                      subject: `Dragon Store: App details issue - ${appData.id} - ${appData.title}`,
+                    });
+
+                    if (
+                      result.status !=
+                      MailComposer.MailComposerStatus.UNDETERMINED
+                    ) {
+                      Toast.show({
+                        type:
+                          result.status == MailComposer.MailComposerStatus.SENT
+                            ? "success"
+                            : "info",
+                        text1: `Email was ${result.status}`,
+                        topOffset: 50,
+                        swipeable: true,
+                      });
+                    }
+                  } else {
+                    Toast.show({
+                      type: "error",
+                      text1: "No Email app found!",
+                      text2: "Please make sure you have email app installed.",
+                      topOffset: 50,
+                      swipeable: true,
+                    });
+                  }
                 }}
                 className="size-6"
               >
@@ -358,6 +390,8 @@ const appDetails = () => {
 
         <View className="h-24" />
       </ScrollView>
+
+      <Toast />
     </ScreenView>
   );
 };
