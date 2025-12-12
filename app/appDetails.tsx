@@ -61,7 +61,7 @@ const appDetails = () => {
       >
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between gap-4">
-            <TouchableOpacity onPress={() => router.back()} className="size-6">
+            <TouchableOpacity onPress={() => router.back()} className="size-7">
               <Svg
                 fill="none"
                 viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ const appDetails = () => {
             </TouchableOpacity>
 
             {/* Action buttons */}
-            <View className="flex-row items-center gap-5">
+            <View className="flex-row items-center gap-7">
               {/* Share icon */}
               <TouchableOpacity
                 onPress={async () => {
@@ -94,7 +94,7 @@ const appDetails = () => {
                     console.log("Error sharing URL:", error);
                   }
                 }}
-                className="size-5"
+                className="size-6"
               >
                 <Svg viewBox="0 0 24 24" fill="#fff">
                   <Path
@@ -105,9 +105,9 @@ const appDetails = () => {
                 </Svg>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={toggleFavorite} className="size-6">
+              <TouchableOpacity onPress={toggleFavorite} className="size-7">
                 {isFavorite ? (
-                  <Svg viewBox="0 0 24 24" fill="#ff2056" className="size-6">
+                  <Svg viewBox="0 0 24 24" fill="#ff2056">
                     <Path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
                   </Svg>
                 ) : (
@@ -125,6 +125,22 @@ const appDetails = () => {
                   </Svg>
                 )}
               </TouchableOpacity>
+
+              {/* Flag icon */}
+              <TouchableOpacity
+                onPress={async () => {
+                  // open gmail with app issue template
+                }}
+                className="size-6"
+              >
+                <Svg viewBox="0 0 24 24" fill="#fff">
+                  <Path
+                    fillRule="evenodd"
+                    d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                    clipRule="evenodd"
+                  />
+                </Svg>
+              </TouchableOpacity>
             </View>
           </View>
         </AppBar>
@@ -138,7 +154,7 @@ const appDetails = () => {
           <View className="flex-row gap-5 items-center mb-10">
             <Image
               source={config.ICON_REPO_URL + appData.icon}
-              style={{ height: 90, width: 90, borderRadius: 32 }}
+              style={{ height: 90, width: 90, borderRadius: 24 }}
               placeholder={require("@/data/assets/placeholder.gif")}
               contentFit="cover"
               transition={400}
@@ -165,7 +181,7 @@ const appDetails = () => {
               App Info
             </Text>
 
-            <View className="h-[80px] flex-1 bg-[#181818] rounded-xl px-4 flex-row gap-3 items-center justify-around">
+            <View className="h-[80px] flex-1 bg-[#181818] rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-800 shadow-lg">
               <View className="flex-col gap-1.5 justify-center items-center">
                 <Image
                   source={require("@/data/assets/android.png")}
@@ -239,7 +255,9 @@ const appDetails = () => {
           <View className="h-10" />
 
           <View>
-            <Text className="text-white text-xl font-medium mb-3">More</Text>
+            <Text className="text-white text-xl font-medium mb-3">
+              App Details
+            </Text>
             <View className="flex-col gap-3">
               <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
                 <Text className="text-white font-medium text-base">

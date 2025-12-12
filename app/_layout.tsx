@@ -4,19 +4,30 @@ import { Stack } from "expo-router";
 import { useEffect } from "react";
 import Toast from "react-native-toast-message";
 
+function showNetworkToast() {
+  Toast.show({
+    type: "error",
+    text1: "You're Offline",
+    text2: "Please check your internet connection.",
+    autoHide: false,
+    topOffset: 50,
+    swipeable: true,
+  });
+}
+
+async function checkNetwork() {
+  const networkData = await Network.getNetworkStateAsync();
+  if (!networkData?.isConnected || !networkData?.isInternetReachable)
+    showNetworkToast();
+}
+
 export default function RootLayout() {
   useEffect(() => {
+    // check for network on init
+    checkNetwork();
+
     const subscription = Network.addNetworkStateListener((state) => {
-      if (!state.isConnected) {
-        Toast.show({
-          type: "error",
-          text1: "You're Offline",
-          text2: "Please check your internet connection.",
-          autoHide: false,
-          topOffset: 50,
-          swipeable: true,
-        });
-      }
+      if (!state.isConnected) showNetworkToast();
     });
 
     return () => {
