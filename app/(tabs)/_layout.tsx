@@ -7,7 +7,7 @@ import Svg, { Path } from "react-native-svg";
 
 const Layout = () => {
   const screenWidth = Dimensions.get("window").width;
-  const tabBarWidth = 260;
+  const tabBarWidth = 270;
   const marginHorizontal = (screenWidth - tabBarWidth) / 2;
 
   return (
@@ -27,10 +27,10 @@ const Layout = () => {
           borderTopWidth: 1,
           marginHorizontal,
           marginBottom: 40,
-          height: 52,
+          height: 55,
           paddingTop: "auto",
           paddingBottom: "auto",
-          borderRadius: 52,
+          borderRadius: 55,
           overflow: "hidden",
         },
         tabBarBackground: () => (
@@ -57,7 +57,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[44px] w-[56px] flex justify-center items-center"
+              className="h-[46px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
@@ -91,7 +91,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[44px] w-[56px] flex justify-center items-center"
+              className="h-[46px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
@@ -125,7 +125,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[44px] w-[56px] flex justify-center items-center"
+              className="h-[46px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
@@ -159,7 +159,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[44px] w-[56px] flex justify-center items-center"
+              className="h-[46px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">

@@ -91,13 +91,13 @@ const Home = () => {
             <Text className="text-white font-medium text-2xl">Random Apps</Text>
             <TouchableOpacity
               onPress={refreshRandomApps}
-              className="size-9 bg-rose-500 rounded-full p-2"
+              className="size-9 bg-lime-400 rounded-full p-2"
             >
               <Svg
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
-                stroke="#4d0218"
+                stroke="#000"
               >
                 <Path
                   strokeLinecap="round"

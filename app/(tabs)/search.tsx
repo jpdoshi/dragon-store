@@ -153,8 +153,8 @@ const Search = () => {
             <Text className="text-white text-2xl font-medium">
               Featured Apps
             </Text>
-            <View className="py-0.5 px-3 rounded-full bg-white">
-              <Text className="text-black text-base font-bold">
+            <View className="py-1 px-4 rounded-full bg-indigo-500">
+              <Text className="text-white text-base font-bold">
                 {filterList.length}
               </Text>
             </View>
