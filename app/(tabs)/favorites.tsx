@@ -55,7 +55,7 @@ const Favorites = () => {
           <AppsList appData={appList} />
         </View>
 
-        <View className="h-24" />
+        <View className="h-28" />
       </ScrollView>
     </ScreenView>
   );

@@ -143,7 +143,7 @@ const Home = () => {
           )}
         </View>
 
-        <View className="h-24" />
+        <View className="h-28" />
       </ScrollView>
     </ScreenView>
   );

@@ -3,13 +3,15 @@ import { AppMetaData } from "@/types/AppMetaData";
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 
 const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
+  const screenWidth = Dimensions.get("window").width;
+
   return (
     <AnimatedTouchable
       entering={FadeInDown.duration(450).springify()}
@@ -19,7 +21,8 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           params: { AppData: JSON.stringify(AppData) },
         })
       }
-      className="h-[80px] flex-1 sm:mx-2 bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl"
+      className="h-[80px] bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl"
+      style={{ marginInline: screenWidth >= 640 ? 8 : 0 }}
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image

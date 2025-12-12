@@ -35,7 +35,7 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
       renderItem={({ item }) => <AppContainer AppData={item} />}
       keyExtractor={(item) => item.id.toString()}
       scrollEnabled={false}
-      numColumns={screenWidth > 600 ? 2 : 1}
+      numColumns={screenWidth >= 640 ? 2 : 1}
       ListEmptyComponent={() => (
         <Text className="text-neutral-400 text-lg font-medium mt-24 text-center">
           No Items to show

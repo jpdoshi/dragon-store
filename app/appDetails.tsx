@@ -213,7 +213,7 @@ const appDetails = () => {
               App Info
             </Text>
 
-            <View className="h-[80px] flex-1 bg-[#181818] rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-800 shadow-lg">
+            <View className="h-[80px] flex-1 bg-[#181818] rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-800">
               <View className="flex-col gap-1.5 justify-center items-center">
                 <Image
                   source={require("@/data/assets/android.png")}
@@ -388,7 +388,7 @@ const appDetails = () => {
           </View>
         </Animated.View>
 
-        <View className="h-24" />
+        <View className="h-20" />
       </ScrollView>
 
       <Toast />
