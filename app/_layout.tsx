@@ -24,7 +24,8 @@ async function checkNetwork() {
 export default function RootLayout() {
   useEffect(() => {
     const subscription = Network.addNetworkStateListener((state) => {
-      if (!state.isConnected || !state.isInternetReachable) showNetworkToast();
+      if (!state?.isConnected || !state?.isInternetReachable)
+        showNetworkToast();
     });
 
     // check for network on init
