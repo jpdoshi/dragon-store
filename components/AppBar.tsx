@@ -7,7 +7,7 @@ const AppBar = ({ children }: { children: React.ReactNode }) => {
     <View className="flex-row justify-between items-center">
       <LinearGradient
         colors={["rgba(18,18,18,1.0)", "rgba(18,18,18,0.75)"]}
-        className="flex-1 h-[60px] px-6"
+        className="flex-1 h-[65px] px-6"
       >
         {children}
       </LinearGradient>

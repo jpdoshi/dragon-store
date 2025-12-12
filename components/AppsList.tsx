@@ -1,6 +1,12 @@
 import { AppMetaData } from "@/types/AppMetaData";
 import React, { useEffect, useState } from "react";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import {
+  Dimensions,
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Svg, { Path } from "react-native-svg";
 import AppContainer from "./AppContainer";
 
@@ -9,6 +15,7 @@ const PAGE_SIZE = 10;
 const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
   const [page, setPage] = useState(1);
   const [visible, setVisible] = useState<AppMetaData[]>([]);
+  const screenWidth = Dimensions.get("window").width;
 
   useEffect(() => {
     setPage(1);
@@ -28,6 +35,7 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
       renderItem={({ item }) => <AppContainer AppData={item} />}
       keyExtractor={(item) => item.id.toString()}
       scrollEnabled={false}
+      numColumns={screenWidth > 600 ? 2 : 1}
       ListEmptyComponent={() => (
         <Text className="text-neutral-400 text-lg font-medium mt-24 text-center">
           No Items to show

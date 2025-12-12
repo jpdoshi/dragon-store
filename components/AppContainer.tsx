@@ -19,7 +19,7 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           params: { AppData: JSON.stringify(AppData) },
         })
       }
-      className="h-[80px] bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl"
+      className="h-[80px] flex-1 sm:mx-2 bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl"
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
