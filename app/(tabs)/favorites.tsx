@@ -50,10 +50,10 @@ const Favorites = () => {
 
         <View className="px-6">
           <View className="flex-row items-center justify-between mb-5">
-            <Text className="text-black dark:text-white text-2xl font-medium">
+            <Text className="text-black dark:text-white text-2xl font-semibold">
               Your Favorites
             </Text>
-            <View className="py-1 px-4 rounded-full bg-indigo-400 dark:bg-indigo-500">
+            <View className="py-1 px-4 rounded-full bg-indigo-500">
               <Text className="text-white text-base font-bold">
                 {appList.length}
               </Text>

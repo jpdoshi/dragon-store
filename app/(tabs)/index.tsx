@@ -88,7 +88,7 @@ const Home = () => {
 
         <View className="px-6">
           <View className="flex-row flex-1 justify-between items-center mb-5">
-            <Text className="text-black dark:text-white font-medium text-2xl">
+            <Text className="text-black dark:text-white font-semibold text-2xl">
               Random Apps
             </Text>
             <TouchableOpacity

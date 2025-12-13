@@ -209,7 +209,7 @@ const appDetails = () => {
               <Text className="text-black dark:text-white font-bold text-2xl leading-tight">
                 {appData.title}
               </Text>
-              <Text className="text-neutral-500 dark:text-neutral-400 text-xl font-medium mb-1.5">
+              <Text className="text-neutral-500 dark:text-neutral-400 text-lg font-medium mb-1.5">
                 {appData.owner}
               </Text>
               <View className="bg-rose-500 py-1 px-2 rounded-lg self-start">
@@ -222,7 +222,7 @@ const appDetails = () => {
           </View>
 
           <View>
-            <Text className="text-black dark:text-white text-xl font-medium mb-3">
+            <Text className="text-black dark:text-white text-xl font-semibold mb-3">
               App Info
             </Text>
 
@@ -294,7 +294,7 @@ const appDetails = () => {
           <View className="h-10" />
 
           <View>
-            <Text className="text-black dark:text-white text-xl font-medium mb-3">
+            <Text className="text-black dark:text-white text-xl font-semibold mb-3">
               About App
             </Text>
             <Text className="text-base text-neutral-500 dark:text-neutral-400">
@@ -305,7 +305,7 @@ const appDetails = () => {
           <View className="h-10" />
 
           <View>
-            <Text className="text-black dark:text-white text-xl font-medium mb-3">
+            <Text className="text-black dark:text-white text-xl font-semibold mb-3">
               Source Details
             </Text>
             <View className="flex-col gap-3">
@@ -406,7 +406,7 @@ const appDetails = () => {
           </View>
         </Animated.View>
 
-        <View className="h-20" />
+        <View className="h-18" />
       </ScrollView>
 
       <Toast />
