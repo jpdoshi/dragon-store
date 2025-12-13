@@ -49,9 +49,17 @@ const Favorites = () => {
         <View className="h-8" />
 
         <View className="px-6">
-          <Text className="text-2xl font-medium text-black dark:text-white mb-5">
-            Your Favorites
-          </Text>
+          <View className="flex-row items-center justify-between mb-5">
+            <Text className="text-black dark:text-white text-2xl font-medium">
+              Your Favorites
+            </Text>
+            <View className="py-1 px-4 rounded-full bg-indigo-400 dark:bg-indigo-500">
+              <Text className="text-white text-base font-bold">
+                {appList.length}
+              </Text>
+            </View>
+          </View>
+
           <AppsList appData={appList} />
         </View>
 

@@ -196,7 +196,7 @@ const appDetails = () => {
           entering={FadeIn.delay(150).duration(400)}
           className="px-6"
         >
-          <View className="flex-row gap-4 items-center mb-10">
+          <View className="flex-row gap-5 items-center mb-10">
             <Image
               source={config.ICON_REPO_URL + appData.icon}
               style={{ height: 90, width: 90, borderRadius: 24 }}
@@ -209,7 +209,7 @@ const appDetails = () => {
               <Text className="text-black dark:text-white font-bold text-2xl leading-tight">
                 {appData.title}
               </Text>
-              <Text className="text-neutral-400 text-xl font-medium mb-1.5">
+              <Text className="text-neutral-500 dark:text-neutral-400 text-xl font-medium mb-1.5">
                 {appData.owner}
               </Text>
               <View className="bg-rose-500 py-1 px-2 rounded-lg self-start">

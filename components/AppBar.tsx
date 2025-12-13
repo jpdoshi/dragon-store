@@ -9,10 +9,10 @@ const AppBar = ({ children }: { children: React.ReactNode }) => {
       <LinearGradient
         colors={
           theme == "dark"
-            ? ["rgba(18,18,18,1.0)", "rgba(18,18,18,0.75)"]
-            : ["rgba(250,250,250,1.0)", "rgba(250,250,250,0.75)"]
+            ? ["rgba(18,18,18,1.0)", "rgba(18,18,18,0.8)"]
+            : ["rgba(250,250,250,1.0)", "rgba(250,250,250,0.8)"]
         }
-        className="flex-1 h-[65px] px-6"
+        className="flex-1 h-[64px] px-6"
       >
         {children}
       </LinearGradient>
