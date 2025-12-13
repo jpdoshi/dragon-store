@@ -21,7 +21,7 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
           params: { AppData: JSON.stringify(AppData) },
         })
       }
-      className="h-[80px] bg-[#181818] mb-3 py-3 px-4 shadow-md rounded-xl"
+      className="h-[80px] bg-light-surface dark:bg-dark-surface mb-3 py-3 px-4 shadow shadow-rose-200 dark:shadow-black rounded-xl"
       style={{ marginInline: screenWidth >= 640 ? 8 : 0 }}
     >
       <View className="flex-1 flex-row gap-4 items-center">
@@ -34,7 +34,7 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
         />
 
         <View className="flex-1 flex-col">
-          <Text className="text-white text-lg font-semibold leading-snug">
+          <Text className="text-black dark:text-white text-lg font-semibold leading-snug">
             {AppData.title}
           </Text>
 

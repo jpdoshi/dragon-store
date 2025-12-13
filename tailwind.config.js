@@ -6,8 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#ff2056",
-        bg: "#121212",
+        light: {
+          bg: "#fafafa",
+          tertiary: "#eeeeee",
+          surface: "#ffffff",
+        },
+        dark: {
+          bg: "#121212",
+          tertiary: "#212121",
+          surface: "#181818",
+        },
       },
     },
   },

@@ -36,10 +36,10 @@ const Favorites = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-tight">
+              <Text className="text-2xl font-bold text-black dark:text-white leading-tight">
                 Favorite Apps
               </Text>
-              <Text className="font-medium text-primary">
+              <Text className="font-medium text-rose-500">
                 Your Favorites Stay Here
               </Text>
             </View>
@@ -49,7 +49,7 @@ const Favorites = () => {
         <View className="h-8" />
 
         <View className="px-6">
-          <Text className="text-2xl font-medium text-white mb-5">
+          <Text className="text-2xl font-medium text-black dark:text-white mb-5">
             Your Favorites
           </Text>
           <AppsList appData={appList} />

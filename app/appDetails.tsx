@@ -7,7 +7,14 @@ import * as MailComposer from "expo-mail-composer";
 import { router, useLocalSearchParams } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
-import { ScrollView, Share, Text, TouchableOpacity, View } from "react-native";
+import {
+  ScrollView,
+  Share,
+  Text,
+  TouchableOpacity,
+  useColorScheme,
+  View,
+} from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 import Toast from "react-native-toast-message";
@@ -19,8 +26,8 @@ const appDetails = () => {
   const appData = JSON.parse(AppData.toString());
 
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const colorScheme = useColorScheme();
 
-  // Load favorite state
   useEffect(() => {
     loadFavoriteState();
   }, []);
@@ -98,7 +105,10 @@ const appDetails = () => {
                 }}
                 className="size-6"
               >
-                <Svg viewBox="0 0 24 24" fill="#fff">
+                <Svg
+                  viewBox="0 0 24 24"
+                  fill={colorScheme == "dark" ? "#fff" : "#000"}
+                >
                   <Path
                     fillRule="evenodd"
                     d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z"
@@ -117,7 +127,7 @@ const appDetails = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2}
-                    stroke="#fff"
+                    stroke={colorScheme == "dark" ? "#fff" : "#000"}
                   >
                     <Path
                       strokeLinecap="round"
@@ -165,7 +175,10 @@ const appDetails = () => {
                 }}
                 className="size-6"
               >
-                <Svg viewBox="0 0 24 24" fill="#fff">
+                <Svg
+                  viewBox="0 0 24 24"
+                  fill={colorScheme == "dark" ? "#fff" : "#000"}
+                >
                   <Path
                     fillRule="evenodd"
                     d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
@@ -183,7 +196,7 @@ const appDetails = () => {
           entering={FadeIn.delay(150).duration(400)}
           className="px-6"
         >
-          <View className="flex-row gap-5 items-center mb-10">
+          <View className="flex-row gap-4 items-center mb-10">
             <Image
               source={config.ICON_REPO_URL + appData.icon}
               style={{ height: 90, width: 90, borderRadius: 24 }}
@@ -193,14 +206,14 @@ const appDetails = () => {
             />
 
             <View>
-              <Text className="text-white font-bold text-2xl leading-tight">
+              <Text className="text-black dark:text-white font-bold text-2xl leading-tight">
                 {appData.title}
               </Text>
               <Text className="text-neutral-400 text-xl font-medium mb-1.5">
                 {appData.owner}
               </Text>
               <View className="bg-rose-500 py-1 px-2 rounded-lg self-start">
-                <Text className="text-black font-bold">
+                <Text className="text-white dark:text-black font-bold">
                   {appData.category.charAt(0).toUpperCase() +
                     appData.category.slice(1)}
                 </Text>
@@ -209,38 +222,41 @@ const appDetails = () => {
           </View>
 
           <View>
-            <Text className="text-white text-xl font-medium mb-3">
+            <Text className="text-black dark:text-white text-xl font-medium mb-3">
               App Info
             </Text>
 
-            <View className="h-[80px] flex-1 bg-[#181818] rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-800">
+            <View className="h-[80px] flex-1 bg-white dark:bg-dark-surface rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-200 dark:border-neutral-800 shadow-lg shadow-neutral-200 dark:shadow-black">
               <View className="flex-col gap-1.5 justify-center items-center">
                 <Image
                   source={require("@/data/assets/android.png")}
                   style={{ height: 28, width: 28 }}
                 />
-                <Text className="font-medium text-sm text-neutral-400">
+                <Text className="font-medium text-sm text-neutral-500 dark:text-neutral-400">
                   Platform
                 </Text>
               </View>
-              <View className="h-10 w-[1px] bg-neutral-700" />
+              <View className="h-10 w-[1px] bg-neutral-300 dark:bg-neutral-700" />
               {appData.website?.trim() && (
                 <TouchableOpacity
                   onPress={async () => await openBrowserAsync(appData.website)}
                   className="flex-col gap-1.5 justify-center items-center"
                 >
                   <View className="size-7">
-                    <Svg viewBox="0 0 24 24" fill="#2b7fff">
+                    <Svg
+                      viewBox="0 0 24 24"
+                      fill={colorScheme == "dark" ? "#2b7fff" : "#51a2ff"}
+                    >
                       <Path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
                     </Svg>
                   </View>
-                  <Text className="font-medium text-sm text-neutral-400">
+                  <Text className="font-medium text-sm text-neutral-500 dark:text-neutral-400">
                     Website
                   </Text>
                 </TouchableOpacity>
               )}
               {appData.website?.trim() && (
-                <View className="h-10 w-[1px] bg-neutral-700" />
+                <View className="h-10 w-[1px] bg-neutral-300 dark:bg-neutral-700" />
               )}
               <TouchableOpacity
                 onPress={async () => {
@@ -259,7 +275,7 @@ const appDetails = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
-                    stroke="#fff"
+                    stroke={colorScheme == "dark" ? "#fff" : "#000"}
                   >
                     <Path
                       strokeLinecap="round"
@@ -268,7 +284,7 @@ const appDetails = () => {
                     />
                   </Svg>
                 </View>
-                <Text className="font-medium text-sm text-neutral-400">
+                <Text className="font-medium text-sm text-neutral-500 dark:text-neutral-400">
                   Latest APK
                 </Text>
               </TouchableOpacity>
@@ -278,21 +294,23 @@ const appDetails = () => {
           <View className="h-10" />
 
           <View>
-            <Text className="text-white text-xl font-medium mb-3">
+            <Text className="text-black dark:text-white text-xl font-medium mb-3">
               About App
             </Text>
-            <Text className="text-base text-neutral-400">{appData.about}</Text>
+            <Text className="text-base text-neutral-500 dark:text-neutral-400">
+              {appData.about}
+            </Text>
           </View>
 
           <View className="h-10" />
 
           <View>
-            <Text className="text-white text-xl font-medium mb-3">
+            <Text className="text-black dark:text-white text-xl font-medium mb-3">
               Source Details
             </Text>
             <View className="flex-col gap-3">
-              <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
-                <Text className="text-white font-medium text-base">
+              <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                <Text className="text-black dark:text-white font-medium text-base">
                   Download Source
                 </Text>
                 <Text className="text-green-600 font-semibold text-base">
@@ -303,8 +321,8 @@ const appDetails = () => {
                 </Text>
               </View>
               {appData.repoUrl.includes("github.com") && (
-                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
-                  <Text className="text-white font-medium text-base">
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                  <Text className="text-black dark:text-white font-medium text-base">
                     Owner Profile
                   </Text>
                   <TouchableOpacity
@@ -341,8 +359,8 @@ const appDetails = () => {
                   </TouchableOpacity>
                 </View>
               )}
-              <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-800">
-                <Text className="text-white font-medium text-base">
+              <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                <Text className="text-black dark:text-white font-medium text-base">
                   {appData.repoUrl.includes("github.com") ||
                   appData.repoUrl.includes("gitlab.com")
                     ? "Repo URL"

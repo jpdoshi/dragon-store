@@ -16,10 +16,10 @@ const About = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-tight">
+              <Text className="text-2xl font-bold text-black dark:text-white leading-tight">
                 About Developer
               </Text>
-              <Text className="font-medium text-primary">
+              <Text className="font-medium text-rose-500">
                 Know More About Developer
               </Text>
             </View>
@@ -34,16 +34,16 @@ const About = () => {
               src={"https://avatars.githubusercontent.com/u/122164427?v=4"}
               height={100}
               width={100}
-              className="rounded-full shadow-2xl shadow-red-600"
+              className="rounded-full shadow-2xl shadow-red-500 dark:shadow-red-600"
             />
             <View>
-              <Text className="text-2xl font-bold text-white leading-tight">
+              <Text className="text-2xl font-bold text-black dark:text-white leading-tight">
                 The JD Dev
               </Text>
               <Text className="text-rose-500 text-lg font-semibold">
                 github.com/jpdoshi
               </Text>
-              <Text className="text-neutral-400 text-base mt-1">
+              <Text className="text-neutral-500 dark:text-neutral-400 text-base mt-1">
                 Based in India 🇮🇳
               </Text>
             </View>
@@ -73,7 +73,7 @@ const About = () => {
               onPress={async () =>
                 await openBrowserAsync("https://github.com/jpdoshi")
               }
-              className="h-[45px] flex-row flex-1 rounded-xl bg-white justify-center items-center gap-1"
+              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-100 dark:bg-white justify-center items-center gap-1"
             >
               <View className="size-6">
                 <Svg viewBox="0 0 128 128">
@@ -95,28 +95,28 @@ const About = () => {
           </View>
 
           <View className="h-10" />
-          <Text className="text-xl font-semibold text-white">
+          <Text className="text-xl font-semibold text-black dark:text-white">
             About Dragon Store
           </Text>
-          <Text className="text-base text-neutral-400 mt-2">
+          <Text className="text-base text-neutral-500 dark:text-neutral-400 mt-2">
             Dragon Store is your gateway to transparent, libre and free
             open-source apps.
           </Text>
 
           <View className="h-8" />
-          <Text className="text-xl font-semibold text-white">
+          <Text className="text-xl font-semibold text-black dark:text-white">
             About Developer
           </Text>
-          <Text className="text-base text-neutral-400 mt-2">
+          <Text className="text-base text-neutral-500 dark:text-neutral-400 mt-2">
             👋 Hello there, I am Jainam P. Doshi, Software Engineer from India
             🇮🇳. I love to create innovative apps.
           </Text>
 
           <View className="h-8" />
-          <Text className="text-xl font-semibold text-white">
+          <Text className="text-xl font-semibold text-black dark:text-white">
             Support the Project
           </Text>
-          <Text className="text-base leading-normal mt-2 text-neutral-400">
+          <Text className="text-base leading-normal mt-2 text-neutral-500 dark:text-neutral-400">
             Fell in love with the project? Contribute to the development by
             supporting the developer. You can Buy me a coffee ☕ to help me keep
             up the good work.

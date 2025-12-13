@@ -9,19 +9,20 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  useColorScheme,
   View,
 } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
 const Search = () => {
   const { apps, loading } = useAppsData();
+  const colorScheme = useColorScheme();
 
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
 
   const sortedApps = [...apps].sort((a, b) => a.title.localeCompare(b.title));
-
   const [filterList, setFilterList] = useState(sortedApps);
 
   const categoriesList = [
@@ -69,10 +70,10 @@ const Search = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-tight">
+              <Text className="text-2xl font-bold text-black dark:text-white leading-tight">
                 Discover Apps
               </Text>
-              <Text className="font-medium text-primary">
+              <Text className="font-medium text-rose-500">
                 Explore Library of Apps
               </Text>
             </View>
@@ -83,7 +84,7 @@ const Search = () => {
         <View className="px-6">
           {/* Search Bar */}
           <View
-            className="flex-row items-center bg-[#212121] border-2 border-neutral-600
+            className="flex-row items-center bg-neutral-100 dark:bg-dark-tertiary border border-neutral-300 dark:border-neutral-600
                 focus:border-rose-500 rounded-2xl h-[50px] px-3 mb-4"
           >
             <View className="size-5">
@@ -91,7 +92,7 @@ const Search = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
-                stroke="#fff"
+                stroke={colorScheme == "dark" ? "#fff" : "#000"}
               >
                 <Path
                   strokeLinecap="round"
@@ -105,8 +106,8 @@ const Search = () => {
               onChangeText={setSearchQuery}
               value={searchQuery}
               placeholder="Search Apps"
-              placeholderTextColor="#777"
-              className="flex-1 text-white ml-1 text-lg font-medium"
+              placeholderTextColor="#737373"
+              className="flex-1 text-black dark:text-white ml-1 text-lg font-medium"
             />
 
             <TouchableOpacity
@@ -140,9 +141,11 @@ const Search = () => {
               <TouchableOpacity
                 key={index}
                 onPress={() => setCategory(item)}
-                className={`${category == item ? "bg-rose-500" : "bg-[#212121]"} rounded-lg py-1.5 px-3`}
+                className={`${category == item ? "bg-rose-500" : "bg-rose-100 dark:bg-dark-tertiary"} rounded-lg py-1.5 px-3`}
               >
-                <Text className="text-white font-semibold">
+                <Text
+                  className={`text-black dark:text-white ${category == item && "text-white"} font-semibold`}
+                >
                   {item ? item.charAt(0).toUpperCase() + item.slice(1) : "All"}
                 </Text>
               </TouchableOpacity>
@@ -150,10 +153,10 @@ const Search = () => {
           </View>
 
           <View className="flex-row items-center justify-between mb-5">
-            <Text className="text-white text-2xl font-medium">
+            <Text className="text-black dark:text-white text-2xl font-medium">
               Featured Apps
             </Text>
-            <View className="py-1 px-4 rounded-full bg-indigo-500">
+            <View className="py-1 px-4 rounded-full dark:bg-indigo-500">
               <Text className="text-white text-base font-bold">
                 {filterList.length}
               </Text>

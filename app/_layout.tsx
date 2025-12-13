@@ -2,6 +2,7 @@ import "@/global.css";
 import * as Network from "expo-network";
 import { Stack } from "expo-router";
 import { useEffect } from "react";
+import { useColorScheme } from "react-native";
 import Toast from "react-native-toast-message";
 
 function showNetworkToast() {
@@ -22,6 +23,7 @@ async function checkNetwork() {
 }
 
 export default function RootLayout() {
+  const colorScheme = useColorScheme();
   useEffect(() => {
     const subscription = Network.addNetworkStateListener((state) => {
       if (!state?.isConnected || !state?.isInternetReachable)
@@ -40,7 +42,7 @@ export default function RootLayout() {
     <>
       <Stack
         screenOptions={{
-          statusBarStyle: "light",
+          statusBarStyle: colorScheme == "dark" ? "light" : "dark",
           headerShown: false,
           animation: "ios_from_right",
         }}

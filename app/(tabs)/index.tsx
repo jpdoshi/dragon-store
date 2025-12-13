@@ -25,7 +25,7 @@ const Home = () => {
 
   const refreshRandomApps = () => {
     if (!apps || apps.length === 0) return;
-    const newList = [...apps].sort(() => Math.random() - 0.5).slice(0, 5);
+    const newList = [...apps].sort(() => Math.random() - 0.5).slice(0, 7);
 
     setAppList(newList);
   };
@@ -43,10 +43,10 @@ const Home = () => {
         <AppBar>
           <View className="flex-1 flex-row items-center justify-between">
             <View>
-              <Text className="text-2xl font-bold text-white leading-tight">
+              <Text className="text-2xl font-bold text-black dark:text-white leading-tight">
                 Dragon Store
               </Text>
-              <Text className="font-medium text-primary">
+              <Text className="font-medium text-rose-500">
                 Discover Trending Apps
               </Text>
             </View>
@@ -59,7 +59,7 @@ const Home = () => {
             source={require("@/data/assets/logo.png")}
             className="size-[120px] rounded-full shadow-2xl shadow-rose-600"
           />
-          <Text className="font-bold text-2xl text-white mt-3">
+          <Text className="font-bold text-2xl text-black dark:text-white mt-3">
             {Application.applicationName} v
             {Application.nativeApplicationVersion}
           </Text>
@@ -71,7 +71,7 @@ const Home = () => {
                   `${config.DRAGON_STORE_REPO_URL}/releases/latest`
                 )
               }
-              className="bg-rose-500 py-3 px-4 rounded-lg"
+              className="bg-rose-500 py-2.5 px-4 rounded-lg"
             >
               <Text className="font-bold text-white">Check Update</Text>
             </TouchableOpacity>
@@ -79,7 +79,7 @@ const Home = () => {
               onPress={async () =>
                 await openBrowserAsync(config.DRAGON_STORE_REPO_URL)
               }
-              className="bg-white py-3 px-4 rounded-lg"
+              className=" bg-rose-100 dark:bg-white py-2.5 px-4 rounded-lg"
             >
               <Text className="font-bold text-black">Github Repo</Text>
             </TouchableOpacity>
@@ -88,10 +88,12 @@ const Home = () => {
 
         <View className="px-6">
           <View className="flex-row flex-1 justify-between items-center mb-5">
-            <Text className="text-white font-medium text-2xl">Random Apps</Text>
+            <Text className="text-black dark:text-white font-medium text-2xl">
+              Random Apps
+            </Text>
             <TouchableOpacity
               onPress={refreshRandomApps}
-              className="size-9 bg-lime-400 rounded-full p-2"
+              className="size-9 bg-lime-300 dark:bg-lime-400 rounded-full p-2"
             >
               <Svg
                 fill="none"

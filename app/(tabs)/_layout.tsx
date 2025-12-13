@@ -2,13 +2,14 @@ import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
 import { Tabs } from "expo-router";
 import React from "react";
-import { Dimensions, View } from "react-native";
+import { Dimensions, useColorScheme, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
 const Layout = () => {
   const screenWidth = Dimensions.get("window").width;
   const tabBarWidth = 270;
   const marginHorizontal = (screenWidth - tabBarWidth) / 2;
+  const colorScheme = useColorScheme();
 
   return (
     <Tabs
@@ -22,7 +23,10 @@ const Layout = () => {
         tabBarStyle: {
           position: "absolute",
           backgroundColor: "transparent",
-          borderColor: "rgba(60,60,60,0.6)",
+          borderColor:
+            colorScheme == "dark"
+              ? "rgba(60,60,60,0.6)"
+              : "rgba(220,220,220,0.6)",
           borderWidth: 1,
           borderTopWidth: 1,
           marginHorizontal,
@@ -32,12 +36,17 @@ const Layout = () => {
           paddingBottom: "auto",
           borderRadius: 55,
           overflow: "hidden",
+          shadowColor: colorScheme == "dark" ? "#000" : "#a1a1a1",
         },
         tabBarBackground: () => (
           <BlurView
             intensity={60}
             experimentalBlurMethod="dimezisBlurView"
-            tint="systemMaterialDark"
+            tint={
+              colorScheme == "dark"
+                ? "systemMaterialDark"
+                : "systemMaterialLight"
+            }
             style={{
               flex: 1,
             }}
@@ -65,7 +74,7 @@ const Layout = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
-                  stroke="#fff"
+                  stroke={colorScheme == "dark" || focused ? "#fff" : "#a1a1a1"}
                 >
                   <Path
                     strokeLinecap="round"
@@ -99,7 +108,7 @@ const Layout = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
-                  stroke="#fff"
+                  stroke={colorScheme == "dark" || focused ? "#fff" : "#a1a1a1"}
                 >
                   <Path
                     strokeLinecap="round"
@@ -133,7 +142,7 @@ const Layout = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
-                  stroke="#fff"
+                  stroke={colorScheme == "dark" || focused ? "#fff" : "#a1a1a1"}
                 >
                   <Path
                     strokeLinecap="round"
@@ -167,7 +176,7 @@ const Layout = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
-                  stroke="#fff"
+                  stroke={colorScheme == "dark" || focused ? "#fff" : "#a1a1a1"}
                 >
                   <Path
                     strokeLinecap="round"
