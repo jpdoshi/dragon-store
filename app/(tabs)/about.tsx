@@ -1,10 +1,12 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
+import * as MailComposer from "expo-mail-composer";
 import { openBrowserAsync } from "expo-web-browser";
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { ClipPath, Defs, G, Path, Rect } from "react-native-svg";
+import Toast from "react-native-toast-message";
 
 const About = () => {
   return (
@@ -95,15 +97,68 @@ const About = () => {
           </View>
 
           <View className="h-10" />
-          {/* <Text className="text-xl font-semibold text-black dark:text-white">
-            About Dragon Store
+          <Text className="text-xl font-semibold text-black dark:text-white">
+            Request App
           </Text>
           <Text className="text-lg text-neutral-500 dark:text-neutral-400 mt-2">
-            Dragon Store is your gateway to transparent, libre and free
-            open-source apps.
+            You can request to add your favorite app to dragon store via email.
           </Text>
+          <TouchableOpacity
+            onPress={async () => {
+              const isAvailable = await MailComposer.isAvailableAsync();
 
-          <View className="h-8" /> */}
+              if (isAvailable) {
+                const result = await MailComposer.composeAsync({
+                  recipients: ["thejddev@gmail.com"],
+                  subject: `Dragon Store: App Request`,
+                });
+
+                if (
+                  result.status != MailComposer.MailComposerStatus.UNDETERMINED
+                ) {
+                  Toast.show({
+                    type:
+                      result.status == MailComposer.MailComposerStatus.SENT
+                        ? "success"
+                        : "info",
+                    text1: `Email was ${result.status}`,
+                    topOffset: 50,
+                    swipeable: true,
+                  });
+                }
+              } else {
+                Toast.show({
+                  type: "error",
+                  text1: "No Email app found!",
+                  text2: "Please make sure you have email app installed.",
+                  topOffset: 50,
+                  swipeable: true,
+                });
+              }
+            }}
+            className="h-[45px] flex-row flex-1 rounded-xl bg-dark-surface shdow justify-center items-center gap-1 mt-4"
+          >
+            <View className="size-5">
+              <Svg
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="#fff"
+              >
+                <Path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </Svg>
+            </View>
+
+            <Text className="text-base text-white font-semibold">
+              Request App
+            </Text>
+          </TouchableOpacity>
+
+          <View className="h-8" />
           <Text className="text-xl font-semibold text-black dark:text-white">
             About Developer
           </Text>
@@ -172,7 +227,7 @@ const About = () => {
           </TouchableOpacity>
         </Animated.View>
 
-        <View className="h-28" />
+        <View className="h-36" />
       </ScrollView>
     </ScreenView>
   );
