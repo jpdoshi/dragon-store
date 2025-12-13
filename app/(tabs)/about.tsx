@@ -136,7 +136,7 @@ const About = () => {
                 });
               }
             }}
-            className="h-[45px] flex-row flex-1 rounded-xl bg-dark-surface shdow justify-center items-center gap-1 mt-4"
+            className="h-[45px] flex-row flex-1 rounded-xl bg-sky-500 dark:bg-sky-600 shdow justify-center items-center gap-1 mt-4"
           >
             <View className="size-5">
               <Svg
