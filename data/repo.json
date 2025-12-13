@@ -598,5 +598,155 @@
     "icon": "material-files.png",
     "repoUrl": "https://github.com/zhanghai/MaterialFiles",
     "website": "https://play.google.com/store/apps/details?id=me.zhanghai.android.files"
+  },
+  {
+    "id": "875248",
+    "title": "Canta",
+    "owner": "samolego",
+    "category": "tools",
+    "about": "Canta allows you to uninstall pre-installed or user apps without root, by leveraging Shizuku. It integrates with the Universal Debloat List to provide safe recommendations.",
+    "icon": "canta.png",
+    "repoUrl": "https://github.com/samolego/Canta",
+    "website": "https://samolego.github.io/Canta/"
+  },
+  {
+    "id": "733790",
+    "title": "Seal",
+    "owner": "JunkFood02",
+    "category": "media",
+    "about": "Seal APK is an ultimate video and audio downloader for Android, based on YT-DLP, the most trusted and reliable app for downloading multimedia files from the web.",
+    "icon": "seal.png",
+    "repoUrl": "https://github.com/JunkFood02/Seal",
+    "website": ""
+  },
+  {
+    "id": "528573",
+    "title": "MiCTS",
+    "owner": "parallelcc",
+    "category": "tools",
+    "about": "MiCTS is a very lightweight app that allows you to activate Google's Circle to Search tool on any device running Android 9 or higher.",
+    "icon": "micts.png",
+    "repoUrl": "https://github.com/parallelcc/MiCTS",
+    "website": ""
+  },
+  {
+    "id": "936506",
+    "title": "LSPosed",
+    "owner": "JingMatrix",
+    "category": "tools",
+    "about": "A Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework.",
+    "icon": "lsposed.png",
+    "repoUrl": "https://github.com/JingMatrix/LSPosed",
+    "website": "https://modules.lsposed.org"
+  },
+  {
+    "id": "085122",
+    "title": "Logseq",
+    "owner": "logseq",
+    "category": "tools",
+    "about": "Logseq is the open toolbox for workflows that deal with lots of information: Students, Academics, Writers, Project Managers, Developers.",
+    "icon": "logseq.png",
+    "repoUrl": "https://github.com/logseq/logseq",
+    "website": "https://logseq.com"
+  },
+  {
+    "id": "069540",
+    "title": "Revenge Manager",
+    "owner": "revenge-mod",
+    "category": "social",
+    "about": "Revenge Manager is an application that installs and updates Revenge, a modification for Discord.",
+    "icon": "revenge.png",
+    "repoUrl": "https://github.com/revenge-mod/revenge-manager",
+    "website": ""
+  },
+  {
+    "id": "674785",
+    "title": "LibreTorrent",
+    "owner": "proninyaroslav",
+    "category": "tools",
+    "about": "LibreTorrent is an open-source torrent client based on Libtorrent. It provides you with a simple way to download anything you want directly onto your Android smartphone memory. Plus, you can easily create your own torrent files and share them comfortably with other users as well.",
+    "icon": "libretorrent.png",
+    "repoUrl": "https://gitlab.com/proninyaroslav/libretorrent",
+    "website": "https://github.com/proninyaroslav/libretorrent"
+  },
+  {
+    "id": "422972",
+    "title": "DroidFS",
+    "owner": "hardcore-sushi",
+    "category": "tools",
+    "about": "An alternative way to use encrypted virtual filesystems on Android that uses its own internal file explorer instead of mounting volumes. It currently supports gocryptfs and CryFS.",
+    "icon": "droidfs.png",
+    "repoUrl": "https://github.com/hardcore-sushi/DroidFS",
+    "website": "https://forge.chapril.org/hardcoresushi/DroidFS"
+  },
+  {
+    "id": "627213",
+    "title": "Droid-ify",
+    "owner": "Droid-ify",
+    "category": "tools",
+    "about": "A quick material F-Droid client. Features: Material F-Droid style, No cards or inappropriate animations, Fast repository syncing, Standard Android components.",
+    "icon": "droidify.png",
+    "repoUrl": "https://github.com/Droid-ify/client",
+    "website": "https://droidify.eu.org"
+  },
+  {
+    "id": "073350",
+    "title": "Signal",
+    "owner": "signalapp",
+    "category": "social",
+    "about": "Signal is an open-source, encrypted messaging service for instant messaging, voice calls, and video calls.",
+    "icon": "signal.png",
+    "repoUrl": "https://github.com/signalapp/Signal-Android",
+    "website": "https://signal.org"
+  },
+  {
+    "id": "965164",
+    "title": "LibreTube",
+    "owner": "libre-tube",
+    "category": "streaming",
+    "about": "LibreTube is an alternative frontend for YouTube, for Android. This means that it uses the same video sources as YouTube, but displays them in a different interface that is more intuitive and privacy-oriented.",
+    "icon": "libretube.png",
+    "repoUrl": "https://github.com/libre-tube/LibreTube",
+    "website": "https://libretube.dev"
+  },
+  {
+    "id": "229789",
+    "title": "Redomi",
+    "owner": "acszo",
+    "category": "media",
+    "about": "Redomi is a Song.link client to open songs from different platforms to your favourite one.",
+    "icon": "redomi.png",
+    "repoUrl": "https://github.com/acszo/Redomi",
+    "website": ""
+  },
+  {
+    "id": "733879",
+    "title": "aShell",
+    "owner": "DP-Hridayan",
+    "category": "tools",
+    "about": "aShell is a lightweight, open-source ADB shell designed for Android devices running Shizuku. It enables you to execute ADB commands directly from your phone.",
+    "icon": "ashell.png",
+    "repoUrl": "https://github.com/DP-Hridayan/aShellYou",
+    "website": "http://ashell.vercel.app"
+  },
+  {
+    "id": "440456",
+    "title": "Amarok",
+    "owner": "deltazefiro",
+    "category": "tools",
+    "about": "Amarok is a lightweight Android privacy tool designed to keep your personal files & apps away from prying eyes without the hassle of heavy encryption.",
+    "icon": "amarok.png",
+    "repoUrl": "https://github.com/deltazefiro/Amarok-Hider",
+    "website": "https://deltazefiro.github.io/Amarok-doc/en-US"
+  },
+  {
+    "id": "912253",
+    "title": "Dhizuku",
+    "owner": "iamr0s",
+    "category": "tools",
+    "about": "This app can delegate functions from the device owner. That is, this app acts as an intermediary to call functions from the device owner.",
+    "icon": "dhizuku.png",
+    "repoUrl": "https://github.com/iamr0s/Dhizuku",
+    "website": ""
   }
 ]
