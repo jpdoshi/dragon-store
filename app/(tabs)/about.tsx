@@ -34,7 +34,7 @@ const About = () => {
               src={"https://avatars.githubusercontent.com/u/122164427?v=4"}
               height={100}
               width={100}
-              className="rounded-full shadow-2xl shadow-red-500 dark:shadow-red-600"
+              className="rounded-full shadow-2xl shadow-red-400 dark:shadow-red-600"
             />
             <View>
               <Text className="text-2xl font-bold text-black dark:text-white leading-tight">
@@ -56,7 +56,7 @@ const About = () => {
               onPress={async () =>
                 await openBrowserAsync("https://thejddev.vercel.app")
               }
-              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-500 justify-center items-center gap-1"
+              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-500 shadow justify-center items-center gap-1"
             >
               <View className="size-6">
                 <Svg viewBox="0 0 24 24" fill="#fff">
@@ -73,7 +73,7 @@ const About = () => {
               onPress={async () =>
                 await openBrowserAsync("https://github.com/jpdoshi")
               }
-              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-100 dark:bg-white justify-center items-center gap-1"
+              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-50 dark:bg-white shadow justify-center items-center gap-1"
             >
               <View className="size-6">
                 <Svg viewBox="0 0 128 128">

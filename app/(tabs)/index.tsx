@@ -71,7 +71,7 @@ const Home = () => {
                   `${config.DRAGON_STORE_REPO_URL}/releases/latest`
                 )
               }
-              className="bg-rose-500 py-2.5 px-4 rounded-lg"
+              className="bg-rose-500 shadow py-2.5 px-4 rounded-lg"
             >
               <Text className="font-bold text-white">Check Update</Text>
             </TouchableOpacity>
@@ -79,7 +79,7 @@ const Home = () => {
               onPress={async () =>
                 await openBrowserAsync(config.DRAGON_STORE_REPO_URL)
               }
-              className=" bg-rose-100 dark:bg-white py-2.5 px-4 rounded-lg"
+              className=" bg-rose-50 dark:bg-white shadow py-2.5 px-4 rounded-lg"
             >
               <Text className="font-bold text-black">Github Repo</Text>
             </TouchableOpacity>

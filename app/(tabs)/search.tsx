@@ -141,7 +141,7 @@ const Search = () => {
               <TouchableOpacity
                 key={index}
                 onPress={() => setCategory(item)}
-                className={`${category == item ? "bg-rose-500" : "bg-rose-100 dark:bg-dark-tertiary"} rounded-lg py-1.5 px-3`}
+                className={`${category == item ? "bg-rose-500" : "bg-rose-50 dark:bg-dark-tertiary"} rounded-lg py-1.5 px-3 shadow`}
               >
                 <Text
                   className={`text-black dark:text-white ${category == item && "text-white"} font-semibold`}
@@ -156,7 +156,7 @@ const Search = () => {
             <Text className="text-black dark:text-white text-2xl font-medium">
               Featured Apps
             </Text>
-            <View className="py-1 px-4 rounded-full dark:bg-indigo-500">
+            <View className="py-1 px-4 rounded-full bg-indigo-500">
               <Text className="text-white text-base font-bold">
                 {filterList.length}
               </Text>
