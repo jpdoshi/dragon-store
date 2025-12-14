@@ -1,5 +1,6 @@
 import AppBar from "@/components/AppBar";
 import AppsList from "@/components/AppsList";
+import ConfirmExitModal from "@/components/ConfirmExitModal";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import { useAppsData } from "@/hooks/useAppsData";
@@ -10,7 +11,6 @@ import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  Alert,
   BackHandler,
   Image,
   ScrollView,
@@ -22,6 +22,7 @@ import Svg, { Path } from "react-native-svg";
 
 const Home = () => {
   const { apps, loading } = useAppsData();
+  const [showExitModal, setShowExitModal] = useState(false);
 
   const [appList, setAppList] = useState<AppMetaData[]>([]);
 
@@ -39,22 +40,7 @@ const Home = () => {
   useFocusEffect(
     React.useCallback(() => {
       const onBackPress = () => {
-        Alert.alert(
-          "Quit App",
-          "are you sure you want to quit the app",
-          [
-            {
-              text: "cancel",
-              style: "cancel",
-            },
-            {
-              text: "sure",
-              onPress: () => BackHandler.exitApp(),
-            },
-          ],
-          { cancelable: true }
-        );
-
+        setShowExitModal(true);
         return true;
       };
 
@@ -180,6 +166,10 @@ const Home = () => {
 
         <View className="h-28" />
       </ScrollView>
+      <ConfirmExitModal
+        showExitModal={showExitModal}
+        setShowExitModal={setShowExitModal}
+      />
     </ScreenView>
   );
 };
