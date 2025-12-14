@@ -39,7 +39,14 @@ const Home = () => {
 
   useFocusEffect(
     React.useCallback(() => {
+      setShowExitModal(false);
+
       const onBackPress = () => {
+        if (showExitModal) {
+          BackHandler.exitApp();
+          return true;
+        }
+
         setShowExitModal(true);
         return true;
       };
