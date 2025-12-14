@@ -43,6 +43,7 @@ const Home = () => {
 
       const onBackPress = () => {
         if (showExitModal) {
+          setShowExitModal(false);
           BackHandler.exitApp();
           return true;
         }
@@ -119,7 +120,7 @@ const Home = () => {
             </Text>
             <TouchableOpacity
               onPress={refreshRandomApps}
-              className="size-9 bg-lime-300 dark:bg-lime-400 rounded-full p-2"
+              className="size-9 bg-lime-300 rounded-full p-2"
             >
               <Svg
                 fill="none"

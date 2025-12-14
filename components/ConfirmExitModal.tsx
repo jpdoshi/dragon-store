@@ -1,13 +1,6 @@
 import { BlurView } from "expo-blur";
 import React from "react";
-import {
-  BackHandler,
-  Modal,
-  Text,
-  TouchableOpacity,
-  useColorScheme,
-  View,
-} from "react-native";
+import { BackHandler, Modal, Text, TouchableOpacity, View } from "react-native";
 
 interface ModalProps {
   showExitModal: boolean;
@@ -15,14 +8,15 @@ interface ModalProps {
 }
 
 const ConfirmExitModal = ({ showExitModal, setShowExitModal }: ModalProps) => {
-  const colorScheme = useColorScheme();
-
   return (
     <Modal
       visible={showExitModal}
       transparent
       animationType="fade"
-      onRequestClose={() => BackHandler.exitApp()}
+      onRequestClose={() => {
+        setShowExitModal(false);
+        BackHandler.exitApp();
+      }}
     >
       <TouchableOpacity
         activeOpacity={1}
@@ -36,7 +30,7 @@ const ConfirmExitModal = ({ showExitModal, setShowExitModal }: ModalProps) => {
           className="flex-1 justify-center items-center px-6"
         >
           <TouchableOpacity activeOpacity={1}>
-            <View className="min-w-[320px] bg-white dark:bg-dark-bg rounded-3xl p-6">
+            <View className="min-w-[320px] bg-white dark:bg-dark-bg rounded-3xl p-6 shadow-2xl shadow-rose-400 dark:shadow-rose-700">
               <Text className="text-2xl font-bold text-black dark:text-white mb-2">
                 Exit App
               </Text>
@@ -56,7 +50,10 @@ const ConfirmExitModal = ({ showExitModal, setShowExitModal }: ModalProps) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  onPress={() => BackHandler.exitApp()}
+                  onPress={() => {
+                    setShowExitModal(false);
+                    BackHandler.exitApp();
+                  }}
                   className="px-4 py-2 rounded-lg bg-rose-500"
                 >
                   <Text className="text-white font-semibold">Exit App</Text>
