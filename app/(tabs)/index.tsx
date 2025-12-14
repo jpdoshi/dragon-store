@@ -5,11 +5,13 @@ import config from "@/config";
 import { useAppsData } from "@/hooks/useAppsData";
 import { AppMetaData } from "@/types/AppMetaData";
 import * as Application from "expo-application";
-import { router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Alert,
+  BackHandler,
   Image,
   ScrollView,
   Text,
@@ -33,6 +35,37 @@ const Home = () => {
   useEffect(() => {
     refreshRandomApps();
   }, [apps]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        Alert.alert(
+          "Quit App",
+          "are you sure you want to quit the app",
+          [
+            {
+              text: "cancel",
+              style: "cancel",
+            },
+            {
+              text: "sure",
+              onPress: () => BackHandler.exitApp(),
+            },
+          ],
+          { cancelable: true }
+        );
+
+        return true;
+      };
+
+      const subscription = BackHandler.addEventListener(
+        "hardwareBackPress",
+        onBackPress
+      );
+
+      return () => subscription.remove();
+    }, [])
+  );
 
   return (
     <ScreenView>
