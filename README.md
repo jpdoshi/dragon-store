@@ -10,11 +10,11 @@ The end goal of Dragon store is to provide apps to users in a safe and transpare
 
 <table>
    <tr>
-   <td><img src="https://github.com/user-attachments/assets/0c6a36a2-d339-4ae5-b374-72e81ede4ed9" height="1560px" width="720px" loading="lazy" /></td>
-   <td><img src="https://github.com/user-attachments/assets/c3d38dfb-8e63-4795-b0ae-8064faa7a2fb" height="1560px" width="720px" loading="lazy" /></td>
-   <td><img src="https://github.com/user-attachments/assets/c30cd533-300a-460e-9cc1-e000ed544ad2" height="1560px" width="720px" loading="lazy" /></td>
-   <td><img src="https://github.com/user-attachments/assets/875b1884-0963-499e-99a4-a0a526cfaea0" height="1560px" width="720px" loading="lazy" /></td>
-   <td><img src="https://github.com/user-attachments/assets/4dfc6aa6-2838-44fd-9bed-bb7477ff2584" height="1560px" width="720px" loading="lazy" /></td>
+   <td><img src="https://github.com/user-attachments/assets/0c6a36a2-d339-4ae5-b374-72e81ede4ed9" width="720px" loading="lazy" /></td>
+   <td><img src="https://github.com/user-attachments/assets/c3d38dfb-8e63-4795-b0ae-8064faa7a2fb" width="720px" loading="lazy" /></td>
+   <td><img src="https://github.com/user-attachments/assets/c30cd533-300a-460e-9cc1-e000ed544ad2" width="720px" loading="lazy" /></td>
+   <td><img src="https://github.com/user-attachments/assets/875b1884-0963-499e-99a4-a0a526cfaea0" width="720px" loading="lazy" /></td>
+   <td><img src="https://github.com/user-attachments/assets/4dfc6aa6-2838-44fd-9bed-bb7477ff2584" width="720px" loading="lazy" /></td>
    </tr>
 </table>
 
