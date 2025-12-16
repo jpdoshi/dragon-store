@@ -347,7 +347,7 @@
     "about": "Tor Browser isolates websites, prevents tracking, hides browsing history, and encrypts traffic three times, allowing access to blocked sites.",
     "icon": "tor.png",
     "repoUrl": "https://www.torproject.org/download/",
-    "website": "https://www.torproject,org"
+    "website": "https://www.torproject.org"
   },
   {
     "id": "609891",
@@ -666,7 +666,7 @@
     "category": "tools",
     "about": "LibreTorrent is an open-source torrent client based on Libtorrent. It provides you with a simple way to download anything you want directly onto your Android smartphone memory. Plus, you can easily create your own torrent files and share them comfortably with other users as well.",
     "icon": "libretorrent.png",
-    "repoUrl": "https://gitlab.com/proninyaroslav/libretorrent",
+    "repoUrl": "https://gitlab.com/proninyaroslav/libretorrent/-/releases",
     "website": "https://github.com/proninyaroslav/libretorrent"
   },
   {
