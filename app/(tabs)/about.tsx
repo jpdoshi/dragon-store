@@ -110,7 +110,8 @@ const About = () => {
               if (isAvailable) {
                 const result = await MailComposer.composeAsync({
                   recipients: ["thejddev@gmail.com"],
-                  subject: `Dragon Store: App Request`,
+                  subject: "Dragon Store: App Request",
+                  body: `App Name: \n\nHomepage/website: \n\nSource Repo: `,
                 });
 
                 if (

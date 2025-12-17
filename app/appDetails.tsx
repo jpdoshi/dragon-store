@@ -146,7 +146,8 @@ const appDetails = () => {
                   if (isAvailable) {
                     const result = await MailComposer.composeAsync({
                       recipients: ["thejddev@gmail.com"],
-                      subject: `Dragon Store: App details issue - ${appData.id} - ${appData.title}`,
+                      subject: "Dragon Store: App details issue",
+                      body: `App ID: ${appData.id}\n\nApp Title: ${appData.title}\n\nIssue: `,
                     });
 
                     if (

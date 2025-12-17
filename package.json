@@ -21,7 +21,6 @@
     "expo": "~54.0.25",
     "expo-application": "~7.0.8",
     "expo-blur": "^15.0.7",
-    "expo-check-installed-apps": "^0.2.9",
     "expo-constants": "~18.0.10",
     "expo-font": "~14.0.10",
     "expo-haptics": "~15.0.7",
