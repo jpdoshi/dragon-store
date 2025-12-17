@@ -1,13 +1,18 @@
 import AppBar from "@/components/AppBar";
+import ReleaseNotesModal from "@/components/ReleaseNotesModal";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
+import { convertTime } from "@/utils/convertTime";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import axios from "axios";
 import { Image } from "expo-image";
 import * as MailComposer from "expo-mail-composer";
 import { router, useLocalSearchParams } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import {
+  ActivityIndicator,
+  Alert,
   ScrollView,
   Share,
   Text,
@@ -28,9 +33,35 @@ const appDetails = () => {
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
   const colorScheme = useColorScheme();
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [repoData, setRepoData] = useState<any>(null);
+  const [showReleaseNotes, setShowReleaseNotes] = useState(false);
+
   useEffect(() => {
     loadFavoriteState();
+    loadGithubData();
   }, []);
+
+  const loadGithubData = async () => {
+    try {
+      if (appData.repoUrl.includes("github.com")) {
+        setIsLoading(true);
+
+        const fetchedXHR = await axios.get(
+          `${appData.repoUrl}/releases/latest`.replace(
+            "github.com",
+            "api.github.com/repos"
+          )
+        );
+
+        if (fetchedXHR?.data) setRepoData(fetchedXHR?.data);
+        setIsLoading(false);
+      }
+    } catch (error) {
+      Alert.alert("Github API: Failed to fetch repo data", error?.toString());
+      setIsLoading(false);
+    }
+  };
 
   const loadFavoriteState = async () => {
     try {
@@ -303,6 +334,72 @@ const appDetails = () => {
             </Text>
           </View>
 
+          {isLoading && (
+            <ActivityIndicator color="#ff2056" size="large" className="mt-20" />
+          )}
+
+          {!isLoading && repoData && (
+            <View>
+              <View className="h-10" />
+
+              <View>
+                <Text className="text-black dark:text-white text-xl font-semibold mb-3">
+                  Latest Release
+                </Text>
+                {repoData.tag_name?.trim() && (
+                  <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                    <Text className="text-black dark:text-white font-semibold text-base">
+                      Tag Name / App Version
+                    </Text>
+                    <Text className="text-amber-500 text-base font-semibold line-clamp-1 text-ellipsis">
+                      {repoData?.tag_name}
+                    </Text>
+                  </View>
+                )}
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                  <Text className="text-black dark:text-white font-semibold text-base">
+                    Published At
+                  </Text>
+                  <Text className="text-black dark:text-white text-base font-medium">
+                    {convertTime(repoData?.published_at)}
+                  </Text>
+                </View>
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                  <Text className="text-black dark:text-white font-semibold text-base">
+                    Release Notes
+                  </Text>
+                  <TouchableOpacity
+                    onPress={() => setShowReleaseNotes(true)}
+                    className="flex-row gap-1 items-center"
+                  >
+                    <View className="size-5">
+                      <Svg
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="#2b7fff"
+                      >
+                        <Path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                        />
+                        <Path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </Svg>
+                    </View>
+                    <Text className="text-blue-500 text-base font-semibold">
+                      Show Notes
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+          )}
+
           <View className="h-10" />
 
           <View>
@@ -340,7 +437,7 @@ const appDetails = () => {
                       }
                     }}
                   >
-                    <Text className="text-rose-400 font-medium text-base">
+                    <Text className="text-rose-400 font-medium text-base line-clamp-1 text-ellipsis">
                       {`github.com/${appData.owner}`}
                     </Text>
                     <View className="size-5">
@@ -382,7 +479,7 @@ const appDetails = () => {
                     }
                   }}
                 >
-                  <Text className="text-rose-400 font-medium text-base">
+                  <Text className="text-rose-400 font-medium text-base line-clamp-1 text-ellipsis">
                     {appData.repoUrl.includes("github.com")
                       ? appData.repoUrl.replace("https://github.com/", "")
                       : new URL(appData.repoUrl).hostname}
@@ -407,8 +504,14 @@ const appDetails = () => {
           </View>
         </Animated.View>
 
-        <View className="h-18" />
+        <View className="h-24" />
       </ScrollView>
+
+      <ReleaseNotesModal
+        visible={showReleaseNotes}
+        onClose={() => setShowReleaseNotes(false)}
+        releaseNotes={repoData?.body}
+      />
 
       <Toast />
     </ScreenView>
