@@ -76,6 +76,4 @@ Below listed are few features that are currently available in dragon store:
 
 ## Support the Project
 
-Fell in love with the project? Contribute to the development by supporting the developer. You can Buy me a coffee ☕ to help me keep up the good work. You can Email me on <a href="mailto://thejddev@gmail.com">My Mail</a> for report bugs, recommendations, unique ideas and support for the project.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W51Q0IXP)
+Fell in love with the project? Contribute to the development by supporting the developer. You can Email me on <a href="mailto://thejddev@gmail.com">My Mail</a> for report bugs, recommendations, unique ideas and support for the project.
