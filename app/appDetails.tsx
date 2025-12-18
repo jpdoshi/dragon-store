@@ -270,7 +270,7 @@ const appDetails = () => {
             </View>
           </View>
 
-          <View className="h-10" />
+          <View className="h-7" />
 
           <View className="h-[80px] flex-1 bg-white dark:bg-dark-surface rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-200 dark:border-neutral-800 shadow-lg shadow-neutral-200 dark:shadow-black">
             <View className="flex-col gap-1.5 justify-center items-center">
@@ -337,7 +337,7 @@ const appDetails = () => {
           {appData.repoUrl.includes("github.com") && (
             <TouchableOpacity
               onPress={async () => await openBrowserAsync(appData.repoUrl)}
-              className="h-[40px] flex-row flex-1 rounded-xl bg-white shadow justify-center items-center gap-1.5 mt-4"
+              className="h-[40px] flex-row flex-1 rounded-xl bg-white shadow justify-center items-center gap-1.5 mt-4 border border-neutral-200 dark:border-neutral-800"
             >
               <View className="size-6">
                 <Svg viewBox="0 0 128 128">
@@ -385,52 +385,37 @@ const appDetails = () => {
               <View className="h-10" />
 
               <View>
-                <Text className="text-black dark:text-white text-xl font-semibold mb-3">
+                <Text className="text-black dark:text-white text-xl font-semibold mb-4">
                   Repo Data
                 </Text>
-                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
-                  <Text className="text-black dark:text-white font-semibold text-base">
-                    Stars
-                  </Text>
-                  <Text className="text-green-600 text-base font-semibold line-clamp-1 text-ellipsis">
-                    {formatNumber(repoData?.stargazers_count)}
-                  </Text>
-                </View>
-                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
-                  <Text className="text-black dark:text-white font-semibold text-base">
-                    Forks
-                  </Text>
-                  <Text className="text-amber-500 text-base font-medium">
-                    {formatNumber(repoData?.forks_count)}
-                  </Text>
-                </View>
-                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
-                  <Text className="text-black dark:text-white font-semibold text-base">
-                    Latest Push
-                  </Text>
-                  <Text className="text-black dark:text-white text-base font-medium">
-                    {convertTime(repoData?.pushed_at)}
-                  </Text>
-                </View>
-                {repoData?.topics?.length > 0 && (
-                  <View className="flex-row gap-3 justify-between border-b border-neutral-200 dark:border-neutral-800 py-3">
-                    <Text className="text-black dark:text-white font-semibold text-base">
-                      Topics
+                <View className="h-[80px] flex-1 bg-[rgba(255,32,86,0.1)] rounded-2xl px-4 flex-row gap-3 items-center justify-around">
+                  <View className="flex-col gap-1.5 justify-center items-center">
+                    <Text className="text-black dark:text-white text-lg font-semibold">
+                      {formatNumber(repoData?.stargazers_count)}
                     </Text>
-                    <View className="flex-1 min-w-0 flex-row flex-wrap justify-end gap-1.5">
-                      {repoData?.topics.map((topic: string, index: number) => (
-                        <View
-                          key={index}
-                          className="border border-rose-500 bg-[rgba(255,32,86,0.15)] rounded px-1"
-                        >
-                          <Text className="text-sm font-semibold text-rose-500">
-                            {topic}
-                          </Text>
-                        </View>
-                      ))}
-                    </View>
+                    <Text className="text-sm font-medium text-rose-600 dark:text-rose-400">
+                      Stars
+                    </Text>
                   </View>
-                )}
+                  <View className="h-10 w-[1px] bg-rose-300 dark:bg-rose-900" />
+                  <View className="flex-col gap-1.5 justify-center items-center">
+                    <Text className="text-black dark:text-white text-lg font-semibold">
+                      {formatNumber(repoData?.forks_count)}
+                    </Text>
+                    <Text className="text-sm font-medium text-rose-600 dark:text-rose-400">
+                      Forks
+                    </Text>
+                  </View>
+                  <View className="h-10 w-[1px] bg-rose-300 dark:bg-rose-900" />
+                  <View className="flex-col gap-1.5 justify-center items-center">
+                    <Text className="text-black dark:text-white text-lg font-semibold">
+                      {convertTime(repoData?.pushed_at)}
+                    </Text>
+                    <Text className="text-sm font-medium text-rose-600 dark:text-rose-400">
+                      Latest Push
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           )}
