@@ -938,5 +938,15 @@
     "icon": "apkupdater.png",
     "repoUrl": "https://github.com/rumboalla/apkupdater",
     "website": ""
+  },
+  {
+    "id": "565451",
+    "title": "Waller",
+    "owner": "Pankaj-Meharchandani",
+    "category": "tools",
+    "about": "Generate and set stunning gradient wallpapers on your Android device with Waller. Easily customize your home and lock screens with a variety of vibrant backgrounds.",
+    "icon": "waller.png",
+    "repoUrl": "https://github.com/pankaj-meharchandani/waller",
+    "website": ""
   }
 ]
