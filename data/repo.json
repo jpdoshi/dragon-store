@@ -748,5 +748,195 @@
     "icon": "dhizuku.png",
     "repoUrl": "https://github.com/iamr0s/Dhizuku",
     "website": ""
+  },
+  {
+    "id": "782958",
+    "title": "Joplin",
+    "owner": "laurent22",
+    "category": "tools",
+    "about": "Capture your thoughts freely and without distractions, tracking, or ads. With Joplin’s end-to-end encryption and open-source code, you can concentrate on your ideas and tasks without worrying about your privacy.",
+    "icon": "joplin.png",
+    "repoUrl": "https://github.com/laurent22/joplin-android",
+    "website": "https://joplinapp.org"
+  },
+  {
+    "id": "210695",
+    "title": "KernelSU",
+    "owner": "tiann",
+    "category": "tools",
+    "about": "KernelSU is a root solution for Android GKI devices. It works in kernel mode and grants root permission to userspace apps directly in kernel space.",
+    "icon": "kernelsu.png",
+    "repoUrl": "https://github.com/tiann/KernelSU",
+    "website": "https://kernelsu.org"
+  },
+  {
+    "id": "055444",
+    "title": "SimpMusic",
+    "owner": "maxrave-dev",
+    "category": "streaming",
+    "about": "SimpMusic is a FOSS YouTube Music client for Android and Desktop with many features from Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop.",
+    "icon": "simpmusic.png",
+    "repoUrl": "https://github.com/maxrave-dev/SimpMusic",
+    "website": "https://simpmusic.org"
+  },
+  {
+    "id": "471748",
+    "title": "Proton Pass",
+    "owner": "protonpass",
+    "category": "internet",
+    "about": "Safely store, share, and access your passwords, notes, and more using Proton Pass, our encrypted password manager.",
+    "icon": "proton-pass.png",
+    "repoUrl": "https://proton.me/pass/download",
+    "website": "https://proton.me/pass"
+  },
+  {
+    "id": "635650",
+    "title": "Stremio",
+    "owner": "stremio",
+    "category": "streaming",
+    "about": "Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices. And with its commitment to security, Stremio is the ultimate choice for a worry-free, high-quality streaming experience.",
+    "icon": "stremio.png",
+    "repoUrl": "https://www.stremio.com/downloads",
+    "website": "https://www.stremio.com"
+  },
+  {
+    "id": "793533",
+    "title": "Organic Maps",
+    "owner": "organicmaps",
+    "category": "tools",
+    "about": "Organic Maps is a privacy-first offline maps & GPS app for hiking, cycling, biking, and driving. Absolutely free. No ads. No tracking. Developed with love by the open-source community. Powered by OpenStreetMap data.",
+    "icon": "organic-maps.png",
+    "repoUrl": "https://github.com/organicmaps/organicmaps",
+    "website": "https://organicmaps.app"
+  },
+  {
+    "id": "664764",
+    "title": "RustDesk",
+    "owner": "rustdesk",
+    "category": "tools",
+    "about": "Switch from TeamViewer, AnyDesk, and Splashtop to RustDesk for a secure and reliable remote desktop experience with your own self-hosted servers.",
+    "icon": "rustdesk.png",
+    "repoUrl": "https://github.com/rustdesk/rustdesk",
+    "website": "https://rustdesk.com"
+  },
+  {
+    "id": "189750",
+    "title": "xManager",
+    "owner": "Team-xManager",
+    "category": "tools",
+    "about": "xManager is a smart and convenient app that lets you manage and install different versions of Spotify on your Android device.",
+    "icon": "xmanager.png",
+    "repoUrl": "https://github.com/Team-xManager/xManager",
+    "website": "https://xmanagerapp.com"
+  },
+  {
+    "id": "172824",
+    "title": "Spotube",
+    "owner": "KRTirtho",
+    "category": "streaming",
+    "about": "Bring your own music metadata/playlist/audio-source with plugins created by community or by yourself. A small step towards the decentralized music streaming era!",
+    "icon": "spotube.png",
+    "repoUrl": "https://github.com/KRTirtho/spotube",
+    "website": "https://spotube.krtirtho.dev"
+  },
+  {
+    "id": "447004",
+    "title": "Shadowsocks",
+    "owner": "shadowsocks",
+    "category": "tools",
+    "about": "Shadowsocks is a high-performance cross-platform secured socks5 proxy. It will help you surf the internet privately and securely.",
+    "icon": "shadowsocks.png",
+    "repoUrl": "https://github.com/shadowsocks/shadowsocks-android",
+    "website": ""
+  },
+  {
+    "id": "174287",
+    "title": "Aegis Authenticator",
+    "owner": "beemdevelopment",
+    "category": "tools",
+    "about": "Aegis Authenticator is a free, secure and open source 2FA app for Android. It aims to provide a secure authenticator for your online services, while also including some features missing in existing authenticator apps, like proper encryption and backups.",
+    "icon": "aegisauth.png",
+    "repoUrl": "https://github.com/beemdevelopment/Aegis",
+    "website": "https://getaegis.app"
+  },
+  {
+    "id": "953143",
+    "title": "PiliPlus",
+    "owner": "bggRGjQaUbCoE",
+    "category": "streaming",
+    "about": "PiliPlus app is a very easy-to-use third-party playback platform for Bilibili, which removes all the advertising pushes in the original software, will not be disturbed when browsing and watching videos, simplifies the interface layout, and is more convenient to use.",
+    "icon": "piliplus.png",
+    "repoUrl": "https://github.com/bggRGjQaUbCoE/PiliPlus",
+    "website": ""
+  },
+  {
+    "id": "992093",
+    "title": "NewsBlur",
+    "owner": "samuelclay",
+    "category": "tools",
+    "about": "NewsBlur is a personal news reader with intelligence. It's an RSS feed reader and social news network that shows the original site while giving you powerful filtering tools. Train NewsBlur to learn what you like and dislike, and it will automatically highlight and hide stories.",
+    "icon": "newsblur.png",
+    "repoUrl": "https://github.com/samuelclay/NewsBlur",
+    "website": "http://www.newsblur.com"
+  },
+  {
+    "id": "338293",
+    "title": "PipePipe",
+    "owner": "InfinityLoop1308",
+    "category": "streaming",
+    "about": "A FLOSS Android app to let you browse YouTube, NicoNico and BiliBili freely. NewPipe, reimagined: faster, more stable, and packed with more features.",
+    "icon": "pipepipe.png",
+    "repoUrl": "https://github.com/InfinityLoop1308/PipePipe",
+    "website": "https://pipepipe.dev"
+  },
+  {
+    "id": "896166",
+    "title": "Stratum",
+    "owner": "stratumauth",
+    "category": "tools",
+    "about": "A free open-source two factor authentication app for Android. It features encrypted backups, icons, categories and a high level of customisation. It also has a Wear OS companion app.",
+    "icon": "stratum.png",
+    "repoUrl": "https://github.com/stratumauth/app",
+    "website": "https://stratumauth.com"
+  },
+  {
+    "id": "401782",
+    "title": "Lemuroid",
+    "owner": "Swordfish90",
+    "category": "emulators",
+    "about": "Lemuroid is an open-source emulation project for Android based on Libretro. Its main goal is ease of use, good Android integration and a great user experience.",
+    "icon": "lemuroid.png",
+    "repoUrl": "https://github.com/Swordfish90/Lemuroid",
+    "website": ""
+  },
+  {
+    "id": "334287",
+    "title": "OLauncher",
+    "owner": "tanujnotes",
+    "category": "tools",
+    "about": "Olauncher is a Minimal AF Launcher for Android. Reduce your screen time. Daily wallpapers.",
+    "icon": "olauncher.png",
+    "repoUrl": "https://github.com/tanujnotes/Olauncher",
+    "website": ""
+  },
+  {
+    "id": "649348",
+    "title": "Komikku",
+    "owner": "komikku-app",
+    "category": "media",
+    "about": "A free and open source manga reader which is based off TachiyomiSY & Mihon/Tachiyomi. This fork is meant to provide new & useful features while regularly take features/updates from Mihon or other forks like SY, J2K and Neko...",
+    "icon": "komikku.png",
+    "repoUrl": "https://github.com/komikku-app/komikku",
+    "website": "https://komikku-app.github.io"
+  },
+  {
+    "id": "563179",
+    "title": "APK Updater",
+    "owner": "rumboalla",
+    "category": "tools",
+    "about": "APKUpdater is an open source tool that simplifies the process of finding updates for your installed apps. It provides similar functionality to an app store, but instead of depending on a single source, it aggregates the results from APKMirror, Aptoide, F-Droid, IzzyOnDroid, APKPure, GitLab and GitHub.",
+    "icon": "apkupdater.png",
+    "repoUrl": "https://github.com/rumboalla/apkupdater",
+    "website": ""
   }
 ]
