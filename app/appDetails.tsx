@@ -3,6 +3,7 @@ import ReleaseNotesModal from "@/components/ReleaseNotesModal";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import { convertTime } from "@/utils/convertTime";
+import { formatNumber } from "@/utils/formatNumber";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { Image } from "expo-image";
@@ -34,8 +35,11 @@ const appDetails = () => {
   const colorScheme = useColorScheme();
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [releaseData, setReleaseData] = useState<any>(null);
   const [repoData, setRepoData] = useState<any>(null);
+
   const [showReleaseNotes, setShowReleaseNotes] = useState(false);
+  const [showAPIError, setShowAPIError] = useState(false);
 
   useEffect(() => {
     loadFavoriteState();
@@ -47,18 +51,31 @@ const appDetails = () => {
       if (appData.repoUrl.includes("github.com")) {
         setIsLoading(true);
 
-        const fetchedXHR = await axios.get(
+        const fetchedRepoXHR = await axios.get(
+          appData.repoUrl.replace("github.com", "api.github.com/repos")
+        );
+
+        const fetchedReleaseXHR = await axios.get(
           `${appData.repoUrl}/releases/latest`.replace(
             "github.com",
             "api.github.com/repos"
           )
         );
 
-        if (fetchedXHR?.data) setRepoData(fetchedXHR?.data);
+        if (fetchedRepoXHR?.data) setRepoData(fetchedRepoXHR?.data);
+        if (fetchedReleaseXHR?.data) setReleaseData(fetchedReleaseXHR?.data);
+
         setIsLoading(false);
       }
-    } catch (error) {
-      Alert.alert("Github API: Failed to fetch repo data", error?.toString());
+    } catch (error: any) {
+      if (error.status == 403) {
+        setShowAPIError(true);
+      } else {
+        Alert.alert(
+          "Github API: Failed to fetch repo data",
+          "Could not fetch Github repo data. Check your internet connection or try again later"
+        );
+      }
       setIsLoading(false);
     }
   };
@@ -335,7 +352,14 @@ const appDetails = () => {
           </View>
 
           {isLoading && (
-            <ActivityIndicator color="#ff2056" size="large" className="mt-20" />
+            <ActivityIndicator color="#ff2056" size="large" className="mt-10" />
+          )}
+
+          {showAPIError && (
+            <Text className="mt-10 text-red-500 text-center font-medium">
+              Sign in with Github to extend API usage limit from 60 to 5000 per
+              hour.
+            </Text>
           )}
 
           {!isLoading && repoData && (
@@ -344,15 +368,70 @@ const appDetails = () => {
 
               <View>
                 <Text className="text-black dark:text-white text-xl font-semibold mb-3">
+                  Repo Data
+                </Text>
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                  <Text className="text-black dark:text-white font-semibold text-base">
+                    Stars
+                  </Text>
+                  <Text className="text-green-600 text-base font-semibold line-clamp-1 text-ellipsis">
+                    {formatNumber(repoData?.stargazers_count)}
+                  </Text>
+                </View>
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                  <Text className="text-black dark:text-white font-semibold text-base">
+                    Forks
+                  </Text>
+                  <Text className="text-amber-500 text-base font-medium">
+                    {formatNumber(repoData?.forks_count)}
+                  </Text>
+                </View>
+                <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
+                  <Text className="text-black dark:text-white font-semibold text-base">
+                    Latest Push
+                  </Text>
+                  <Text className="text-black dark:text-white text-base font-medium">
+                    {convertTime(repoData?.pushed_at)}
+                  </Text>
+                </View>
+                {repoData?.topics?.length > 0 && (
+                  <View className="flex-row gap-3 justify-between border-b border-neutral-200 dark:border-neutral-800 py-3">
+                    <Text className="text-black dark:text-white font-semibold text-base">
+                      Topics
+                    </Text>
+                    <View className="flex-1 min-w-0 flex-row flex-wrap justify-end gap-1.5">
+                      {repoData?.topics.map((topic: string, index: number) => (
+                        <View
+                          key={index}
+                          className="border border-rose-500 bg-[rgba(255,32,86,0.1)] rounded px-1"
+                        >
+                          <Text className="text-sm font-semibold text-rose-500">
+                            {topic}
+                          </Text>
+                        </View>
+                      ))}
+                    </View>
+                  </View>
+                )}
+              </View>
+            </View>
+          )}
+
+          {!isLoading && releaseData && (
+            <View>
+              <View className="h-10" />
+
+              <View>
+                <Text className="text-black dark:text-white text-xl font-semibold mb-3">
                   Latest Release
                 </Text>
-                {repoData.tag_name?.trim() && (
+                {releaseData.tag_name?.trim() && (
                   <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
                     <Text className="text-black dark:text-white font-semibold text-base">
                       Tag Name / App Version
                     </Text>
                     <Text className="text-amber-500 text-base font-semibold line-clamp-1 text-ellipsis">
-                      {repoData?.tag_name}
+                      {releaseData?.tag_name}
                     </Text>
                   </View>
                 )}
@@ -361,7 +440,7 @@ const appDetails = () => {
                     Published At
                   </Text>
                   <Text className="text-black dark:text-white text-base font-medium">
-                    {convertTime(repoData?.published_at)}
+                    {convertTime(releaseData?.published_at)}
                   </Text>
                 </View>
                 <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
@@ -510,7 +589,7 @@ const appDetails = () => {
       <ReleaseNotesModal
         visible={showReleaseNotes}
         onClose={() => setShowReleaseNotes(false)}
-        releaseNotes={repoData?.body}
+        releaseNotes={releaseData?.body}
       />
 
       <Toast />

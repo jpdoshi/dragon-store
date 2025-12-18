@@ -34,9 +34,9 @@ const ReleaseNotesModal = ({
         intensity={15}
         experimentalBlurMethod="dimezisBlurView"
         tint="dark"
-        className="flex-1 justify-center items-center px-6"
+        className="flex-1 justify-center items-center px-6 py-8"
       >
-        <View className="min-w-[320px] max-h-[95%] bg-white dark:bg-dark-bg rounded-3xl p-6 shadow-2xl shadow-rose-400 dark:shadow-rose-700">
+        <View className="min-w-[320px] max-w-[520px] max-h-[85%] bg-white dark:bg-dark-bg rounded-3xl p-6 shadow-2xl shadow-rose-400 dark:shadow-rose-700">
           {/* Header */}
           <Text className="text-2xl font-bold text-black dark:text-white">
             Release Notes
