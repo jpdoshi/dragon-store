@@ -61,8 +61,8 @@ const Login = () => {
 
     login();
     const timeoutId = setTimeout(() => {
-      router.navigate("/");
-    }, 5000);
+      router.replace("/");
+    }, 10000);
 
     return () => clearTimeout(timeoutId);
   }, []);
