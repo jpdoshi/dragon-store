@@ -78,4 +78,6 @@ Below listed are few features that are currently available in dragon store:
 
 ## Support the Project
 
-Fell in love with the project? Contribute to the development by supporting the developer. You can Email me on <a href="mailto://thejddev@gmail.com">My Mail</a> for report bugs, recommendations, unique ideas and support for the project.
+Fell in love with the project? Contribute to the development by supporting the developer. You can Email me on <a href="mailto://thejddev@gmail.com">My Mail</a> for report bugs, recommendations, unique ideas and support for the project. Consider donation for contribution:
+
+<a href="upi://pay?pa=jpdoshi2811@okaxis&pn=Jainam Doshi(The JD Dev)&tn=Donation for Dragon Store Project&am=150.00&cu=INR" style="background: linear-gradient(to bottom, #7c86ff, #7008e7); padding: 8px 12px; border: none; border-radius: 8px; color: white; font-size: 16px; box-shadow: 2px 4px 8px rgba(0,0,0,0.15); font-family: sans-serif; text-decoration: none;">Donate using UPI</a>
