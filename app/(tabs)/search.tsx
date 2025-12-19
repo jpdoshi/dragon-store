@@ -116,13 +116,13 @@ const Search = () => {
                 setDebouncedQuery("");
               }}
             >
-              {debouncedQuery.trim() && (
-                <View className="size-5">
+              {searchQuery.trim() && (
+                <View className="size-6">
                   <Svg
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
-                    stroke="#fff"
+                    stroke={colorScheme == "dark" ? "#fff" : "#000"}
                   >
                     <Path
                       strokeLinecap="round"

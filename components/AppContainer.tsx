@@ -2,15 +2,20 @@ import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
 import { Image } from "expo-image";
 import { router } from "expo-router";
-import React from "react";
-import { Dimensions, Text, TouchableOpacity, View } from "react-native";
+import React, { memo } from "react";
+import { Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
+type Props = {
+  AppData: AppMetaData;
+  screenWidth: number;
+};
+
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 
-const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
-  const screenWidth = Dimensions.get("window").width;
+const AppContainer = ({ AppData, screenWidth }: Props) => {
+  const marginInline = screenWidth >= 640 ? 8 : 0;
 
   return (
     <AnimatedTouchable
@@ -18,19 +23,19 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
       onPress={() =>
         router.push({
           pathname: "/appDetails",
-          params: { AppData: JSON.stringify(AppData) },
+          params: { id: AppData.id },
         })
       }
-      className="h-[80px] bg-light-surface dark:bg-dark-surface mb-3 py-3 px-4 shadow shadow-rose-200 dark:shadow-black rounded-xl"
-      style={{ marginInline: screenWidth >= 640 ? 8 : 0 }}
+      className="h-[82px] bg-light-surface dark:bg-dark-surface mb-3 p-4 shadow-md shadow-rose-200 dark:shadow-black rounded-2xl"
+      style={{ marginInline }}
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
           source={config.ICON_REPO_URL + AppData.icon}
-          style={{ height: 54, width: 54, borderRadius: 16 }}
+          style={{ height: 56, width: 56, borderRadius: 16 }}
           placeholder={require("@/data/assets/placeholder.gif")}
           contentFit="cover"
-          transition={400}
+          transition={250}
         />
 
         <View className="flex-1 flex-col">
@@ -38,12 +43,10 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
             {AppData.title}
           </Text>
 
-          <View className="flex-row items-center gap-2">
-            <Text className="text-sm font-medium text-rose-500 leading-tight">
-              {AppData.category.charAt(0).toUpperCase() +
-                AppData.category.slice(1)}
-            </Text>
-          </View>
+          <Text className="text-sm font-medium text-rose-500">
+            {AppData.category.charAt(0).toUpperCase() +
+              AppData.category.slice(1)}
+          </Text>
 
           <Text className="text-neutral-400 text-sm">{AppData.owner}</Text>
         </View>
@@ -67,4 +70,4 @@ const AppContainer = ({ AppData }: { AppData: AppMetaData }) => {
   );
 };
 
-export default AppContainer;
+export default memo(AppContainer);
