@@ -1,6 +1,8 @@
-<img width="150" height="150" alt="logo" src="https://github.com/user-attachments/assets/88f94aa4-da52-4104-940d-380931965fe5" />
+<div align="center">
+   <img width="180" height="180" alt="logo" src="https://github.com/user-attachments/assets/a02295dd-a1d9-4326-a13b-ffae02123f59" alt="Dragon store logo" />
+</div>
 
-# Dragon Store
+<h1 align="center">Dragon Store</h1>
 
 Dragon Store is your gateway to transparent, libre and free open-source apps. It is exclusively made for power users to install mod apps easily.
 
