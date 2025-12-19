@@ -11,6 +11,7 @@ import axios from "axios";
 import { Image } from "expo-image";
 import * as MailComposer from "expo-mail-composer";
 import { router, useLocalSearchParams } from "expo-router";
+import * as SecureStore from "expo-secure-store";
 import { openBrowserAsync } from "expo-web-browser";
 import React, { useEffect, useState } from "react";
 import {
@@ -57,19 +58,44 @@ const appDetails = () => {
       if (appData?.repoUrl.includes("github.com")) {
         setIsLoading(true);
 
-        const fetchedRepoXHR = await axios.get(
-          appData.repoUrl.replace("github.com", "api.github.com/repos")
-        );
+        const token = await SecureStore.getItemAsync("github_token");
 
-        const fetchedReleaseXHR = await axios.get(
-          `${appData.repoUrl}/releases/latest`.replace(
-            "github.com",
-            "api.github.com/repos"
-          )
-        );
+        const authHeaders = {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/vnd.github+json",
+        };
 
-        if (fetchedRepoXHR?.data) setRepoData(fetchedRepoXHR?.data);
-        if (fetchedReleaseXHR?.data) setReleaseData(fetchedReleaseXHR?.data);
+        if (token) {
+          const fetchedRepoXHR = await axios.get(
+            appData.repoUrl.replace("github.com", "api.github.com/repos"),
+            { headers: authHeaders }
+          );
+
+          const fetchedReleaseXHR = await axios.get(
+            `${appData.repoUrl}/releases/latest`.replace(
+              "github.com",
+              "api.github.com/repos"
+            ),
+            { headers: authHeaders }
+          );
+
+          if (fetchedRepoXHR?.data) setRepoData(fetchedRepoXHR?.data);
+          if (fetchedReleaseXHR?.data) setReleaseData(fetchedReleaseXHR?.data);
+        } else {
+          const fetchedRepoXHR = await axios.get(
+            appData.repoUrl.replace("github.com", "api.github.com/repos")
+          );
+
+          const fetchedReleaseXHR = await axios.get(
+            `${appData.repoUrl}/releases/latest`.replace(
+              "github.com",
+              "api.github.com/repos"
+            )
+          );
+
+          if (fetchedRepoXHR?.data) setRepoData(fetchedRepoXHR?.data);
+          if (fetchedReleaseXHR?.data) setReleaseData(fetchedReleaseXHR?.data);
+        }
 
         setIsLoading(false);
       }
@@ -402,7 +428,10 @@ const appDetails = () => {
                   Sign in with Github to extend Github API usage limit from 60
                   to 5000 per hour.
                 </Text>
-                <TouchableOpacity className="h-[45px] flex-row justify-center items-center gap-1.5 shadow bg-dark-surface rounded-full mt-4">
+                <TouchableOpacity
+                  onPress={() => router.navigate("/login")}
+                  className="h-[45px] flex-row justify-center items-center gap-1.5 shadow bg-dark-surface rounded-full mt-4"
+                >
                   <View className="size-6">
                     <Svg viewBox="0 0 128 128">
                       <G fill="#fff">
