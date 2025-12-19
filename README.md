@@ -78,6 +78,6 @@ Below listed are few features that are currently available in dragon store:
 
 ## Support the Project
 
-Fell in love with the project? Contribute to the development by supporting the developer. You can Email me on <a href="mailto://thejddev@gmail.com">My Mail</a> for report bugs, recommendations, unique ideas and support for the project. Consider donation for contribution:
+Fell in love with the project? Contribute to the development by supporting the developer. You can Email me on <a href="mailto://thejddev@gmail.com">My Mail</a> for report bugs, recommendations, unique ideas and support for the project. Consider donation for contribution to the project. Scan below QR with any UPI app on your phone:
 
 ![Donate using UPI](<https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=jpdoshi2811@okaxis&pn=Jainam%20Doshi(TheJDDev)&tn=Donation%20for%20Dragon%20StoreProject&am=150.00&cu=INR>)
