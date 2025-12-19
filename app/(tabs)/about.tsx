@@ -3,7 +3,14 @@ import ScreenView from "@/components/ScreenView";
 import * as MailComposer from "expo-mail-composer";
 import { openBrowserAsync } from "expo-web-browser";
 import React from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  Linking,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { G, Path } from "react-native-svg";
 import Toast from "react-native-toast-message";
@@ -174,8 +181,35 @@ const About = () => {
           </Text>
           <Text className="text-lg leading-normal mt-2 text-neutral-500 dark:text-neutral-400">
             Fell in love with the project? Contribute to the development by
-            supporting the developer.
+            supporting the developer. Click below button to support developer by
+            donation via UPI
           </Text>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL(
+                "upi://pay?pa=jpdoshi2811@okaxis&pn=Jainam%20Doshi(TheJDDev)&tn=Donation%20for%20Dragon%20StoreProject&am=150.00&cu=INR"
+              )
+            }
+            className="h-[40px] flex-row justify-center items-center gap-1 shadow bg-violet-500 rounded-xl mt-4"
+          >
+            <View className="size-6">
+              <Svg
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="#fff"
+              >
+                <Path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 8.25H9m6 3H9m3 6-3-3h1.5a3 3 0 1 0 0-6M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </Svg>
+            </View>
+            <Text className="text-base font-semibold text-white">
+              Donate via UPI
+            </Text>
+          </TouchableOpacity>
         </Animated.View>
 
         <View className="h-36" />
