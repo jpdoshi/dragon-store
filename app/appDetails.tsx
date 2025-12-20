@@ -619,10 +619,16 @@ const appDetails = () => {
                   Repo Owner
                 </Text>
                 <View className="flex-1 flex-row gap-4 items-center">
-                  <Image
-                    source={repoData?.owner.avatar_url}
-                    style={{ height: 75, width: 75, borderRadius: 75 }}
-                  />
+                  <View className="rounded-full border border-neutral-200 dark:border-neutral-600 shadow">
+                    <Image
+                      source={repoData?.owner.avatar_url}
+                      style={{
+                        height: 70,
+                        width: 70,
+                        borderRadius: 70,
+                      }}
+                    />
+                  </View>
                   <View>
                     <Text className="text-black dark:text-white font-medium text-xl">
                       {repoData?.owner.login}

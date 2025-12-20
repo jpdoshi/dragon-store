@@ -136,7 +136,7 @@
     "category": "internet",
     "about": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "icon": "ironfox.png",
-    "repoUrl": "https://github.com/ironfox-oss/IronFox",
+    "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases",
     "website": "https://ironfoxoss.org"
   },
   {
