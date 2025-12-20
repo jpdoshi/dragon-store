@@ -136,7 +136,7 @@
     "category": "internet",
     "about": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "icon": "ironfox.png",
-    "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases",
+    "repoUrl": "https://github.com/ironfox-oss/IronFox",
     "website": "https://ironfoxoss.org"
   },
   {
@@ -336,7 +336,7 @@
     "category": "tools",
     "about": "Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, reviews, and download the APK directly from Google Play to your device.",
     "icon": "aurora-store.png",
-    "repoUrl": "https://github.com/whyorean/AuroraStore",
+    "repoUrl": "https://f-droid.org/en/packages/com.aurora.store",
     "website": "https://auroraoss.com"
   },
   {
@@ -666,7 +666,7 @@
     "category": "tools",
     "about": "LibreTorrent is an open-source torrent client based on Libtorrent. It provides you with a simple way to download anything you want directly onto your Android smartphone memory. Plus, you can easily create your own torrent files and share them comfortably with other users as well.",
     "icon": "libretorrent.png",
-    "repoUrl": "https://gitlab.com/proninyaroslav/libretorrent/-/releases",
+    "repoUrl": "https://f-droid.org/en/packages/org.proninyaroslav.libretorrent",
     "website": "https://github.com/proninyaroslav/libretorrent"
   },
   {
@@ -947,6 +947,36 @@
     "about": "Generate and set stunning gradient wallpapers on your Android device with Waller. Easily customize your home and lock screens with a variety of vibrant backgrounds.",
     "icon": "waller.png",
     "repoUrl": "https://github.com/pankaj-meharchandani/waller",
+    "website": ""
+  },
+  {
+    "id": "454755",
+    "title": "YTDLnis",
+    "owner": "deniscerri",
+    "category": "media",
+    "about": "YTDLnis is a free and open source video/audio downloader app that uses yt-dlp, a program that can download videos and audio from over 1000 websites.",
+    "icon": "ytdlnis.png",
+    "repoUrl": "https://github.com/deniscerri/ytdlnis",
+    "website": "https://ytdlnis.org"
+  },
+  {
+    "id": "421451",
+    "title": "Element X",
+    "owner": "element-hq",
+    "category": "social",
+    "about": "Element X gives you fast, secure and private instant messaging and video calls built on Matrix, the open standard for real-time communication.",
+    "icon": "element-x.png",
+    "repoUrl": "https://github.com/element-hq/element-x-android",
+    "website": ""
+  },
+  {
+    "id": "455436",
+    "title": "HeliBoard",
+    "owner": "Helium314",
+    "category": "tools",
+    "about": "HeliBoard is a privacy-conscious and customizable open-source keyboard, based on AOSP / OpenBoard. Does not use internet permission, and thus is 100% offline.",
+    "icon": "heliboard.png",
+    "repoUrl": "https://github.com/Helium314/HeliBoard",
     "website": ""
   }
 ]
