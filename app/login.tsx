@@ -69,7 +69,7 @@ const Login = () => {
 
   return (
     <ScreenView>
-      <View className="flex-1 justify-center items-center">
+      <View className="flex-1 justify-center items-center px-6">
         {loginResult == "LOAD" ? (
           <ActivityIndicator size={"large"} color={"#ff2056"} />
         ) : (
