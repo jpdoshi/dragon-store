@@ -1,4 +1,5 @@
 import AppBar from "@/components/AppBar";
+import DownloadsModal from "@/components/DownloadsModal";
 import ReleaseNotesModal from "@/components/ReleaseNotesModal";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
@@ -44,6 +45,7 @@ const appDetails = () => {
   const [repoData, setRepoData] = useState<any>(null);
 
   const [showReleaseNotes, setShowReleaseNotes] = useState(false);
+  const [showDownloads, setShowDownloads] = useState(false);
   const [showAPIError, setShowAPIError] = useState(false);
 
   useEffect(() => {
@@ -351,11 +353,7 @@ const appDetails = () => {
               <TouchableOpacity
                 onPress={async () => {
                   if (appData?.repoUrl.includes("github.com")) {
-                    await openBrowserAsync(
-                      `${appData.repoUrl}/releases/latest`
-                    );
-                  } else if (appData?.repoUrl.includes("gitlab.com")) {
-                    await openBrowserAsync(`${appData.repoUrl}/-/releases`);
+                    setShowDownloads(true);
                   } else {
                     await openBrowserAsync(appData?.repoUrl ?? "");
                   }
@@ -387,11 +385,11 @@ const appDetails = () => {
                 onPress={async () =>
                   await openBrowserAsync(appData?.repoUrl ?? "")
                 }
-                className="h-[45px] flex-row flex-1 rounded-xl bg-white shadow justify-center items-center gap-1.5 mt-4"
+                className="h-[45px] flex-row flex-1 rounded-2xl bg-black dark:bg-white shadow justify-center items-center gap-1.5 mt-3"
               >
                 <View className="size-6">
                   <Svg viewBox="0 0 128 128">
-                    <G fill="#000">
+                    <G fill={colorScheme == "dark" ? "#000" : "#fff"}>
                       <Path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
@@ -402,7 +400,7 @@ const appDetails = () => {
                   </Svg>
                 </View>
 
-                <Text className="text-base text-black font-semibold">
+                <Text className="text-base text-white dark:text-black font-semibold">
                   Github Repo
                 </Text>
               </TouchableOpacity>
@@ -704,6 +702,15 @@ const appDetails = () => {
           onClose={() => setShowReleaseNotes(false)}
           releaseNotes={releaseData?.body}
         />
+
+        {!isLoading && releaseData && (
+          <DownloadsModal
+            visible={showDownloads}
+            onClose={() => setShowDownloads(false)}
+            releaseTag={releaseData?.tag_name}
+            assets={releaseData?.assets}
+          />
+        )}
 
         <Toast />
       </ScreenView>
