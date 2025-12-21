@@ -1109,5 +1109,60 @@
     "repoUrl": "https://f-droid.org/en/packages/de.tutao.calendar",
     "website": "https://tuta.com",
     "tags": "calendar, private, secure, encryption"
+  },
+  {
+    "id": "287359",
+    "title": "RVX Manager",
+    "owner": "inotia00",
+    "category": "tools",
+    "about": "RVX Manager is a forked version of ReVanced Manager to run inotia00 patches. It helps you build Extended Apps.",
+    "icon": "rvx-manager.png",
+    "repoUrl": "https://github.com/inotia00/revanced-manager",
+    "website": "https://revanced.app",
+    "tags": "rvx, manager, vanced, revanced, fork, patches"
+  },
+  {
+    "id": "619645",
+    "title": "Orbot",
+    "owner": "guardianproject",
+    "category": "internet",
+    "about": "Orbot is a free VPN and proxy app that empowers other apps to use the internet more securely. Orbot uses Tor to encrypt your Internet traffic and then hides it by bouncing through a series of computers around the world.",
+    "icon": "orbot.png",
+    "repoUrl": "https://github.com/guardianproject/orbot-android",
+    "website": "https://gitlab.com/guardianproject/orbot",
+    "tags": "vpn, proxy, encryption, private, secure"
+  },
+  {
+    "id": "003826",
+    "title": "Xed Editor",
+    "owner": "Xed-Editor",
+    "category": "tools",
+    "about": "Xed-Editor is a versatile text editor for Android, offering advanced functionality such as syntax highlighting, extensive customization options, and a streamlined interface for efficient editing.",
+    "icon": "xed-editor.png",
+    "repoUrl": "https://github.com/Xed-Editor/Xed-Editor",
+    "website": "",
+    "tags": "text, code, editor, viewer"
+  },
+  {
+    "id": "354526",
+    "title": "SimpleX Chat",
+    "owner": "simplex-chat",
+    "category": "social",
+    "about": "SimpleX is the first messaging platform that has no user identifiers of any kind - 100% private by design",
+    "icon": "simplex.png",
+    "repoUrl": "https://github.com/simplex-chat/simplex-chat",
+    "website": "https://simplex.chat",
+    "tags": "private, messaging, calls, encryption, secure"
+  },
+  {
+    "id": "283851",
+    "title": "Ente Photos",
+    "owner": "ente.io",
+    "category": "media",
+    "about": "Store, share and discover your memories with Ente Photos. With end-to-end encryption, only you—and those you share with—can see your photos and videos.",
+    "icon": "ente-photos.png",
+    "repoUrl": "https://f-droid.org/en/packages/io.ente.photos.fdroid",
+    "website": "https://ente.io",
+    "tags": "cloud, encryption, private, secure, photos, videos"
   }
 ]
