@@ -1076,5 +1076,38 @@
     "repoUrl": "https://github.com/Helium314/HeliBoard",
     "website": "",
     "tags": "keyboard, private, secure"
+  },
+  {
+    "id": "911045",
+    "title": "Fennec",
+    "owner": "Mozilla Foundation",
+    "category": "internet",
+    "about": "Fennec F-Droid browser is based on the latest Mozilla Firefox release. It has proprietary bits and telemetry removed.",
+    "icon": "fennec.png",
+    "repoUrl": "https://f-droid.org/en/packages/org.mozilla.fennec_fdroid",
+    "website": "",
+    "tags": "firefox, browser, private, secure"
+  },
+  {
+    "id": "024797",
+    "title": "Tuta Mail",
+    "owner": "tutao",
+    "category": "internet",
+    "about": "Tuta is an email service with a strong focus on security and privacy that lets you encrypt emails, contacts and calendar entries on all your devices.",
+    "icon": "tuta-mail.png",
+    "repoUrl": "https://f-droid.org/en/packages/de.tutao.tutanota",
+    "website": "https://tuta.com",
+    "tags": "email, mail, private, secure"
+  },
+  {
+    "id": "732256",
+    "title": "Tuta Calendar",
+    "owner": "tutao",
+    "category": "internet",
+    "about": "Tuta Calendar is the only zero-knowledge calendar with quantum-safe encryption, making sure all your events are protected from snooping and prying eyes.",
+    "icon": "tuta-calendar.png",
+    "repoUrl": "https://f-droid.org/en/packages/de.tutao.calendar",
+    "website": "https://tuta.com",
+    "tags": "calendar, private, secure, encryption"
   }
 ]
