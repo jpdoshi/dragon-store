@@ -7,7 +7,8 @@
     "about": "ReVanced Extended is a forked version of the original ReVanced Project. With the Extended version, you can get more features not yet introduced in the official project.",
     "icon": "rvx-yt.png",
     "repoUrl": "https://github.com/NoName-exe/revanced-extended",
-    "website": "https://rvx.to"
+    "website": "https://rvx.to",
+    "tags": "youtube, yt, video, adblock, sponsorblock, premium"
   },
   {
     "id": "665202",
@@ -17,7 +18,8 @@
     "about": "ReVanced Extended is a forked version of the original ReVanced Project. With the Extended version, you can get more features not yet introduced in the official project.",
     "icon": "rvx-music.png",
     "repoUrl": "https://github.com/NoName-exe/revanced-extended",
-    "website": "https://rvx.to"
+    "website": "https://rvx.to",
+    "tags": "youtube, spotify, audio, adblock, premium"
   },
   {
     "id": "118702",
@@ -27,7 +29,8 @@
     "about": "A libre lightweight streaming front-end for Android.",
     "icon": "newpipe.png",
     "repoUrl": "https://github.com/TeamNewPipe/NewPipe",
-    "website": "https://newpipe.net"
+    "website": "https://newpipe.net",
+    "tags": "youtube, yt, video, adblock"
   },
   {
     "id": "264136",
@@ -37,7 +40,8 @@
     "about": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
     "icon": "yt-revanced.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
-    "website": "https://revanced.app"
+    "website": "https://revanced.app",
+    "tags": "yt, video, adblock, sponsorblock, premium"
   },
   {
     "id": "631141",
@@ -47,7 +51,8 @@
     "about": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
     "icon": "yt-music.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
-    "website": "https://revanced.app"
+    "website": "https://revanced.app",
+    "tags": "youtube, audio, spotify, adblock, premium"
   },
   {
     "id": "623181",
@@ -57,7 +62,8 @@
     "about": "Reddit is the most diverse place on the web, where people from all over the world come together to share passions, ideas and experiences.",
     "icon": "reddit.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
-    "website": "https://revanced.app"
+    "website": "https://revanced.app",
+    "tags": "adblock, premium"
   },
   {
     "id": "169609",
@@ -67,7 +73,8 @@
     "about": "Spotify is a digital music service that gives you access to millions of songs.",
     "icon": "spotify.png",
     "repoUrl": "https://github.com/krvstek/rvx-apks",
-    "website": "https://revanced.app"
+    "website": "https://revanced.app",
+    "tags": "yt, youtube, music, adblock, premium"
   },
   {
     "id": "914162",
@@ -77,7 +84,8 @@
     "about": "Instafel provides fast & up-to-date Instagram Alpha experience for everyone!",
     "icon": "instagram.png",
     "repoUrl": "https://github.com/mamiiblt/instafel",
-    "website": "https://instafel.app"
+    "website": "https://instafel.app",
+    "tags": "instagram, alternative, adblock, client"
   },
   {
     "id": "127378",
@@ -87,17 +95,19 @@
     "about": "ReVanced Manager is an all-in-one solution for downloading, installing, and managing ReVanced apps and other modded APKs.",
     "icon": "revanced-manager.png",
     "repoUrl": "https://github.com/revanced/revanced-manager",
-    "website": "https://revanced.app"
+    "website": "https://revanced.app",
+    "tags": "vanced, youtube, yt, music, spotify, reddit, patches, premium"
   },
   {
     "id": "187661",
     "title": "Next Player",
     "owner": "anilbeesetti",
-    "category": "tools",
+    "category": "media",
     "about": "Next Player is an Android native video player written in Kotlin. It provides a simple and easy-to-use interface for users to play videos on their Android devices.",
     "icon": "next-player.png",
     "repoUrl": "https://github.com/anilbeesetti/nextplayer",
-    "website": ""
+    "website": "",
+    "tags": "mx, vlc, video"
   },
   {
     "id": "954552",
@@ -107,7 +117,8 @@
     "about": "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.",
     "icon": "obtainium.png",
     "repoUrl": "https://github.com/ImranR98/Obtainium",
-    "website": "https://obtainium.imranr.dev"
+    "website": "https://obtainium.imranr.dev",
+    "tags": "store, alternative, free, libre, open-source"
   },
   {
     "id": "963456",
@@ -117,7 +128,8 @@
     "about": "GmsCore fork for ReVanced with Material 3 Expressive design, enhanced features, and improvements.",
     "icon": "microg-re.png",
     "repoUrl": "https://github.com/WSTxda/MicroG-RE",
-    "website": ""
+    "website": "",
+    "tags": "play, services, vanced, revanced, rvx"
   },
   {
     "id": "731936",
@@ -127,7 +139,8 @@
     "about": "Experience true freedom online. Gain unrestricted access to global content, block annoying ads, and safeguard your privacy with a fast and secure VPN.",
     "icon": "protonvpn.png",
     "repoUrl": "https://github.com/ProtonVPN/android-app",
-    "website": "https://protonvpn.com"
+    "website": "https://protonvpn.com",
+    "tags": "secure, free, private"
   },
   {
     "id": "008359",
@@ -137,7 +150,8 @@
     "about": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "icon": "ironfox.png",
     "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases",
-    "website": "https://ironfoxoss.org"
+    "website": "https://ironfoxoss.org",
+    "tags": "secure, private, firefox, browser"
   },
   {
     "id": "127207",
@@ -147,7 +161,8 @@
     "about": "Iceraven Browser is a web browser for Android, based on Mozilla's Fenix version of Firefox, GeckoView and Mozilla Android Components.",
     "icon": "iceraven.png",
     "repoUrl": "https://github.com/fork-maintainers/iceraven-browser",
-    "website": ""
+    "website": "",
+    "tags": "secret, private, firefox, browser"
   },
   {
     "id": "352883",
@@ -157,7 +172,8 @@
     "about": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
     "icon": "termux.png",
     "repoUrl": "https://github.com/termux/termux-app",
-    "website": ""
+    "website": "",
+    "tags": "unix, linux, terminal, commands, prompt, shell"
   },
   {
     "id": "178761",
@@ -167,7 +183,8 @@
     "about": "Block ads. Save data. And get way faster webpages. Just by switching your browser.",
     "icon": "brave.png",
     "repoUrl": "https://github.com/brave/brave-browser",
-    "website": "https://brave.com"
+    "website": "https://brave.com",
+    "tags": "chrome, private, secure, browser"
   },
   {
     "id": "342875",
@@ -177,7 +194,8 @@
     "about": "microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.",
     "icon": "gms-core.png",
     "repoUrl": "https://github.com/microg/GmsCore",
-    "website": "https://rvxapp.com/gmscore"
+    "website": "https://rvxapp.com/gmscore",
+    "tags": "play, services, vanced, revanced, rvx"
   },
   {
     "id": "930330",
@@ -187,7 +205,8 @@
     "about": "ReVanced Google Photos APK Auto-Builds",
     "icon": "photos.png",
     "repoUrl": "https://github.com/mentalblank/GPhotos-Revanced",
-    "website": "https://revanced.app"
+    "website": "https://revanced.app",
+    "tags": "free, unlimited, photos, storage"
   },
   {
     "id": "630698",
@@ -197,7 +216,8 @@
     "about": "PPSSPP is the original and best PSP emulator for Android. It runs a lot of games, but depending on the power of your device all may not run at full speed.",
     "icon": "ppsspp.png",
     "repoUrl": "https://www.ppsspp.org/download",
-    "website": "https://www.ppsspp.org"
+    "website": "https://www.ppsspp.org",
+    "tags": "psp, games, emulator, rom, iso"
   },
   {
     "id": "978280",
@@ -207,7 +227,8 @@
     "about": "Eden is an experimental open-source emulator for the Nintendo Switch, built with performance and stability in mind.",
     "icon": "eden.png",
     "repoUrl": "https://eden-emu.dev/download",
-    "website": "https://eden-emu.dev"
+    "website": "https://eden-emu.dev",
+    "tags": "nintendo, games, emulator, rom, iso"
   },
   {
     "id": "046323",
@@ -217,7 +238,8 @@
     "about": "The most advanced Nintendo Switch emulator. Experience your favorite games on PC with enhanced performance, higher resolutions, and improved frame rates.",
     "icon": "citron.png",
     "repoUrl": "https://citron-emu.org/#download",
-    "website": "https://citron-emu.org"
+    "website": "https://citron-emu.org",
+    "tags": "nintendo, games, emulator, rom, iso"
   },
   {
     "id": "181873",
@@ -227,7 +249,8 @@
     "about": "AniLabX - android app for watching anime/dramas/cartoons and reading manga/comics/light novels.",
     "icon": "anilab.png",
     "repoUrl": "https://github.com/AniLabX/AniLabX",
-    "website": "https://anilabx.xyz"
+    "website": "https://anilabx.xyz",
+    "tags": "anime, crunchyroll, movies, shows"
   },
   {
     "id": "052341",
@@ -237,7 +260,8 @@
     "about": "Discover and read manga, webtoons, comics, and more - easier than ever on your Android device.",
     "icon": "mihon.png",
     "repoUrl": "https://mihon.app/download",
-    "website": "https://mihon.app"
+    "website": "https://mihon.app",
+    "tags": "manga, reader, comics, tachiyomi"
   },
   {
     "id": "927391",
@@ -247,7 +271,8 @@
     "about": "KDE Connect is a Multi-platform app that allows your devices to communicate.",
     "icon": "kdeconnect.png",
     "repoUrl": "https://kdeconnect.kde.org/download.html",
-    "website": "https://kdeconnect.kde.org"
+    "website": "https://kdeconnect.kde.org",
+    "tags": "files, transfer, sharing, pc, laptop, tablet"
   },
   {
     "id": "364963",
@@ -257,7 +282,8 @@
     "about": "F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform.",
     "icon": "f-droid.png",
     "repoUrl": "https://github.com/f-droid/fdroidclient",
-    "website": "https://f-droid.org"
+    "website": "https://f-droid.org",
+    "tags": "play, store, alternative, fdroid, open-source"
   },
   {
     "id": "085570",
@@ -267,7 +293,8 @@
     "about": "Open-source third-party Telegram client with not many but useful modifications.",
     "icon": "nekogram.png",
     "repoUrl": "https://github.com/Nekogram/Nekogram",
-    "website": "https://nekogram.app"
+    "website": "https://nekogram.app",
+    "tags": "telegram, client, mod"
   },
   {
     "id": "706419",
@@ -277,7 +304,8 @@
     "about": "Access all your messages, calendars, and contacts in one fast app. Filter and organize the way you like. Manage all accounts separately or in a unified inbox.",
     "icon": "thunderbird.png",
     "repoUrl": "https://github.com/thunderbird/thunderbird-android",
-    "website": "https://www.thunderbird.net"
+    "website": "https://www.thunderbird.net",
+    "tags": "email, mail, private, secure"
   },
   {
     "id": "161432",
@@ -287,7 +315,8 @@
     "about": "Proton Mail is a free and secure email service that's powered by our community, not surveillance capitalism.",
     "icon": "protonmail.png",
     "repoUrl": "https://github.com/ProtonMail/android-mail",
-    "website": "https://proton.me/mail"
+    "website": "https://proton.me/mail",
+    "tags": "email, mail, private, secure"
   },
   {
     "id": "954417",
@@ -297,7 +326,8 @@
     "about": "Lawnchair is a supercharged version of the Pixel Launcher you know and love. Being an open-source project, you get all the latest Pixel Launcher features.",
     "icon": "lawnchair.png",
     "repoUrl": "https://github.com/LawnchairLauncher/lawnchair",
-    "website": "https://lawnchair.app"
+    "website": "https://lawnchair.app",
+    "tags": "home, launcher, pixel, material3"
   },
   {
     "id": "889075",
@@ -307,7 +337,8 @@
     "about": "Winlator is an Android application for running Windows applications with Wine and Box86/Box64.",
     "icon": "winlator.png",
     "repoUrl": "https://github.com/brunodev85/winlator",
-    "website": "https://winlator.org"
+    "website": "https://winlator.org",
+    "tags": "windows, run, exe, msi, apps"
   },
   {
     "id": "004932",
@@ -317,7 +348,8 @@
     "about": "VLC for Android is a full audio player, with a complete database, an equalizer and filters, playing all weird audio formats.",
     "icon": "vlc.png",
     "repoUrl": "https://www.videolan.org/vlc/download-android.html",
-    "website": "https://www.videolan.org/vlc"
+    "website": "https://www.videolan.org/vlc",
+    "tags": "video, mx, free, open-source"
   },
   {
     "id": "097940",
@@ -327,7 +359,8 @@
     "about": "An open-source privacy oriented Twitter/X client. Privacy: No tracking, with all data local. No ads: Not clogged by multiple ads.",
     "icon": "squawker.png",
     "repoUrl": "https://github.com/j-fbriere/squawker",
-    "website": ""
+    "website": "",
+    "tags": "twitter, x, client, mods"
   },
   {
     "id": "153168",
@@ -337,7 +370,8 @@
     "about": "Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, reviews, and download the APK directly from Google Play to your device.",
     "icon": "aurora-store.png",
     "repoUrl": "https://f-droid.org/en/packages/com.aurora.store",
-    "website": "https://auroraoss.com"
+    "website": "https://auroraoss.com",
+    "tags": "play, store, alternative, fdroid"
   },
   {
     "id": "488616",
@@ -347,7 +381,8 @@
     "about": "Tor Browser isolates websites, prevents tracking, hides browsing history, and encrypts traffic three times, allowing access to blocked sites.",
     "icon": "tor.png",
     "repoUrl": "https://www.torproject.org/download/",
-    "website": "https://www.torproject.org"
+    "website": "https://www.torproject.org",
+    "tags": "tor, onion, private, secure, vpn, browser"
   },
   {
     "id": "609891",
@@ -357,7 +392,8 @@
     "about": "Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.",
     "icon": "cromite.png",
     "repoUrl": "https://github.com/uazo/cromite",
-    "website": ""
+    "website": "",
+    "tags": "chrome, private, secure, browser"
   },
   {
     "id": "229778",
@@ -367,7 +403,8 @@
     "about": "Bitwarden is a freemium open-source password management service that is used to store sensitive information, such as website credentials, in an encrypted vault.",
     "icon": "bitwarden.png",
     "repoUrl": "https://github.com/bitwarden/android",
-    "website": "https://bitwarden.com"
+    "website": "https://bitwarden.com",
+    "tags": "password, manager, safe, secure, private"
   },
   {
     "id": "971384",
@@ -377,7 +414,8 @@
     "about": "CloudStream is one of the best streaming and downloading apps available for free. It helps users stream their favorite movies, TV shows, anime, sports, live TV, and much more.",
     "icon": "cloudstream.png",
     "repoUrl": "https://github.com/recloudstream/cloudstream",
-    "website": "https://cloudstream-apk.com"
+    "website": "https://cloudstream-apk.com",
+    "tags": "shows, movies, netflix, hbo, prime"
   },
   {
     "id": "182527",
@@ -387,7 +425,8 @@
     "about": "LocalSend is a free, open-source, cross-platform file sharing tool that allows you to share files to nearby devices.",
     "icon": "localsend.png",
     "repoUrl": "https://github.com/localsend/localsend",
-    "website": "https://localsend.org"
+    "website": "https://localsend.org",
+    "tags": "files, transfer, sharing, pc, laptop, tablet"
   },
   {
     "id": "381145",
@@ -397,7 +436,8 @@
     "about": "Nobook is a lightweight Android application to browse facebook.",
     "icon": "nobook.png",
     "repoUrl": "https://github.com/ycngmn/Nobook",
-    "website": ""
+    "website": "",
+    "tags": "facebook, client, mods"
   },
   {
     "id": "697772",
@@ -407,7 +447,8 @@
     "about": "Xtra for Twitch is a Twitch client focused on providing the best viewing and chatting experience on mobile devices.",
     "icon": "xtra.png",
     "repoUrl": "https://github.com/crackededed/Xtra",
-    "website": ""
+    "website": "",
+    "tags": "twitch, client, mods"
   },
   {
     "id": "005086",
@@ -417,7 +458,8 @@
     "about": "FUTO Keyboard is a private, offline keyboard with features like swipe typing, smart autocorrect, predictive text, and personalization.",
     "icon": "futo-keyboard.png",
     "repoUrl": "https://github.com/futo-org/android-keyboard",
-    "website": "https://keyboard.futo.org"
+    "website": "https://keyboard.futo.org",
+    "tags": "keyboard, private, secure"
   },
   {
     "id": "439122",
@@ -427,7 +469,8 @@
     "about": "FlorisBoard is a free and open-source keyboard for Android 8.0+ devices. It aims at being modern, user-friendly and customizable while fully respecting your privacy.",
     "icon": "florisboard.png",
     "repoUrl": "https://github.com/florisboard/florisboard",
-    "website": "https://florisboard.org"
+    "website": "https://florisboard.org",
+    "tags": "keyboard, private, secure"
   },
   {
     "id": "525179",
@@ -437,7 +480,8 @@
     "about": "NetherSX2 is a PlayStation emulator created for the Android operating system. It lets people play games on their smartphones or tablets that are using PS2 system hardware to run PS2 game ROMs.",
     "icon": "nethersx2.png",
     "repoUrl": "https://github.com/Trixarian/NetherSX2-patch",
-    "website": "https://nethersx2.org"
+    "website": "https://nethersx2.org",
+    "tags": "ps2, rom, iso, emulator"
   },
   {
     "id": "202198",
@@ -447,7 +491,8 @@
     "about": "Shizuku guides users to run a process, Shizuku server, with root or ADB first. When the app starts, the binder to Shizuku server will also be sent to the app.",
     "icon": "shizuku.png",
     "repoUrl": "https://github.com/RikkaApps/Shizuku",
-    "website": ""
+    "website": "",
+    "tags": "system, sudo, power, developer, adb"
   },
   {
     "id": "285148",
@@ -457,7 +502,8 @@
     "about": "Spark ideas. From personal notes to journaling, knowledge bases, and project management, Obsidian gives you the tools to come up with ideas and organize them.",
     "icon": "obsidian.png",
     "repoUrl": "https://obsidian.md/mobile",
-    "website": "https://obsidian.md"
+    "website": "https://obsidian.md",
+    "tags": "notes, taking, productivity, text"
   },
   {
     "id": "198951",
@@ -467,7 +513,8 @@
     "about": "Hail is a free app to freeze Android apps, which can disable, hide, or suspend them to save power and reduce RAM usage.",
     "icon": "hail.png",
     "repoUrl": "https://github.com/aistra0528/Hail",
-    "website": ""
+    "website": "",
+    "tags": "freeze, stop, disable, hide, apps, process"
   },
   {
     "id": "058946",
@@ -477,7 +524,8 @@
     "about": "AntiSplit M is an open-source tool designed specifically for Android devices, mainly used to merge split APK files, such as Split APKs, XAPK, and APKM, into a single complete APK file for direct installation.",
     "icon": "antisplit-m.png",
     "repoUrl": "https://github.com/AbdurazaaqMohammed/AntiSplit-M",
-    "website": ""
+    "website": "",
+    "tags": "apk, xapk, android, installer"
   },
   {
     "id": "583539",
@@ -487,7 +535,8 @@
     "about": "AdAway is a free, open-source ad blocker for Android. It uses system hosts or a VPN to block ads and trackers.",
     "icon": "adaway.png",
     "repoUrl": "https://github.com/AdAway/AdAway",
-    "website": "https://adaway.org"
+    "website": "https://adaway.org",
+    "tags": "adblock, safe, secure, private"
   },
   {
     "id": "198864",
@@ -497,7 +546,8 @@
     "about": "mpvExtended is a fork of mpv-android, built on the libmpv library. It aims to combine the powerful features of mpv with an easy to use interface and additional features.",
     "icon": "mpvex.png",
     "repoUrl": "https://github.com/marlboro-advance/mpvEx",
-    "website": "https://mpvex.vercel.app"
+    "website": "https://mpvex.vercel.app",
+    "tags": "video, mx, video, player, alternative"
   },
   {
     "id": "594932",
@@ -507,7 +557,8 @@
     "about": "Metrolist is an open-source, lightweight client designed to tap into YouTube Music's vast library while stripping away unnecessary features and advertisements.",
     "icon": "metrolist.png",
     "repoUrl": "https://github.com/mostafaalagamy/Metrolist",
-    "website": "https://metrolistapk.com"
+    "website": "https://metrolistapk.com",
+    "tags": "youtube, yt, spotify, audio, music, player"
   },
   {
     "id": "058843",
@@ -517,7 +568,8 @@
     "about": "Fossify Gallery is a comprehensive photo and video app designed with privacy in mind. This Android application provides a seamless experience free from ads.",
     "icon": "fossify-gallery.png",
     "repoUrl": "https://github.com/FossifyOrg/Gallery",
-    "website": "https://www.fossify.org"
+    "website": "https://www.fossify.org",
+    "tags": "safe, secure, private, photos"
   },
   {
     "id": "234071",
@@ -527,7 +579,8 @@
     "about": "The Fossify Phone App offers a fluid and responsive mobile interface, enhancing your phone's performance while safeguarding your privacy.",
     "icon": "fossify-phone.png",
     "repoUrl": "https://github.com/FossifyOrg/Phone",
-    "website": "https://www.fossify.org"
+    "website": "https://www.fossify.org",
+    "tags": "dialer, contacts, secure, private"
   },
   {
     "id": "391337",
@@ -537,7 +590,8 @@
     "about": "Infinity is a beautiful, feature-rich app that offers a smooth Reddit browsing experience. It is completely ad-less; you can browse Reddit without interruptions or distractions. Built by a passionate university student, Infinity is open source.",
     "icon": "infinity.png",
     "repoUrl": "https://github.com/Docile-Alligator/Infinity-For-Reddit",
-    "website": "https://play.google.com/store/apps/details?id=ml.docilealligator.infinityforreddit.plus"
+    "website": "https://play.google.com/store/apps/details?id=ml.docilealligator.infinityforreddit.plus",
+    "tags": "reddit, client, mods"
   },
   {
     "id": "139814",
@@ -547,7 +601,8 @@
     "about": "PixelPlay is a modern, offline-first music player for Android, built with Kotlin and Jetpack Compose. It's designed to provide a beautiful and seamless experience for listening to your local music library.",
     "icon": "pixelplay.png",
     "repoUrl": "https://github.com/theovilardo/PixelPlay",
-    "website": ""
+    "website": "",
+    "tags": "music, audio, player, offline"
   },
   {
     "id": "325031",
@@ -557,7 +612,8 @@
     "about": "Looking for a better app installer? Try InstallerX! Many customized Chinese ROMs come with subpar default installers. You can replace them with InstallerX Revived.",
     "icon": "installer-x-revived.png",
     "repoUrl": "https://github.com/wxxsfxyzm/InstallerX-Revived",
-    "website": ""
+    "website": "",
+    "tags": "apps, installer, apk, secure, private"
   },
   {
     "id": "185516",
@@ -567,7 +623,8 @@
     "about": "App Manager is a fully-featured package manager for Android, with features like installing/uninstalling APKs, viewing app info, and creating shortcuts.",
     "icon": "appmanager.png",
     "repoUrl": "https://github.com/MuntashirAkon/AppManager",
-    "website": "https://muntashirakon.github.io/AppManager"
+    "website": "https://muntashirakon.github.io/AppManager",
+    "tags": "apk, installer, uninstall, shortcuts"
   },
   {
     "id": "942493",
@@ -577,7 +634,8 @@
     "about": "SD Maid 2/SE is an app and file manager that specializes in knowing which apps have created specific files on your device.",
     "icon": "sdmaid-se.png",
     "repoUrl": "https://github.com/d4rken-org/sdmaid-se",
-    "website": "https://play.google.com/store/apps/details?id=eu.darken.sdmse"
+    "website": "https://play.google.com/store/apps/details?id=eu.darken.sdmse",
+    "tags": "files, manager, safe, secure, private"
   },
   {
     "id": "105151",
@@ -587,7 +645,8 @@
     "about": "ZArchiver - is a program for archive management. It has a simple and functional interface. Allows you to work with various types of archives: 7zip, zip, bz2, gz2, tar and others.",
     "icon": "zarchiver.png",
     "repoUrl": "https://zdevs.ru/en/za/apk.html",
-    "website": "https://zdevs.ru/en/"
+    "website": "https://zdevs.ru/en/",
+    "tags": "files, manager, safe, secure, private"
   },
   {
     "id": "559606",
@@ -597,7 +656,8 @@
     "about": "An open source Material Design file manager. Features: - Open source: Lightweight, clean and secure. - Material Design: Follows Material Design guidelines.",
     "icon": "material-files.png",
     "repoUrl": "https://github.com/zhanghai/MaterialFiles",
-    "website": "https://play.google.com/store/apps/details?id=me.zhanghai.android.files"
+    "website": "https://play.google.com/store/apps/details?id=me.zhanghai.android.files",
+    "tags": "files, manager, safe, secure, private"
   },
   {
     "id": "875248",
@@ -607,17 +667,19 @@
     "about": "Canta allows you to uninstall pre-installed or user apps without root, by leveraging Shizuku. It integrates with the Universal Debloat List to provide safe recommendations.",
     "icon": "canta.png",
     "repoUrl": "https://github.com/samolego/Canta",
-    "website": "https://samolego.github.io/Canta/"
+    "website": "https://samolego.github.io/Canta/",
+    "tags": "uninstaller, debloater, apps, shizuku"
   },
   {
     "id": "733790",
     "title": "Seal",
     "owner": "JunkFood02",
     "category": "media",
-    "about": "Seal APK is an ultimate video and audio downloader for Android, based on YT-DLP, the most trusted and reliable app for downloading multimedia files from the web.",
+    "about": "Seal app is an ultimate video and audio downloader for Android, based on YT-DLP, the most trusted and reliable app for downloading multimedia files from the web.",
     "icon": "seal.png",
     "repoUrl": "https://github.com/JunkFood02/Seal",
-    "website": ""
+    "website": "",
+    "tags": "video, audio, downloader"
   },
   {
     "id": "528573",
@@ -627,7 +689,8 @@
     "about": "MiCTS is a very lightweight app that allows you to activate Google's Circle to Search tool on any device running Android 9 or higher.",
     "icon": "micts.png",
     "repoUrl": "https://github.com/parallelcc/MiCTS",
-    "website": ""
+    "website": "",
+    "tags": "circle, search, android, lens"
   },
   {
     "id": "936506",
@@ -637,7 +700,8 @@
     "about": "A Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework.",
     "icon": "lsposed.png",
     "repoUrl": "https://github.com/JingMatrix/LSPosed",
-    "website": "https://modules.lsposed.org"
+    "website": "https://modules.lsposed.org",
+    "tags": "zygisk, xposed, shuzuku, framework, patches"
   },
   {
     "id": "085122",
@@ -647,7 +711,8 @@
     "about": "Logseq is the open toolbox for workflows that deal with lots of information: Students, Academics, Writers, Project Managers, Developers.",
     "icon": "logseq.png",
     "repoUrl": "https://github.com/logseq/logseq",
-    "website": "https://logseq.com"
+    "website": "https://logseq.com",
+    "tags": "notes, taking, productivity, text"
   },
   {
     "id": "069540",
@@ -657,7 +722,8 @@
     "about": "Revenge Manager is an application that installs and updates Revenge, a modification for Discord.",
     "icon": "revenge.png",
     "repoUrl": "https://github.com/revenge-mod/revenge-manager",
-    "website": ""
+    "website": "",
+    "tags": "discord, client, mods"
   },
   {
     "id": "674785",
@@ -667,7 +733,8 @@
     "about": "LibreTorrent is an open-source torrent client based on Libtorrent. It provides you with a simple way to download anything you want directly onto your Android smartphone memory. Plus, you can easily create your own torrent files and share them comfortably with other users as well.",
     "icon": "libretorrent.png",
     "repoUrl": "https://f-droid.org/en/packages/org.proninyaroslav.libretorrent",
-    "website": "https://github.com/proninyaroslav/libretorrent"
+    "website": "https://github.com/proninyaroslav/libretorrent",
+    "tags": "torrent, mirror, downloader, files, sharing"
   },
   {
     "id": "422972",
@@ -677,7 +744,8 @@
     "about": "An alternative way to use encrypted virtual filesystems on Android that uses its own internal file explorer instead of mounting volumes. It currently supports gocryptfs and CryFS.",
     "icon": "droidfs.png",
     "repoUrl": "https://github.com/hardcore-sushi/DroidFS",
-    "website": "https://forge.chapril.org/hardcoresushi/DroidFS"
+    "website": "https://forge.chapril.org/hardcoresushi/DroidFS",
+    "tags": "files, storage, encryption, explorer"
   },
   {
     "id": "627213",
@@ -687,7 +755,8 @@
     "about": "A quick material F-Droid client. Features: Material F-Droid style, No cards or inappropriate animations, Fast repository syncing, Standard Android components.",
     "icon": "droidify.png",
     "repoUrl": "https://github.com/Droid-ify/client",
-    "website": "https://droidify.eu.org"
+    "website": "https://droidify.eu.org",
+    "tags": "fdroid, play, store, client, mods"
   },
   {
     "id": "073350",
@@ -697,7 +766,8 @@
     "about": "Signal is an open-source, encrypted messaging service for instant messaging, voice calls, and video calls.",
     "icon": "signal.png",
     "repoUrl": "https://github.com/signalapp/Signal-Android",
-    "website": "https://signal.org"
+    "website": "https://signal.org",
+    "tags": "end to end, encryption, chats, messaging, video, voice, calls"
   },
   {
     "id": "965164",
@@ -707,7 +777,8 @@
     "about": "LibreTube is an alternative frontend for YouTube, for Android. This means that it uses the same video sources as YouTube, but displays them in a different interface that is more intuitive and privacy-oriented.",
     "icon": "libretube.png",
     "repoUrl": "https://github.com/libre-tube/LibreTube",
-    "website": "https://libretube.dev"
+    "website": "https://libretube.dev",
+    "tags": "yt, video, youtube, player, adblock"
   },
   {
     "id": "229789",
@@ -717,7 +788,8 @@
     "about": "Redomi is a Song.link client to open songs from different platforms to your favourite one.",
     "icon": "redomi.png",
     "repoUrl": "https://github.com/acszo/Redomi",
-    "website": ""
+    "website": "",
+    "tags": "spotify, yt, youtube, music, audio, link, url"
   },
   {
     "id": "733879",
@@ -727,7 +799,8 @@
     "about": "aShell is a lightweight, open-source ADB shell designed for Android devices running Shizuku. It enables you to execute ADB commands directly from your phone.",
     "icon": "ashell.png",
     "repoUrl": "https://github.com/DP-Hridayan/aShellYou",
-    "website": "http://ashell.vercel.app"
+    "website": "http://ashell.vercel.app",
+    "tags": "adb, shell, shizuku, commands, sudo, developer"
   },
   {
     "id": "440456",
@@ -737,7 +810,8 @@
     "about": "Amarok is a lightweight Android privacy tool designed to keep your personal files & apps away from prying eyes without the hassle of heavy encryption.",
     "icon": "amarok.png",
     "repoUrl": "https://github.com/deltazefiro/Amarok-Hider",
-    "website": "https://deltazefiro.github.io/Amarok-doc/en-US"
+    "website": "https://deltazefiro.github.io/Amarok-doc/en-US",
+    "tags": "hide, files, encryption, private, secure"
   },
   {
     "id": "912253",
@@ -747,7 +821,8 @@
     "about": "This app can delegate functions from the device owner. That is, this app acts as an intermediary to call functions from the device owner.",
     "icon": "dhizuku.png",
     "repoUrl": "https://github.com/iamr0s/Dhizuku",
-    "website": ""
+    "website": "",
+    "tags": "shizuku, adb, shell, power, developer"
   },
   {
     "id": "782958",
@@ -757,7 +832,8 @@
     "about": "Capture your thoughts freely and without distractions, tracking, or ads. With Joplin’s end-to-end encryption and open-source code, you can concentrate on your ideas and tasks without worrying about your privacy.",
     "icon": "joplin.png",
     "repoUrl": "https://github.com/laurent22/joplin-android",
-    "website": "https://joplinapp.org"
+    "website": "https://joplinapp.org",
+    "tags": "notes, taking, productivity, text"
   },
   {
     "id": "210695",
@@ -767,7 +843,8 @@
     "about": "KernelSU is a root solution for Android GKI devices. It works in kernel mode and grants root permission to userspace apps directly in kernel space.",
     "icon": "kernelsu.png",
     "repoUrl": "https://github.com/tiann/KernelSU",
-    "website": "https://kernelsu.org"
+    "website": "https://kernelsu.org",
+    "tags": "root, developer, sudo, scripts"
   },
   {
     "id": "055444",
@@ -777,7 +854,8 @@
     "about": "SimpMusic is a FOSS YouTube Music client for Android and Desktop with many features from Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop.",
     "icon": "simpmusic.png",
     "repoUrl": "https://github.com/maxrave-dev/SimpMusic",
-    "website": "https://simpmusic.org"
+    "website": "https://simpmusic.org",
+    "tags": "spotify, youtube, yt, music, client, mods, adblock"
   },
   {
     "id": "471748",
@@ -787,7 +865,8 @@
     "about": "Safely store, share, and access your passwords, notes, and more using Proton Pass, our encrypted password manager.",
     "icon": "proton-pass.png",
     "repoUrl": "https://proton.me/pass/download",
-    "website": "https://proton.me/pass"
+    "website": "https://proton.me/pass",
+    "tags": "password, manager, store, notes, private, encryption"
   },
   {
     "id": "635650",
@@ -797,7 +876,8 @@
     "about": "Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices. And with its commitment to security, Stremio is the ultimate choice for a worry-free, high-quality streaming experience.",
     "icon": "stremio.png",
     "repoUrl": "https://www.stremio.com/downloads",
-    "website": "https://www.stremio.com"
+    "website": "https://www.stremio.com",
+    "tags": "shows, movies, netflix, hbo, prime"
   },
   {
     "id": "793533",
@@ -807,7 +887,8 @@
     "about": "Organic Maps is a privacy-first offline maps & GPS app for hiking, cycling, biking, and driving. Absolutely free. No ads. No tracking. Developed with love by the open-source community. Powered by OpenStreetMap data.",
     "icon": "organic-maps.png",
     "repoUrl": "https://github.com/organicmaps/organicmaps",
-    "website": "https://organicmaps.app"
+    "website": "https://organicmaps.app",
+    "tags": "map, offline, gps, open, private"
   },
   {
     "id": "664764",
@@ -817,7 +898,8 @@
     "about": "Switch from TeamViewer, AnyDesk, and Splashtop to RustDesk for a secure and reliable remote desktop experience with your own self-hosted servers.",
     "icon": "rustdesk.png",
     "repoUrl": "https://github.com/rustdesk/rustdesk",
-    "website": "https://rustdesk.com"
+    "website": "https://rustdesk.com",
+    "tags": "screen, mirroring, desktop, anydesk, teamviewer"
   },
   {
     "id": "189750",
@@ -827,7 +909,8 @@
     "about": "xManager is a smart and convenient app that lets you manage and install different versions of Spotify on your Android device.",
     "icon": "xmanager.png",
     "repoUrl": "https://github.com/Team-xManager/xManager",
-    "website": "https://xmanagerapp.com"
+    "website": "https://xmanagerapp.com",
+    "tags": "spotify, mods, adblock, music"
   },
   {
     "id": "172824",
@@ -837,7 +920,8 @@
     "about": "Bring your own music metadata/playlist/audio-source with plugins created by community or by yourself. A small step towards the decentralized music streaming era!",
     "icon": "spotube.png",
     "repoUrl": "https://github.com/KRTirtho/spotube",
-    "website": "https://spotube.krtirtho.dev"
+    "website": "https://spotube.krtirtho.dev",
+    "tags": "spotify, audio, music, plugins"
   },
   {
     "id": "447004",
@@ -847,7 +931,8 @@
     "about": "Shadowsocks is a high-performance cross-platform secured socks5 proxy. It will help you surf the internet privately and securely.",
     "icon": "shadowsocks.png",
     "repoUrl": "https://github.com/shadowsocks/shadowsocks-android",
-    "website": ""
+    "website": "",
+    "tags": "proxy, vpn, tor, private, secure"
   },
   {
     "id": "174287",
@@ -857,7 +942,8 @@
     "about": "Aegis Authenticator is a free, secure and open source 2FA app for Android. It aims to provide a secure authenticator for your online services, while also including some features missing in existing authenticator apps, like proper encryption and backups.",
     "icon": "aegisauth.png",
     "repoUrl": "https://github.com/beemdevelopment/Aegis",
-    "website": "https://getaegis.app"
+    "website": "https://getaegis.app",
+    "tags": "authenticator, secure, encryption, backups"
   },
   {
     "id": "953143",
@@ -867,7 +953,8 @@
     "about": "PiliPlus app is a very easy-to-use third-party playback platform for Bilibili, which removes all the advertising pushes in the original software, will not be disturbed when browsing and watching videos, simplifies the interface layout, and is more convenient to use.",
     "icon": "piliplus.png",
     "repoUrl": "https://github.com/bggRGjQaUbCoE/PiliPlus",
-    "website": ""
+    "website": "",
+    "tags": "bilibili, client, mods, video, shows"
   },
   {
     "id": "992093",
@@ -877,7 +964,8 @@
     "about": "NewsBlur is a personal news reader with intelligence. It's an RSS feed reader and social news network that shows the original site while giving you powerful filtering tools. Train NewsBlur to learn what you like and dislike, and it will automatically highlight and hide stories.",
     "icon": "newsblur.png",
     "repoUrl": "https://github.com/samuelclay/NewsBlur",
-    "website": "http://www.newsblur.com"
+    "website": "http://www.newsblur.com",
+    "tags": "feed, rss, reader, news"
   },
   {
     "id": "338293",
@@ -887,7 +975,8 @@
     "about": "A FLOSS Android app to let you browse YouTube, NicoNico and BiliBili freely. NewPipe, reimagined: faster, more stable, and packed with more features.",
     "icon": "pipepipe.png",
     "repoUrl": "https://github.com/InfinityLoop1308/PipePipe",
-    "website": "https://pipepipe.dev"
+    "website": "https://pipepipe.dev",
+    "tags": "newpipe, youtube, yt, bilibili, client, mods"
   },
   {
     "id": "896166",
@@ -897,7 +986,8 @@
     "about": "A free open-source two factor authentication app for Android. It features encrypted backups, icons, categories and a high level of customisation. It also has a Wear OS companion app.",
     "icon": "stratum.png",
     "repoUrl": "https://github.com/stratumauth/app",
-    "website": "https://stratumauth.com"
+    "website": "https://stratumauth.com",
+    "tags": "authenticator, secure, encryption, customization"
   },
   {
     "id": "401782",
@@ -907,7 +997,8 @@
     "about": "Lemuroid is an open-source emulation project for Android based on Libretro. Its main goal is ease of use, good Android integration and a great user experience.",
     "icon": "lemuroid.png",
     "repoUrl": "https://github.com/Swordfish90/Lemuroid",
-    "website": ""
+    "website": "",
+    "tags": "nintendo, games, emulator, rom, iso"
   },
   {
     "id": "334287",
@@ -917,7 +1008,8 @@
     "about": "Olauncher is a Minimal AF Launcher for Android. Reduce your screen time. Daily wallpapers.",
     "icon": "olauncher.png",
     "repoUrl": "https://github.com/tanujnotes/Olauncher",
-    "website": ""
+    "website": "",
+    "tags": "home, launcher, clean, minimal"
   },
   {
     "id": "649348",
@@ -927,7 +1019,8 @@
     "about": "A free and open source manga reader which is based off TachiyomiSY & Mihon/Tachiyomi. This fork is meant to provide new & useful features while regularly take features/updates from Mihon or other forks like SY, J2K and Neko...",
     "icon": "komikku.png",
     "repoUrl": "https://github.com/komikku-app/komikku",
-    "website": "https://komikku-app.github.io"
+    "website": "https://komikku-app.github.io",
+    "tags": "manga, reader, comics, tachiyomi"
   },
   {
     "id": "563179",
@@ -937,7 +1030,8 @@
     "about": "APKUpdater is an open source tool that simplifies the process of finding updates for your installed apps. It provides similar functionality to an app store, but instead of depending on a single source, it aggregates the results from APKMirror, Aptoide, F-Droid, IzzyOnDroid, APKPure, GitLab and GitHub.",
     "icon": "apkupdater.png",
     "repoUrl": "https://github.com/rumboalla/apkupdater",
-    "website": ""
+    "website": "",
+    "tags": "apk, installer, updater, apps, play, store"
   },
   {
     "id": "565451",
@@ -947,7 +1041,8 @@
     "about": "Generate and set stunning gradient wallpapers on your Android device with Waller. Easily customize your home and lock screens with a variety of vibrant backgrounds.",
     "icon": "waller.png",
     "repoUrl": "https://github.com/pankaj-meharchandani/waller",
-    "website": ""
+    "website": "",
+    "tags": "wallpapers, backgrounds, gradients, clean, minimal"
   },
   {
     "id": "454755",
@@ -957,7 +1052,8 @@
     "about": "YTDLnis is a free and open source video/audio downloader app that uses yt-dlp, a program that can download videos and audio from over 1000 websites.",
     "icon": "ytdlnis.png",
     "repoUrl": "https://github.com/deniscerri/ytdlnis",
-    "website": "https://ytdlnis.org"
+    "website": "https://ytdlnis.org",
+    "tags": "audio, video, downloader, youtube, yt, music, web"
   },
   {
     "id": "421451",
@@ -967,7 +1063,8 @@
     "about": "Element X gives you fast, secure and private instant messaging and video calls built on Matrix, the open standard for real-time communication.",
     "icon": "element-x.png",
     "repoUrl": "https://github.com/element-hq/element-x-android",
-    "website": ""
+    "website": "",
+    "tags": "end to end, encryption, chats, matrix, messaging"
   },
   {
     "id": "455436",
@@ -977,6 +1074,7 @@
     "about": "HeliBoard is a privacy-conscious and customizable open-source keyboard, based on AOSP / OpenBoard. Does not use internet permission, and thus is 100% offline.",
     "icon": "heliboard.png",
     "repoUrl": "https://github.com/Helium314/HeliBoard",
-    "website": ""
+    "website": "",
+    "tags": "keyboard, private, secure"
   }
 ]

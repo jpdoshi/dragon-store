@@ -53,8 +53,10 @@ const Search = () => {
     }
 
     if (debouncedQuery.trim().length > 0) {
-      filtered = filtered.filter((app) =>
-        app.title.toLowerCase().includes(debouncedQuery.toLowerCase())
+      filtered = filtered.filter(
+        (app) =>
+          app.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+          app.tags.toLowerCase().includes(debouncedQuery.toLowerCase())
       );
     }
 

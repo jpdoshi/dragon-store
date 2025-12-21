@@ -29,6 +29,7 @@ async function run() {
     );
     const repoUrl = await ask("Enter Source/Repo URL: ");
     const website = await ask("Enter Website URL: ");
+    const tags = await ask("Enter Tags(comma-separated): ");
 
     // Read existing JSON or start with empty array
     let data = [];
@@ -47,6 +48,7 @@ async function run() {
       icon: icon.endsWith(".png") ? icon : `${icon}.png`,
       repoUrl,
       website,
+      tags,
     });
 
     // Save JSON
