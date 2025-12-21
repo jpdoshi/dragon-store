@@ -311,6 +311,9 @@ const appDetails = () => {
 
             <View className="h-7" />
 
+            <Text className="text-black dark:text-white text-xl font-semibold mb-3">
+              App Info
+            </Text>
             <View className="h-[80px] flex-1 bg-white dark:bg-dark-surface rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-200 dark:border-neutral-800 shadow-lg shadow-neutral-200 dark:shadow-black">
               <View className="flex-col gap-1.5 justify-center items-center">
                 <Image
@@ -401,6 +404,28 @@ const appDetails = () => {
                   Github Repo
                 </Text>
               </TouchableOpacity>
+            )}
+            {appData?.tags && (
+              <View>
+                <Text className="text-black dark:text-white text-xl font-semibold mt-8 mb-3">
+                  Tags
+                </Text>
+                <View className="flex-row flex-wrap gap-2">
+                  {appData.tags
+                    ?.split(",")
+                    .map((item: string, index: number) => (
+                      <View
+                        key={index}
+                        className="py-1 px-2 border border-rose-500 bg-[rgba(255,32,86,0.15)] rounded-md"
+                      >
+                        <Text className="text-sm text-rose-500 font-semibold">
+                          {item.trim().charAt(0).toUpperCase() +
+                            item.trim().slice(1)}
+                        </Text>
+                      </View>
+                    ))}
+                </View>
+              </View>
             )}
 
             <View className="h-10" />
@@ -619,7 +644,7 @@ const appDetails = () => {
                   Repo Owner
                 </Text>
                 <View className="flex-1 flex-row gap-4 items-center">
-                  <View className="rounded-full border border-neutral-200 dark:border-neutral-700 shadow">
+                  <View className="rounded-full">
                     <Image
                       source={repoData?.owner.avatar_url}
                       style={{
@@ -630,7 +655,7 @@ const appDetails = () => {
                     />
                   </View>
                   <View>
-                    <Text className="text-black dark:text-white font-medium text-xl">
+                    <Text className="text-black dark:text-white font-semibold text-xl">
                       {repoData?.owner.login}
                     </Text>
                     <TouchableOpacity
