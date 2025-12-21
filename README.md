@@ -1,5 +1,5 @@
 <div align="center">
-   <img width="180" height="180" alt="logo" src="https://github.com/user-attachments/assets/a02295dd-a1d9-4326-a13b-ffae02123f59" alt="Dragon store logo" />
+   <img width="180" height="180" alt="logo" src="https://github.com/user-attachments/assets/693794ea-3f4e-418d-90f6-cdc9ee750e1e" alt="Dragon store logo" />
 </div>
 
 <h1 align="center">Dragon Store</h1>
