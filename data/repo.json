@@ -149,7 +149,7 @@
     "category": "internet",
     "about": "Private, secure, user first web browser for Android. https://ironfoxoss.org/",
     "icon": "ironfox.png",
-    "repoUrl": "https://gitlab.com/ironfox-oss/IronFox/-/releases",
+    "repoUrl": "https://gitlab.com/ironfox-oss/IronFox",
     "website": "https://ironfoxoss.org",
     "tags": "secure, private, firefox, browser"
   },

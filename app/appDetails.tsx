@@ -354,6 +354,8 @@ const appDetails = () => {
                     await openBrowserAsync(
                       `${appData.repoUrl}/releases/latest`
                     );
+                  } else if (appData?.repoUrl.includes("gitlab.com")) {
+                    await openBrowserAsync(`${appData.repoUrl}/-/releases`);
                   } else {
                     await openBrowserAsync(appData?.repoUrl ?? "");
                   }
@@ -600,23 +602,43 @@ const appDetails = () => {
                       Download Source
                     </Text>
                     <Text className="text-green-600 font-semibold text-base">
-                      Official Website
+                      {appData?.repoUrl.includes("f-droid.org")
+                        ? "F-Droid Repo"
+                        : appData?.repoUrl.includes("gitlab.com")
+                          ? "Gitlab Repo"
+                          : "Official Website"}
                     </Text>
                   </View>
                   <View className="h-[50px] flex-row gap-3 justify-between items-center border-b border-neutral-200 dark:border-neutral-800">
                     <Text className="text-black dark:text-white font-medium text-base">
-                      Homepage URL
+                      Homepage Link
                     </Text>
                     <TouchableOpacity
                       className="flex-row gap-1 items-center"
-                      onPress={async () =>
-                        await openBrowserAsync(
-                          `https://${new URL(appData?.repoUrl ?? "").hostname}`
-                        )
-                      }
+                      onPress={async () => {
+                        if (
+                          appData?.repoUrl.includes("f-droid.org") ||
+                          appData?.repoUrl.includes("gitlab.com")
+                        ) {
+                          await openBrowserAsync(appData?.repoUrl);
+                        } else {
+                          await openBrowserAsync(
+                            `https://${new URL(appData?.repoUrl ?? "").hostname}`
+                          );
+                        }
+                      }}
                     >
                       <Text className="text-rose-400 font-medium text-base line-clamp-1 text-ellipsis">
-                        {new URL(appData?.repoUrl ?? "").hostname}
+                        {appData?.repoUrl.includes("f-droid.org")
+                          ? appData?.repoUrl.replace(
+                              "https://f-droid.org/en/packages/",
+                              ""
+                            )
+                          : appData?.repoUrl.includes("gitlab.com")
+                            ? appData?.repoUrl
+                                .replace("https://gitlab.com/", "")
+                                .replace("/-/releases", "")
+                            : new URL(appData?.repoUrl ?? "").hostname}
                       </Text>
                       <View className="size-5">
                         <Svg
