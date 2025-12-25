@@ -284,13 +284,32 @@ const appDetails = () => {
             className="px-6"
           >
             <View className="flex-row gap-5 items-center">
-              <Image
-                source={config.ICON_REPO_URL + appData?.icon}
-                style={{ height: 90, width: 90, borderRadius: 24 }}
-                placeholder={require("@/data/assets/placeholder.gif")}
-                contentFit="cover"
-                transition={400}
-              />
+              <View className="relative">
+                <Image
+                  source={config.ICON_REPO_URL + appData?.icon}
+                  style={{ height: 90, width: 90, borderRadius: 24 }}
+                  placeholder={require("@/data/assets/placeholder.gif")}
+                  contentFit="cover"
+                  transition={400}
+                />
+                <View className="absolute -right-1.5 -bottom-1.5 p-[2.5px] bg-white rounded-lg border border-stone-200 shadow-lg">
+                  <Image
+                    source={
+                      appData?.repoUrl.includes("github.com")
+                        ? require("@/data/assets/github-sm.png")
+                        : appData.repoUrl.includes("gitlab.com")
+                          ? require("@/data/assets/gitlab-sm.png")
+                          : appData.repoUrl.includes("f-droid.org")
+                            ? require("@/data/assets/f-droid-sm.png")
+                            : config.ICON_REPO_URL + appData?.icon
+                    }
+                    style={{
+                      height: 18,
+                      width: 18,
+                    }}
+                  />
+                </View>
+              </View>
 
               <View>
                 <Text className="text-black dark:text-white font-bold text-2xl leading-tight">
@@ -491,34 +510,34 @@ const appDetails = () => {
                       <Text className="text-black dark:text-white text-lg font-bold">
                         {formatNumber(repoData?.stargazers_count)}
                       </Text>
-                      <Text className="text-sm text-blue-400 dark:text-blue-300">
+                      <Text className="text-sm text-rose-400 dark:text-rose-300">
                         Stars
                       </Text>
                     </View>
-                    <View className="h-8 w-[1px] bg-gray-200 dark:bg-gray-700" />
+                    <View className="h-8 w-[1px] bg-stone-200 dark:bg-stone-700" />
                     <View className="flex-col justify-center items-center">
                       <Text className="text-black dark:text-white text-lg font-bold">
                         {formatNumber(repoData?.forks_count)}
                       </Text>
-                      <Text className="text-sm text-blue-400 dark:text-blue-300">
+                      <Text className="text-sm text-rose-400 dark:text-rose-300">
                         Forks
                       </Text>
                     </View>
-                    <View className="h-8 w-[1px] bg-gray-200 dark:bg-gray-700" />
+                    <View className="h-8 w-[1px] bg-stone-200 dark:bg-stone-700" />
                     <View className="flex-col justify-center items-center">
                       <Text className="text-black dark:text-white text-lg font-bold">
                         {formatNumber(repoData?.open_issues_count)}
                       </Text>
-                      <Text className="text-sm text-blue-400 dark:text-blue-300">
+                      <Text className="text-sm text-rose-400 dark:text-rose-300">
                         Issues
                       </Text>
                     </View>
-                    <View className="h-8 w-[1px] bg-gray-200 dark:bg-gray-700" />
+                    <View className="h-8 w-[1px] bg-stone-200 dark:bg-stone-700" />
                     <View className="flex-col justify-center items-center">
                       <Text className="text-black dark:text-white text-lg font-bold">
                         {convertTime(repoData?.pushed_at)}
                       </Text>
-                      <Text className="text-sm text-blue-400 dark:text-blue-300">
+                      <Text className="text-sm text-rose-400 dark:text-rose-300">
                         Last Push
                       </Text>
                     </View>
