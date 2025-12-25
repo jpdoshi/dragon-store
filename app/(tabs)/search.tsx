@@ -93,7 +93,6 @@ const Search = () => {
         <View className="h-4" />
 
         <View className="px-6">
-          <View className="h-3" />
           {/* Search Bar */}
           <View
             className="flex-row items-center bg-neutral-100 dark:bg-dark-tertiary border border-neutral-300 dark:border-neutral-600
