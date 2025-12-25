@@ -1,6 +1,6 @@
 import { AppMetaData } from "@/types/AppMetaData";
-import { LegendList } from "@legendapp/list";
-import React, { useEffect, useState } from "react";
+import { FlashList } from "@shopify/flash-list";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Dimensions, Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import AppContainer from "./AppContainer";
@@ -8,32 +8,32 @@ import AppContainer from "./AppContainer";
 const PAGE_SIZE = 10;
 
 const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
-  const [page, setPage] = useState(1);
   const [visible, setVisible] = useState<AppMetaData[]>([]);
   const screenWidth = Dimensions.get("window").width;
+  const numColumns = screenWidth >= 640 ? 2 : 1;
 
   useEffect(() => {
-    setPage(1);
     setVisible(appData.slice(0, PAGE_SIZE));
   }, [appData]);
 
-  const loadMore = React.useCallback(() => {
+  const loadMore = useCallback(() => {
     const nextSlice = appData.slice(visible.length, visible.length + PAGE_SIZE);
+
+    if (nextSlice.length === 0) return;
+
     setVisible((prev) => [...prev, ...nextSlice]);
-    setPage((prev) => prev + 1);
   }, [appData, visible.length]);
 
-  const renderItem = React.useCallback(
+  const renderItem = useCallback(
     ({ item }: { item: AppMetaData }) => (
       <AppContainer screenWidth={screenWidth} AppData={item} />
     ),
     [screenWidth]
   );
 
-  const keyExtractor = React.useCallback((item: AppMetaData) => item.id, []);
-  const numColumns = screenWidth >= 640 ? 2 : 1;
+  const keyExtractor = useCallback((item: AppMetaData) => item.id, []);
 
-  const ListFooter = React.useMemo(() => {
+  const ListFooter = useMemo(() => {
     if (visible.length >= appData.length) return null;
 
     return (
@@ -58,20 +58,21 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
   }, [visible.length, appData.length, loadMore]);
 
   return (
-    <LegendList
+    <FlashList
       data={visible}
       renderItem={renderItem}
-      estimatedItemSize={82}
       keyExtractor={keyExtractor}
-      recycleItems={true}
-      scrollEnabled={false}
       numColumns={numColumns}
-      ListEmptyComponent={() => (
+      scrollEnabled={false}
+      ListFooterComponent={ListFooter}
+      ListEmptyComponent={
         <Text className="text-neutral-400 text-lg font-medium mt-24 text-center">
           No Items to show
         </Text>
-      )}
-      ListFooterComponent={ListFooter}
+      }
+      contentContainerStyle={{
+        paddingBottom: 16,
+      }}
     />
   );
 };
