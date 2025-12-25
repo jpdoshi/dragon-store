@@ -1,5 +1,4 @@
 import AppBar from "@/components/AppBar";
-import DownloadsModal from "@/components/DownloadsModal";
 import ReleaseNotesModal from "@/components/ReleaseNotesModal";
 import ScreenView from "@/components/ScreenView";
 import config from "@/config";
@@ -353,7 +352,10 @@ const appDetails = () => {
               <TouchableOpacity
                 onPress={async () => {
                   if (appData?.repoUrl.includes("github.com")) {
-                    setShowDownloads(true);
+                    // setShowDownloads(true);
+                    await openBrowserAsync(
+                      `${appData?.repoUrl}/releases/latest`
+                    );
                   } else {
                     await openBrowserAsync(appData?.repoUrl ?? "");
                   }
@@ -703,14 +705,15 @@ const appDetails = () => {
           releaseNotes={releaseData?.body}
         />
 
-        {!isLoading && releaseData && (
+        {/* {!isLoading && releaseData && (
           <DownloadsModal
             visible={showDownloads}
             onClose={() => setShowDownloads(false)}
             releaseTag={releaseData?.tag_name}
+            repoUrl={appData?.repoUrl}
             assets={releaseData?.assets}
           />
-        )}
+        )} */}
 
         <Toast />
       </ScreenView>

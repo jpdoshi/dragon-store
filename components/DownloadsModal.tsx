@@ -1,13 +1,13 @@
 import { BlurView } from "expo-blur";
-import * as FileSystem from "expo-file-system";
+import { openBrowserAsync } from "expo-web-browser";
 import React from "react";
 import { Modal, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
-import Toast from "react-native-toast-message";
 
 interface DownloadsModalProps {
   visible: boolean;
   onClose: () => void;
+  repoUrl: string;
   releaseTag: string;
   assets: any[];
 }
@@ -16,6 +16,7 @@ const DownloadsModal = ({
   visible,
   onClose,
   releaseTag,
+  repoUrl,
   assets,
 }: DownloadsModalProps) => {
   return (
@@ -48,28 +49,11 @@ const DownloadsModal = ({
               assets.map((item, index) => (
                 <TouchableOpacity
                   onPress={async () => {
-                    const url = item.browser_download_url;
-                    const destination = new FileSystem.Directory(
-                      FileSystem.Paths.cache,
-                      "apks"
-                    );
-
                     try {
-                      destination.create();
-                      const output = await FileSystem.File.downloadFileAsync(
-                        url,
-                        destination
-                      );
-                      console.log(output.exists);
-                      console.log(output.uri);
+                      await openBrowserAsync(item.browser_download_url);
                     } catch (error) {
-                      Toast.show({
-                        type: "error",
-                        text1: "Error downloading file",
-                        text2: error?.toString(),
-                      });
+                      console.error(error);
                     }
-
                     onClose();
                   }}
                   key={index}
@@ -112,7 +96,6 @@ const DownloadsModal = ({
           </View>
         </View>
       </BlurView>
-      <Toast />
     </Modal>
   );
 };
