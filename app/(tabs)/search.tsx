@@ -53,11 +53,19 @@ const Search = () => {
     }
 
     if (debouncedQuery.trim().length > 0) {
-      filtered = filtered.filter(
-        (app) =>
-          app.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-          app.tags?.toLowerCase().includes(debouncedQuery.toLowerCase())
-      );
+      const terms = debouncedQuery
+        .toLowerCase()
+        .split(/\s+/) // split by spaces
+        .filter(Boolean);
+
+      filtered = filtered.filter((app) => {
+        const title = app.title.toLowerCase();
+        const tags = app.tags?.toLowerCase() ?? "";
+
+        return terms.every(
+          (term) => title.includes(term) || tags.includes(term)
+        );
+      });
     }
 
     setFilterList(filtered);
