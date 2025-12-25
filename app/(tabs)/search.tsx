@@ -12,7 +12,6 @@ import {
   useColorScheme,
   View,
 } from "react-native";
-import Animated, { FadeInUp } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
 const Search = () => {
@@ -86,21 +85,6 @@ const Search = () => {
         <View className="h-4" />
 
         <View className="px-6">
-          {/* Info Container */}
-          <Animated.View
-            entering={FadeInUp.duration(450).springify()}
-            className="w-full bg-[rgba(0,188,125,0.1)] py-2.5 px-3 border-2 border-dashed border-emerald-300 dark:border-emerald-700 rounded-2xl"
-          >
-            <Text className="text-base font-semibold text-emerald-600 dark:text-emerald-400">
-              Note from Developer
-            </Text>
-            <Text className="text-sm font-medium mt-1 text-emerald-700 dark:text-emerald-300 opacity-65 leading-tight">
-              Kindly note, If you find any errors, clear app data and report the
-              issue. On the other note, you might notice slower performance
-              after loading 100+ apps.
-            </Text>
-          </Animated.View>
-
           <View className="h-3" />
           {/* Search Bar */}
           <View
