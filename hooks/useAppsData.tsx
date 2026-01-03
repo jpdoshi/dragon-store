@@ -15,7 +15,7 @@ export const useAppsData = () => {
     if (cached.length > 0) setApps(cached);
 
     try {
-      const res = await axios.get(config.JSON_REPO_URL);
+      const res = await axios.get(`${config.JSON_REPO_URL}?ts=${Date.now()}`);
       if (res?.data) {
         setApps(res.data);
         await saveCache("APPS_CACHE", res.data);

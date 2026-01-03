@@ -5,7 +5,7 @@ import { Dimensions, Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import AppContainer from "./AppContainer";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 25;
 
 const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
   const [visible, setVisible] = useState<AppMetaData[]>([]);
