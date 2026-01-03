@@ -1130,7 +1130,7 @@
     "icon": "orbot.png",
     "repoUrl": "https://github.com/guardianproject/orbot-android",
     "website": "https://gitlab.com/guardianproject/orbot",
-    "tags": "vpn, proxy, encryption, private, secure"
+    "tags": "tor, onion, vpn, proxy, encryption, private, secure"
   },
   {
     "id": "003826",
@@ -1164,5 +1164,71 @@
     "repoUrl": "https://f-droid.org/en/packages/io.ente.photos.fdroid",
     "website": "https://ente.io",
     "tags": "cloud, encryption, private, secure, photos, videos"
+  },
+  {
+    "id": "160178",
+    "title": "Klick'r - Smart AutoClicker",
+    "owner": "Nain57",
+    "category": "tools",
+    "about": "Klick'r is an open-source Android application designed to automate repetitive tasks effortlessly. Formerly known as Smart AutoClicker, Klick'r offers unique image detection capabilities alongside traditional auto-clicking functionalities, providing a versatile solution for all your automation needs.",
+    "icon": "klickr.png",
+    "repoUrl": "https://github.com/Nain57/Smart-AutoClicker",
+    "website": "",
+    "tags": "automation, image click, auto click, clicker"
+  },
+  {
+    "id": "865539",
+    "title": "Tor VPN",
+    "owner": "torproject",
+    "category": "internet",
+    "about": "Tor VPN is a Tor-powered app which routes other apps on users' device through the Tor Network. Tor VPN benefits from the privacy features of using Tor, hides your real IP address and protects you against surveillance and censorship.",
+    "icon": "torvpn.png",
+    "repoUrl": "https://support.torproject.org/tor-vpn",
+    "website": "https://torproject.org",
+    "tags": "tor, vpn, private, onion, secure"
+  },
+  {
+    "id": "917132",
+    "title": "Mullvad VPN",
+    "owner": "mullvad",
+    "category": "internet",
+    "about": "Free the internet from data collection with Mullvad VPN – a service that helps keep your online activity, identity, and location private. Only €5/month.",
+    "icon": "mullvadvpn.png",
+    "repoUrl": "https://mullvad.net/en/download/vpn/android",
+    "website": "https://mullvad.net/en",
+    "tags": "vpn, private, secure, paid"
+  },
+  {
+    "id": "231939",
+    "title": "Essentials",
+    "owner": "sameerasw",
+    "category": "tools",
+    "about": "Essential tools, mods and workarounds for Pixels and other Androids",
+    "icon": "essentials.png",
+    "repoUrl": "https://github.com/sameerasw/essentials",
+    "website": "",
+    "tags": "pixel, customization, features, shizuku"
+  },
+  {
+    "id": "009647",
+    "title": "RootlessJamesDSP",
+    "owner": "timschneeb",
+    "category": "media",
+    "about": "An implementation of the system-wide JamesDSP audio processing engine for non-rooted Android devices.",
+    "icon": "rootlessjamesdsp.png",
+    "repoUrl": "https://f-droid.org/packages/me.timschneeberger.rootlessjamesdsp",
+    "website": "",
+    "tags": "sound, equalizer, effects, audio"
+  },
+  {
+    "id": "176836",
+    "title": "exteraGram",
+    "owner": "exteraSquad",
+    "category": "social",
+    "about": "exteraGram is a Telegram client based on Android sources with new features.",
+    "icon": "exteragram.png",
+    "repoUrl": "https://github.com/exteraSquad/exteraGram",
+    "website": "https://exteragram.app",
+    "tags": "telegram, client, material you, download boost, modern"
   }
 ]
