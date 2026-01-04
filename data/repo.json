@@ -1230,5 +1230,49 @@
     "repoUrl": "https://github.com/exteraSquad/exteraGram",
     "website": "https://exteragram.app",
     "tags": "telegram, client, material you, download boost, modern"
+  },
+  {
+    "id": "932974",
+    "title": "Morphe Manager",
+    "owner": "MorpheApp",
+    "category": "tools",
+    "about": "From the developers that brought you the greatest modded YouTube apps, comes Morphe - the powerful app modification tool that puts you in control",
+    "icon": "morphe.png",
+    "repoUrl": "https://github.com/MorpheApp/morphe-manager",
+    "website": "https://morphe.software",
+    "tags": "revanced, vanced, rvx, mods, patches"
+  },
+  {
+    "id": "715542",
+    "title": "Magisk",
+    "owner": "topjohnwu",
+    "category": "tools",
+    "about": "Magisk is a suite of open source software for customizing Android, supporting devices higher than Android 6.0.",
+    "icon": "magisk.png",
+    "repoUrl": "https://github.com/topjohnwu/Magisk",
+    "website": "",
+    "tags": "root, sudo, modules, patches"
+  },
+  {
+    "id": "181733",
+    "title": "Hypatia",
+    "owner": "Divested-Mobile",
+    "category": "tools",
+    "about": "Hypatia is the world's first FOSS malware scanner for Android. It is powered by ClamAV style signature databases.",
+    "icon": "hypatia.png",
+    "repoUrl": "https://f-droid.org/en/packages/us.spotco.malwarescanner",
+    "website": "",
+    "tags": "malware, scanner, checker, security, testing"
+  },
+  {
+    "id": "772131",
+    "title": "Markor",
+    "owner": "gsantner",
+    "category": "tools",
+    "about": "Markor is a TextEditor for Android. This project aims to make an editor that is versatile, flexible, and lightweight. Markor utilizes simple markup formats like Markdown and todo.txt for note-taking and list management.",
+    "icon": "markor.png",
+    "repoUrl": "https://github.com/gsantner/markor",
+    "website": "",
+    "tags": "text editor, markdown, list, notes, todos"
   }
 ]
