@@ -4,30 +4,22 @@ import { Image } from "expo-image";
 import { router } from "expo-router";
 import React, { memo } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import Animated, { FadeInDown } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
 type Props = {
   AppData: AppMetaData;
-  screenWidth: number;
 };
 
-const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
-
-const AppContainer = ({ AppData, screenWidth }: Props) => {
-  const marginInline = screenWidth >= 640 ? 8 : 0;
-
+const AppContainer = ({ AppData }: Props) => {
   return (
-    <AnimatedTouchable
-      entering={FadeInDown.duration(450).springify()}
+    <TouchableOpacity
       onPress={() =>
         router.push({
           pathname: "/appDetails",
           params: { id: AppData.id },
         })
       }
-      className="h-[82px] bg-light-surface dark:bg-dark-surface mb-3 p-4 shadow-md shadow-rose-200 dark:shadow-black rounded-2xl"
-      style={{ marginInline }}
+      className="h-[85px] py-4 px-2 border-b border-stone-200 dark:border-stone-800"
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
@@ -35,11 +27,11 @@ const AppContainer = ({ AppData, screenWidth }: Props) => {
           style={{ height: 56, width: 56, borderRadius: 16 }}
           placeholder={require("@/data/assets/placeholder.gif")}
           contentFit="cover"
-          transition={250}
+          transition={300}
         />
 
         <View className="flex-1 flex-col">
-          <Text className="text-black dark:text-white text-lg font-semibold leading-snug">
+          <Text className="text-black dark:text-white text-lg font-semibold leading-snug line-clamp-1 text-nowrap">
             {AppData.title}
           </Text>
 
@@ -48,7 +40,7 @@ const AppContainer = ({ AppData, screenWidth }: Props) => {
               AppData.category.slice(1)}
           </Text>
 
-          <Text className="text-neutral-400 text-sm">{AppData.owner}</Text>
+          <Text className="text-neutral-500 text-sm">{AppData.owner}</Text>
         </View>
 
         <View className="size-10 p-2.5 rounded-full bg-[rgba(236,0,63,0.1)]">
@@ -66,7 +58,7 @@ const AppContainer = ({ AppData, screenWidth }: Props) => {
           </Svg>
         </View>
       </View>
-    </AnimatedTouchable>
+    </TouchableOpacity>
   );
 };
 

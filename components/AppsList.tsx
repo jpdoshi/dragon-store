@@ -1,7 +1,7 @@
 import { AppMetaData } from "@/types/AppMetaData";
 import { FlashList } from "@shopify/flash-list";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Dimensions, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import AppContainer from "./AppContainer";
 
@@ -9,8 +9,6 @@ const PAGE_SIZE = 25;
 
 const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
   const [visible, setVisible] = useState<AppMetaData[]>([]);
-  const screenWidth = Dimensions.get("window").width;
-  const numColumns = screenWidth >= 640 ? 2 : 1;
 
   useEffect(() => {
     setVisible(appData.slice(0, PAGE_SIZE));
@@ -25,10 +23,8 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
   }, [appData, visible.length]);
 
   const renderItem = useCallback(
-    ({ item }: { item: AppMetaData }) => (
-      <AppContainer screenWidth={screenWidth} AppData={item} />
-    ),
-    [screenWidth]
+    ({ item }: { item: AppMetaData }) => <AppContainer AppData={item} />,
+    []
   );
 
   const keyExtractor = useCallback((item: AppMetaData) => item.id, []);
@@ -62,7 +58,6 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
       data={visible}
       renderItem={renderItem}
       keyExtractor={keyExtractor}
-      numColumns={numColumns}
       scrollEnabled={false}
       ListFooterComponent={ListFooter}
       ListEmptyComponent={

@@ -313,7 +313,7 @@ const appDetails = () => {
               </View>
 
               <View>
-                <Text className="text-black dark:text-white font-bold text-2xl leading-tight">
+                <Text className="text-black dark:text-white font-bold text-2xl leading-tight line-clamp-1 text-nowrap text-ellipsis max-w-[240px]">
                   {appData?.title}
                 </Text>
                 <Text className="text-neutral-500 dark:text-neutral-400 text-lg font-medium mb-1.5">
@@ -563,7 +563,7 @@ const appDetails = () => {
                       <Text className="text-black dark:text-white font-semibold text-base">
                         Tag Name / App Version
                       </Text>
-                      <Text className="text-amber-500 text-base font-semibold line-clamp-1 text-ellipsis">
+                      <Text className="text-amber-500 text-base font-semibold line-clamp-1 text-nowrap max-w-[180px]">
                         {releaseData?.tag_name}
                       </Text>
                     </View>
@@ -651,12 +651,11 @@ const appDetails = () => {
                         }
                       }}
                     >
-                      <Text className="text-rose-400 font-medium text-base line-clamp-1 text-ellipsis">
+                      <Text className="text-rose-400 font-medium text-base line-clamp-1 text-nowrap max-w-[180px]">
                         {appData?.repoUrl.includes("f-droid.org")
-                          ? appData?.repoUrl.replace(
-                              "https://f-droid.org/en/packages/",
-                              ""
-                            )
+                          ? appData?.repoUrl
+                              .replace("https://f-droid.org/packages/", "")
+                              .replace("https://f-droid.org/en/packages/", "")
                           : appData?.repoUrl.includes("gitlab.com")
                             ? appData?.repoUrl
                                 .replace("https://gitlab.com/", "")
