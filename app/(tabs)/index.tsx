@@ -18,6 +18,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
 const Home = () => {
@@ -113,7 +114,10 @@ const Home = () => {
           </View>
         </View>
 
-        <View className="px-6">
+        <Animated.View
+          entering={FadeIn.delay(150).duration(500)}
+          className="px-6"
+        >
           <View className="flex-row flex-1 justify-between items-center mb-5">
             <Text className="text-black dark:text-white font-semibold text-2xl">
               Random Apps
@@ -170,7 +174,7 @@ const Home = () => {
               </View>
             </>
           )}
-        </View>
+        </Animated.View>
 
         <View className="h-28" />
       </ScrollView>

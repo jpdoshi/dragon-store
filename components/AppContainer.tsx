@@ -19,31 +19,33 @@ const AppContainer = ({ AppData }: Props) => {
           params: { id: AppData.id },
         })
       }
-      className="h-[85px] py-4 px-2 border-b border-stone-200 dark:border-stone-800"
+      className="h-[80px] py-4 px-2 border-b border-stone-200 dark:border-stone-800"
     >
       <View className="flex-1 flex-row gap-4 items-center">
         <Image
           source={config.ICON_REPO_URL + AppData.icon}
-          style={{ height: 56, width: 56, borderRadius: 16 }}
+          style={{ height: 50, width: 50, borderRadius: 14 }}
           placeholder={require("@/data/assets/placeholder.gif")}
           contentFit="cover"
-          transition={300}
+          transition={500}
         />
 
         <View className="flex-1 flex-col">
-          <Text className="text-black dark:text-white text-lg font-semibold leading-snug line-clamp-1 text-nowrap">
+          <Text className="text-black dark:text-white text-lg font-semibold leading-tight line-clamp-1 text-nowrap">
             {AppData.title}
           </Text>
 
-          <Text className="text-sm font-medium text-rose-500">
+          <Text className="text-sm font-medium leading-snug text-rose-500">
             {AppData.category.charAt(0).toUpperCase() +
               AppData.category.slice(1)}
           </Text>
 
-          <Text className="text-neutral-500 text-sm">{AppData.owner}</Text>
+          <Text className="text-neutral-500 dark:text-neutral-400 text-sm">
+            {AppData.owner}
+          </Text>
         </View>
 
-        <View className="size-10 p-2.5 rounded-full bg-[rgba(236,0,63,0.1)]">
+        <View className="size-9 p-2 rounded-full bg-[rgba(236,0,63,0.1)]">
           <Svg
             fill="none"
             viewBox="0 0 24 24"

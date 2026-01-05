@@ -37,7 +37,10 @@ const About = () => {
 
         <View className="h-8" />
 
-        <Animated.View entering={FadeIn.duration(300)} className="px-6">
+        <Animated.View
+          entering={FadeIn.delay(150).duration(500)}
+          className="px-6"
+        >
           <View className="flex-row gap-5 items-center">
             <Image
               src={"https://avatars.githubusercontent.com/u/122164427?v=4"}
@@ -65,7 +68,7 @@ const About = () => {
               onPress={async () =>
                 await openBrowserAsync("https://thejddev.vercel.app")
               }
-              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-500 shadow justify-center items-center gap-1"
+              className="h-[40px] flex-row flex-1 rounded-xl bg-rose-500 shadow justify-center items-center gap-1"
             >
               <View className="size-6">
                 <Svg viewBox="0 0 24 24" fill="#fff">
@@ -82,7 +85,7 @@ const About = () => {
               onPress={async () =>
                 await openBrowserAsync("https://github.com/jpdoshi")
               }
-              className="h-[45px] flex-row flex-1 rounded-xl bg-rose-50 dark:bg-white shadow justify-center items-center gap-1"
+              className="h-[40px] flex-row flex-1 rounded-xl bg-rose-50 dark:bg-white shadow justify-center items-center gap-1"
             >
               <View className="size-6">
                 <Svg viewBox="0 0 128 128">

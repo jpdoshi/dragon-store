@@ -1,11 +1,12 @@
 import { AppMetaData } from "@/types/AppMetaData";
+import { vibrate } from "@/utils/vibrate";
 import { FlashList } from "@shopify/flash-list";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import AppContainer from "./AppContainer";
 
-const PAGE_SIZE = 25;
+const PAGE_SIZE = 30;
 
 const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
   const [visible, setVisible] = useState<AppMetaData[]>([]);
@@ -20,6 +21,7 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
     if (nextSlice.length === 0) return;
 
     setVisible((prev) => [...prev, ...nextSlice]);
+    vibrate();
   }, [appData, visible.length]);
 
   const renderItem = useCallback(

@@ -281,19 +281,19 @@ const appDetails = () => {
           <View className="h-5" />
 
           <Animated.View
-            entering={FadeIn.delay(150).duration(400)}
+            entering={FadeIn.delay(150).duration(500)}
             className="px-6"
           >
             <View className="flex-row gap-5 items-center">
               <View className="relative">
                 <Image
                   source={config.ICON_REPO_URL + appData?.icon}
-                  style={{ height: 90, width: 90, borderRadius: 24 }}
+                  style={{ height: 80, width: 80, borderRadius: 20 }}
                   placeholder={require("@/data/assets/placeholder.gif")}
                   contentFit="cover"
                   transition={400}
                 />
-                <View className="absolute -right-1.5 -bottom-1.5 p-[2.5px] bg-white rounded-lg border border-stone-200 shadow-lg">
+                <View className="absolute -right-2 -bottom-2 p-0.5 bg-white rounded-lg border border-stone-200 shadow-lg">
                   <Image
                     source={
                       appData?.repoUrl.includes("github.com")
@@ -330,12 +330,12 @@ const appDetails = () => {
               </View>
             </View>
 
-            <View className="h-7" />
+            <View className="h-6" />
 
             <Text className="text-black dark:text-white text-xl font-semibold mb-3">
               App Info
             </Text>
-            <View className="h-[80px] flex-1 bg-white dark:bg-dark-surface rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-200 dark:border-neutral-800 shadow-lg shadow-neutral-200 dark:shadow-black">
+            <View className="h-[75px] flex-1 bg-white dark:bg-dark-surface rounded-2xl px-4 flex-row gap-3 items-center justify-around border border-neutral-200 dark:border-neutral-800 shadow-lg shadow-neutral-200 dark:shadow-black">
               <View className="flex-col gap-1.5 justify-center items-center">
                 <Image
                   source={require("@/data/assets/android.png")}
@@ -410,7 +410,7 @@ const appDetails = () => {
                 onPress={async () =>
                   await openBrowserAsync(appData?.repoUrl ?? "")
                 }
-                className="h-[45px] flex-row flex-1 rounded-2xl bg-black dark:bg-white shadow justify-center items-center gap-1.5 mt-3"
+                className="h-[40px] flex-row flex-1 rounded-2xl bg-black dark:bg-white shadow justify-center items-center gap-1.5 mt-3"
               >
                 <View className="size-6">
                   <Svg viewBox="0 0 128 128">

@@ -12,6 +12,7 @@ import {
   useColorScheme,
   View,
 } from "react-native";
+import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
 
 const Search = () => {
@@ -92,7 +93,10 @@ const Search = () => {
 
         <View className="h-4" />
 
-        <View className="px-6">
+        <Animated.View
+          entering={FadeIn.delay(150).duration(500)}
+          className="px-6"
+        >
           {/* Search Bar */}
           <View
             className="flex-row items-center bg-neutral-100 dark:bg-dark-tertiary border border-neutral-300 dark:border-neutral-600
@@ -168,8 +172,8 @@ const Search = () => {
             <Text className="text-black dark:text-white text-2xl font-semibold">
               Featured Apps
             </Text>
-            <View className="py-1 px-4 rounded-full bg-indigo-500">
-              <Text className="text-white text-base font-bold">
+            <View className="py-1 px-3.5 rounded-full bg-lime-300">
+              <Text className="text-black text-base font-bold">
                 {filterList.length}
               </Text>
             </View>
@@ -184,7 +188,7 @@ const Search = () => {
           ) : (
             <AppsList appData={filterList} />
           )}
-        </View>
+        </Animated.View>
 
         <View className="h-28" />
       </ScrollView>

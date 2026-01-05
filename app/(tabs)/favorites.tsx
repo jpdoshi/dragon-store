@@ -5,6 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "expo-router";
 import React, { useCallback, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
+import Animated, { FadeIn } from "react-native-reanimated";
 
 const FAVORITES_KEY = "favorite_apps";
 
@@ -48,20 +49,23 @@ const Favorites = () => {
 
         <View className="h-8" />
 
-        <View className="px-6">
+        <Animated.View
+          entering={FadeIn.delay(150).duration(500)}
+          className="px-6"
+        >
           <View className="flex-row items-center justify-between mb-5">
             <Text className="text-black dark:text-white text-2xl font-semibold">
               Your Favorites
             </Text>
-            <View className="py-1 px-4 rounded-full bg-indigo-500">
-              <Text className="text-white text-base font-bold">
+            <View className="py-1 px-3.5 rounded-full bg-lime-300">
+              <Text className="text-black text-base font-bold">
                 {appList.length}
               </Text>
             </View>
           </View>
 
           <AppsList appData={appList} />
-        </View>
+        </Animated.View>
 
         <View className="h-28" />
       </ScrollView>

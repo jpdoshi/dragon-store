@@ -1,6 +1,7 @@
 import "@/global.css";
+import { vibrate } from "@/utils/vibrate";
 import * as Network from "expo-network";
-import { Stack } from "expo-router";
+import { Stack, usePathname } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import Toast from "react-native-toast-message";
@@ -24,6 +25,10 @@ async function checkNetwork() {
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+  const pathname = usePathname();
+
+  useEffect(vibrate, [pathname]);
+
   useEffect(() => {
     const subscription = Network.addNetworkStateListener((state) => {
       if (!state?.isConnected || !state?.isInternetReachable)

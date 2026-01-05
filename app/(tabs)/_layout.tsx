@@ -31,10 +31,10 @@ const Layout = () => {
           borderTopWidth: 1,
           marginHorizontal,
           marginBottom: 40,
-          height: 55,
+          height: 52,
           paddingTop: "auto",
           paddingBottom: "auto",
-          borderRadius: 55,
+          borderRadius: 52,
           overflow: "hidden",
           shadowColor: colorScheme == "dark" ? "#000" : "#a1a1a1",
         },
@@ -66,7 +66,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[46px] w-[58px] flex justify-center items-center"
+              className="h-[42px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
@@ -100,7 +100,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[46px] w-[58px] flex justify-center items-center"
+              className="h-[42px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
@@ -134,7 +134,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[46px] w-[58px] flex justify-center items-center"
+              className="h-[42px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
@@ -168,7 +168,7 @@ const Layout = () => {
                   ? ["#ff637e", "#ff2056", "#c70036"]
                   : ["transparent", "transparent"]
               }
-              className="h-[46px] w-[58px] flex justify-center items-center"
+              className="h-[42px] w-[58px] flex justify-center items-center"
               style={{ borderRadius: 42 }}
             >
               <View className="size-6">
