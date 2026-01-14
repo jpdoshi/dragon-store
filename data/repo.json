@@ -33,28 +33,6 @@
     "tags": "youtube, yt, video, adblock"
   },
   {
-    "id": "264136",
-    "title": "Youtube Revanced",
-    "owner": "krvstek",
-    "category": "streaming",
-    "about": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
-    "icon": "yt-revanced.png",
-    "repoUrl": "https://github.com/krvstek/rvx-apks",
-    "website": "https://revanced.app",
-    "tags": "yt, video, adblock, sponsorblock, premium"
-  },
-  {
-    "id": "631141",
-    "title": "YT Music Revanced",
-    "owner": "krvstek",
-    "category": "streaming",
-    "about": "ReVanced Extended, created by inotia00, improves on the original YouTube ReVanced with more features and a friendlier UI.",
-    "icon": "yt-music.png",
-    "repoUrl": "https://github.com/krvstek/rvx-apks",
-    "website": "https://revanced.app",
-    "tags": "youtube, audio, spotify, adblock, premium"
-  },
-  {
     "id": "623181",
     "title": "Reddit Revanced",
     "owner": "krvstek",
@@ -1109,17 +1087,6 @@
     "repoUrl": "https://f-droid.org/en/packages/de.tutao.calendar",
     "website": "https://tuta.com",
     "tags": "calendar, private, secure, encryption"
-  },
-  {
-    "id": "287359",
-    "title": "RVX Manager",
-    "owner": "inotia00",
-    "category": "tools",
-    "about": "RVX Manager is a forked version of ReVanced Manager to run inotia00 patches. It helps you build Extended Apps.",
-    "icon": "rvx-manager.png",
-    "repoUrl": "https://github.com/inotia00/revanced-manager",
-    "website": "https://revanced.app",
-    "tags": "rvx, manager, vanced, revanced, fork, patches"
   },
   {
     "id": "619645",

@@ -21,6 +21,7 @@ import {
 } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
+import Toast from "react-native-toast-message";
 
 const Home = () => {
   const { apps, loading } = useAppsData();
@@ -38,6 +39,16 @@ const Home = () => {
   useEffect(() => {
     refreshRandomApps();
   }, [apps]);
+
+  useEffect(() => {
+    Toast.show({
+      type: "info",
+      text1: "App Update Notice",
+      text2:
+        "Please use the latest version of Dragon Store to receive updates and experience the newest improvements to the app.",
+      topOffset: 50,
+    });
+  }, []);
 
   useFocusEffect(
     React.useCallback(() => {
