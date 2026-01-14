@@ -37,7 +37,10 @@ const AppsList = ({ appData }: { appData: AppMetaData[] }) => {
     return (
       <View style={{ paddingVertical: 15 }}>
         <TouchableOpacity
-          onPress={loadMore}
+          onPress={() => {
+            vibrate();
+            loadMore();
+          }}
           className="h-[45px] w-[150px] mx-auto bg-rose-500 flex-row gap-1 justify-center items-center rounded-full shadow-lg"
         >
           <Text className="text-white font-semibold">Load More</Text>

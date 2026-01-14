@@ -2,7 +2,7 @@
   "expo": {
     "name": "Dragon Store",
     "slug": "dragon-store",
-    "version": "1.6.5",
+    "version": "1.7.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "dragonstore",

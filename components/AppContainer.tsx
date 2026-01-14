@@ -1,5 +1,6 @@
 import config from "@/config";
 import { AppMetaData } from "@/types/AppMetaData";
+import { vibrate } from "@/utils/vibrate";
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import React, { memo } from "react";
@@ -13,12 +14,13 @@ type Props = {
 const AppContainer = ({ AppData }: Props) => {
   return (
     <TouchableOpacity
-      onPress={() =>
+      onPress={() => {
+        vibrate();
         router.push({
           pathname: "/appDetails",
           params: { id: AppData.id },
-        })
-      }
+        });
+      }}
       className="h-[80px] py-4 px-2 border-b border-stone-200 dark:border-stone-800"
     >
       <View className="flex-1 flex-row gap-4 items-center">

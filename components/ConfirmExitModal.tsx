@@ -1,3 +1,4 @@
+import { vibrate } from "@/utils/vibrate";
 import { BlurView } from "expo-blur";
 import React from "react";
 import { BackHandler, Modal, Text, TouchableOpacity, View } from "react-native";
@@ -41,7 +42,10 @@ const ConfirmExitModal = ({ showExitModal, setShowExitModal }: ModalProps) => {
 
               <View className="flex-row justify-end gap-3">
                 <TouchableOpacity
-                  onPress={() => setShowExitModal(false)}
+                  onPress={() => {
+                    vibrate();
+                    setShowExitModal(false);
+                  }}
                   className="px-4 py-2 rounded-lg"
                 >
                   <Text className="text-rose-500 font-semibold">
@@ -51,6 +55,7 @@ const ConfirmExitModal = ({ showExitModal, setShowExitModal }: ModalProps) => {
 
                 <TouchableOpacity
                   onPress={() => {
+                    vibrate();
                     setShowExitModal(false);
                     BackHandler.exitApp();
                   }}

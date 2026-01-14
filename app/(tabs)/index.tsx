@@ -5,6 +5,7 @@ import ScreenView from "@/components/ScreenView";
 import config from "@/config";
 import { useAppsData } from "@/hooks/useAppsData";
 import { AppMetaData } from "@/types/AppMetaData";
+import { vibrate } from "@/utils/vibrate";
 import * as Application from "expo-application";
 import { router, useFocusEffect } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
@@ -94,19 +95,21 @@ const Home = () => {
           <Text className="text-neutral-400">by jpdoshi</Text>
           <View className="flex-row gap-3 mt-4">
             <TouchableOpacity
-              onPress={async () =>
+              onPress={async () => {
+                vibrate();
                 await openBrowserAsync(
                   `${config.DRAGON_STORE_REPO_URL}/releases/latest`
-                )
-              }
+                );
+              }}
               className="bg-rose-500 shadow py-2.5 px-4 rounded-lg"
             >
               <Text className="font-bold text-white">Check Update</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={async () =>
-                await openBrowserAsync(config.DRAGON_STORE_REPO_URL)
-              }
+              onPress={async () => {
+                vibrate();
+                await openBrowserAsync(config.DRAGON_STORE_REPO_URL);
+              }}
               className=" bg-rose-50 dark:bg-white shadow py-2.5 px-4 rounded-lg"
             >
               <Text className="font-bold text-black">Github Repo</Text>
@@ -123,7 +126,10 @@ const Home = () => {
               Random Apps
             </Text>
             <TouchableOpacity
-              onPress={refreshRandomApps}
+              onPress={() => {
+                vibrate();
+                refreshRandomApps();
+              }}
               className="size-9 bg-lime-300 rounded-full p-2"
             >
               <Svg
@@ -152,7 +158,10 @@ const Home = () => {
               <AppsList appData={appList} />
               <View style={{ paddingVertical: 15 }}>
                 <TouchableOpacity
-                  onPress={() => router.navigate("/(tabs)/search")}
+                  onPress={() => {
+                    vibrate();
+                    router.navigate("/(tabs)/search");
+                  }}
                   className="h-[45px] w-[150px] mx-auto bg-rose-500 flex-row gap-1 justify-center items-center rounded-full shadow-lg"
                 >
                   <Text className="text-white font-semibold">More Apps</Text>

@@ -1,5 +1,6 @@
 import AppBar from "@/components/AppBar";
 import ScreenView from "@/components/ScreenView";
+import { vibrate } from "@/utils/vibrate";
 import * as MailComposer from "expo-mail-composer";
 import { openBrowserAsync } from "expo-web-browser";
 import React from "react";
@@ -65,9 +66,10 @@ const About = () => {
 
           <View className="flex-row gap-3">
             <TouchableOpacity
-              onPress={async () =>
-                await openBrowserAsync("https://thejddev.vercel.app")
-              }
+              onPress={async () => {
+                vibrate();
+                await openBrowserAsync("https://thejddev.vercel.app");
+              }}
               className="h-[40px] flex-row flex-1 rounded-xl bg-rose-500 shadow justify-center items-center gap-1"
             >
               <View className="size-6">
@@ -82,9 +84,10 @@ const About = () => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={async () =>
-                await openBrowserAsync("https://github.com/jpdoshi")
-              }
+              onPress={async () => {
+                vibrate();
+                await openBrowserAsync("https://github.com/jpdoshi");
+              }}
               className="h-[40px] flex-row flex-1 rounded-xl bg-rose-50 dark:bg-white shadow justify-center items-center gap-1"
             >
               <View className="size-6">
@@ -116,6 +119,7 @@ const About = () => {
           <TouchableOpacity
             onPress={async () => {
               const isAvailable = await MailComposer.isAvailableAsync();
+              vibrate();
 
               if (isAvailable) {
                 const result = await MailComposer.composeAsync({
@@ -188,11 +192,12 @@ const About = () => {
             donation via UPI
           </Text>
           <TouchableOpacity
-            onPress={() =>
+            onPress={() => {
+              vibrate();
               Linking.openURL(
                 "upi://pay?pa=jpdoshi2811@okaxis&pn=Jainam%20Doshi(TheJDDev)&tn=Donation%20for%20Dragon%20StoreProject&am=150.00&cu=INR"
-              )
-            }
+              );
+            }}
             className="h-[40px] flex-row justify-center items-center gap-1 shadow bg-violet-500 rounded-xl mt-4"
           >
             <View className="size-6">

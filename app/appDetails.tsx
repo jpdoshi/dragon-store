@@ -7,6 +7,7 @@ import { useAppsData } from "@/hooks/useAppsData";
 import { AppMetaData } from "@/types/AppMetaData";
 import { convertTime } from "@/utils/convertTime";
 import { formatNumber } from "@/utils/formatNumber";
+import { vibrate } from "@/utils/vibrate";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { Image } from "expo-image";
@@ -137,6 +138,7 @@ const appDetails = () => {
         favorites.push(appData);
       }
 
+      vibrate();
       await AsyncStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
       setIsFavorite(!isFavorite);
     } catch (err) {
@@ -154,7 +156,10 @@ const appDetails = () => {
           <AppBar>
             <View className="flex-1 flex-row items-center justify-between gap-4">
               <TouchableOpacity
-                onPress={() => router.back()}
+                onPress={() => {
+                  vibrate();
+                  router.back();
+                }}
                 className="size-7"
               >
                 <Svg
@@ -177,6 +182,7 @@ const appDetails = () => {
                 <TouchableOpacity
                   onPress={async () => {
                     try {
+                      vibrate();
                       await Share.share(
                         {
                           message: appData?.repoUrl,
@@ -229,6 +235,7 @@ const appDetails = () => {
                   onPress={async () => {
                     const isAvailable = await MailComposer.isAvailableAsync();
 
+                    vibrate();
                     if (isAvailable) {
                       const result = await MailComposer.composeAsync({
                         recipients: ["thejddev@gmail.com"],
@@ -348,9 +355,10 @@ const appDetails = () => {
               <View className="h-10 w-[1px] bg-neutral-300 dark:bg-neutral-700" />
               {appData?.website?.trim() && (
                 <TouchableOpacity
-                  onPress={async () =>
-                    await openBrowserAsync(appData?.website ?? "")
-                  }
+                  onPress={async () => {
+                    vibrate();
+                    await openBrowserAsync(appData?.website ?? "");
+                  }}
                   className="flex-col gap-1.5 justify-center items-center"
                 >
                   <View className="size-7">
@@ -371,6 +379,7 @@ const appDetails = () => {
               )}
               <TouchableOpacity
                 onPress={async () => {
+                  vibrate();
                   if (appData?.repoUrl.includes("github.com")) {
                     if (releaseData) {
                       setShowDownloads(true);
@@ -407,9 +416,10 @@ const appDetails = () => {
 
             {appData?.repoUrl.includes("github.com") && (
               <TouchableOpacity
-                onPress={async () =>
-                  await openBrowserAsync(appData?.repoUrl ?? "")
-                }
+                onPress={async () => {
+                  vibrate();
+                  await openBrowserAsync(appData?.repoUrl ?? "");
+                }}
                 className="h-[40px] flex-row flex-1 rounded-2xl bg-black dark:bg-white shadow justify-center items-center gap-1.5 mt-3"
               >
                 <View className="size-6">
@@ -479,7 +489,10 @@ const appDetails = () => {
                   to 5000 per hour.
                 </Text>
                 <TouchableOpacity
-                  onPress={() => router.navigate("/login")}
+                  onPress={() => {
+                    vibrate();
+                    router.navigate("/login");
+                  }}
                   className="h-[45px] flex-row justify-center items-center gap-1.5 shadow bg-dark-surface rounded-full mt-4"
                 >
                   <View className="size-6">
@@ -581,7 +594,10 @@ const appDetails = () => {
                       Release Notes
                     </Text>
                     <TouchableOpacity
-                      onPress={() => setShowReleaseNotes(true)}
+                      onPress={() => {
+                        vibrate();
+                        setShowReleaseNotes(true);
+                      }}
                       className="flex-row gap-1 items-center"
                     >
                       <View className="size-5">
@@ -639,6 +655,7 @@ const appDetails = () => {
                     <TouchableOpacity
                       className="flex-row gap-1 items-center"
                       onPress={async () => {
+                        vibrate();
                         if (
                           appData?.repoUrl.includes("f-droid.org") ||
                           appData?.repoUrl.includes("gitlab.com")
@@ -703,9 +720,10 @@ const appDetails = () => {
                       {repoData?.owner.login}
                     </Text>
                     <TouchableOpacity
-                      onPress={async () =>
-                        await openBrowserAsync(repoData?.owner.html_url)
-                      }
+                      onPress={async () => {
+                        vibrate();
+                        await openBrowserAsync(repoData?.owner.html_url);
+                      }}
                       className="bg-[rgba(255,32,86,0.15)] rounded-lg py-1 mt-1 px-2 self-start"
                     >
                       <Text className="text-rose-500 font-medium text-base">

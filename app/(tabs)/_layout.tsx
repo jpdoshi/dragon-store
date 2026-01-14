@@ -1,3 +1,4 @@
+import { vibrate } from "@/utils/vibrate";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
 import { Tabs } from "expo-router";
@@ -57,6 +58,9 @@ const Layout = () => {
       {/* Home Tab */}
       <Tabs.Screen
         name="index"
+        listeners={{
+          tabPress: vibrate,
+        }}
         options={{
           title: "Home",
           tabBarIcon: ({ focused }) => (
@@ -91,6 +95,9 @@ const Layout = () => {
       {/* Search Tab */}
       <Tabs.Screen
         name="search"
+        listeners={{
+          tabPress: vibrate,
+        }}
         options={{
           title: "Search",
           tabBarIcon: ({ focused }) => (
@@ -125,6 +132,9 @@ const Layout = () => {
       {/* Favorites Tab */}
       <Tabs.Screen
         name="favorites"
+        listeners={{
+          tabPress: vibrate,
+        }}
         options={{
           title: "Favorites",
           tabBarIcon: ({ focused }) => (
@@ -159,6 +169,9 @@ const Layout = () => {
       {/* About Tab */}
       <Tabs.Screen
         name="about"
+        listeners={{
+          tabPress: vibrate,
+        }}
         options={{
           title: "About",
           tabBarIcon: ({ focused }) => (

@@ -2,6 +2,7 @@ import AppBar from "@/components/AppBar";
 import AppsList from "@/components/AppsList";
 import ScreenView from "@/components/ScreenView";
 import { useAppsData } from "@/hooks/useAppsData";
+import { vibrate } from "@/utils/vibrate";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
@@ -128,6 +129,7 @@ const Search = () => {
 
             <TouchableOpacity
               onPress={() => {
+                vibrate();
                 setSearchQuery("");
                 setDebouncedQuery("");
               }}
@@ -156,7 +158,10 @@ const Search = () => {
             {categoriesList.map((item, index) => (
               <TouchableOpacity
                 key={index}
-                onPress={() => setCategory(item)}
+                onPress={() => {
+                  vibrate();
+                  setCategory(item);
+                }}
                 className={`${category == item ? "bg-rose-500" : "bg-rose-50 dark:bg-dark-tertiary"} rounded-lg py-1.5 px-3 shadow`}
               >
                 <Text
